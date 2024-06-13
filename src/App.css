@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url(../src//assets/fonts/SourceSansPro-Bold.otf);
+  src: url(../src//assets/fonts/SourceSansPro-Regular.otf);
+  src: url(../src//assets/fonts/SourceSansPro-Semibold.otf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.source_ff {
+  font-family: "SourceSansPro";
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.red_ff {
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none !important;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+:root {
+  /* -------------------- Font-Size -------------------- */
+  --fs-xsm: 13px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 18px;
+  --fs-xl: 20px;
+  --fs-2xl: 22px;
+  --fs-3xl: 24px;
+  --fs-4xl: 36px;
+  --fs-5xl: 40px;
+  /* ---------------------- Color ---------------------- */
+  --clr-primary: #1364f1;
+  --clr-lightblack: #151515;
+  /* ----------------- Background Color ----------------- */
+  --bg-theme: #021536;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fs_13 {
+  font-size: var(--fs-xsm);
+}
+.fs_14 {
+  font-size: var(--fs-sm);
+}
+.fs_16 {
+  font-size: var(--fs-md);
+}
+.fs_18 {
+  font-size: var(--fs-lg);
+}
+.fs_20 {
+  font-size: var(--fs-xl);
+}
+.fs_22 {
+  font-size: var(--fs-2xl);
+}
+.fs_24 {
+  font-size: var(--fs-3xl);
+}
+.fs_36 {
+  font-size: var(--fs-4xl);
+}
+.fs_40 {
+  font-size: var(--fs-5xl);
+}
+
+.color_blue {
+  color: var(--clr-primary);
+}
+.color_lightblack {
+  color: var(--clr-lightblack);
+}
+.bg_theme {
+  background-color: var(--bg-theme);
+}
+
+/* Css */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

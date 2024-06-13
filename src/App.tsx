@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import AuthPages from "./pages/AuthPages";
+import { Route, Routes } from "react-router-dom";
+import ForgotCredential from "./components/authPages/ForgotCredential";
+import Dashboard from "./components/maindashboard/Dashboard";
+import MainDashbord from "./pages/MainDashbord";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/auth" element={<AuthPages />} />
+        <Route path="/" element={<MainDashbord />} />
+        <Route path="/forgot-credential" element={<ForgotCredential />} />
+      </Routes>
     </div>
   );
 }
