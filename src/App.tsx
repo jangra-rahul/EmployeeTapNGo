@@ -7,6 +7,8 @@ import { Route, Routes } from "react-router-dom";
 import ForgotCredential from "./components/authPages/ForgotCredential";
 import Dashboard from "./components/maindashboard/Dashboard";
 import MainDashbord from "./pages/MainDashbord";
+import Usages from "./components/Usages/Usages";
+import UsagesDashboard from "./pages/UsagesDashboard";
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/auth" element={<AuthPages />} />
         <Route path="/" element={<MainDashbord />} />
+        <Route path="/usages-dashboard" element={<UsagesDashboard />} />
         <Route path="/forgot-credential" element={<ForgotCredential />} />
       </Routes>
     </div>
