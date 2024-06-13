@@ -11,16 +11,7 @@ import faq_icon from "../../assets/images/svg/faq_icon.svg";
 import manu_icon from "../../assets/images/svg/manu_icon.svg";
 import black_logo from "../../assets/images/svg/black_logo.svg";
 import close_icon from "../../assets/images/svg/close_manu.svg";
-
-import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-  PieChartOutlined,
-  DesktopOutlined,
-  FileOutlined,
-  TeamOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
+import { Link, Outlet } from "react-router-dom";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -57,10 +48,12 @@ const Dashboard: React.FC = () => {
         </a>
         <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
           <Menu.Item key="1">
-            <div className="d-flex  gap-2 align-items-center">
-              <img src={home_icon} alt="home_icon" />
-              <span className="mb-0 fs_14 red_ff">Home</span>
-            </div>
+            <Link to="/home-dashboard">
+              <div className="d-flex  gap-2 align-items-center">
+                <img src={home_icon} alt="home_icon" />
+                <span className="mb-0 fs_14 red_ff">Home</span>
+              </div>
+            </Link>
           </Menu.Item>
           <Menu.Item key="2">
             <div className="d-flex  gap-2 align-items-center">
@@ -204,16 +197,7 @@ const Dashboard: React.FC = () => {
           </Menu>
         </Drawer>
         <Content style={{ margin: "0 16px" }}>
-          <Breadcrumb style={{ margin: "16px 0" }}>
-            <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-          </Breadcrumb>
-          <div
-            className="site-layout-background"
-            style={{ padding: 24, minHeight: 360 }}
-          >
-            Welcome to the Dashboard!
-          </div>
+          <Outlet />
         </Content>
         <Footer style={{ textAlign: "center" }}>
           Ant Design ©2024 Created by Ant UED

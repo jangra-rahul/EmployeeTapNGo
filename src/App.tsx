@@ -7,13 +7,19 @@ import { Route, Routes } from "react-router-dom";
 import ForgotCredential from "./components/authPages/ForgotCredential";
 import Dashboard from "./components/maindashboard/Dashboard";
 import MainDashbord from "./pages/MainDashbord";
+import HomeDashboard from "./pages/HomeDashboard";
 
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/auth" element={<AuthPages />} />
-        <Route path="/" element={<MainDashbord />} />
+        {/* <Route path="/" element={<MainDashbord />} /> */}
+        <Route path="/" element={<MainDashbord />}>
+          <Route index element={<HomeDashboard />} />
+          <Route path="home-dashboard" element={<HomeDashboard />} />
+        </Route>
+        <Route path="/home-dashboard" element={<HomeDashboard />} />
         <Route path="/forgot-credential" element={<ForgotCredential />} />
       </Routes>
     </div>
