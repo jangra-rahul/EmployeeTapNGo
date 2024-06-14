@@ -97,7 +97,9 @@ const LoginAndSignupHeader: React.FC = () => {
             >
               <Nav.Link
                 href="#"
-                className={selectedTab === "login" ? "active-tab" : ""}
+                className={
+                  selectedTab === "login" ? "active-tab  color_blue" : ""
+                }
               >
                 <h3 className="red_ff fs_24">Login</h3>
               </Nav.Link>
@@ -116,7 +118,9 @@ const LoginAndSignupHeader: React.FC = () => {
             >
               <Nav.Link
                 href="#"
-                className={selectedTab === "register" ? "active-tab" : ""}
+                className={
+                  selectedTab === "register" ? "active-tab color_blue" : ""
+                }
               >
                 <h3 className="red_ff fs_24">Register</h3>
               </Nav.Link>

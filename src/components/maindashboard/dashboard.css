@@ -64,6 +64,7 @@
 :where(.css-dev-only-do-not-override-zg0ahe).ant-drawer .ant-drawer-content {
   width: 70% !important;
 }
+
 /* Show menu button and hide the Sider on small screens */
 @media (max-width: 992px) {
   .header-responsive .menu-button {
