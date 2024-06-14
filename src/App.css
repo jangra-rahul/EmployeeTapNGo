@@ -76,7 +76,7 @@
 }
 
 .color_blue {
-  color: var(--clr-primary);
+  color: var(--clr-primary) !important;
 }
 .color_lightblack {
   color: var(--clr-lightblack);
@@ -96,4 +96,19 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+@media (max-width: 576px) {
+  :root {
+    /* -------------------- Font-Size -------------------- */
+    --fs-xsm: 13px;
+    --fs-sm: 14px;
+    --fs-md: 12px;
+    --fs-lg: 18px;
+    --fs-xl: 20px;
+    --fs-2xl: 22px;
+    --fs-3xl: 24px;
+    --fs-4xl: 36px;
+    --fs-5xl: 40px;
+  }
 }

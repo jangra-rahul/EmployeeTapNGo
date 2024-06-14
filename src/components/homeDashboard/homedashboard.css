@@ -1,0 +1,48 @@
+select {
+  outline: none;
+}
+
+.custom_hight {
+  height: 300px !important;
+}
+
+.form-switch .form-check-input {
+  width: 3em !important;
+}
+
+.custom_col {
+  width: 20% !important;
+}
+
+.bg_yellow {
+  background-color: #ffca00;
+}
+
+.card_hight {
+  height: 123px !important;
+}
+
+.z_index {
+  z-index: 2345;
+}
+
+.pulsh_img {
+  top: 50%;
+  transform: translateY(-50%);
+  right: -15px;
+}
+
+.box {
+  background-color: #f8f8f8;
+}
+
+@media (max-width: 768px) {
+  .custom_col {
+    width: 30% !important;
+  }
+}
+@media (max-width: 768px) {
+  .custom_col {
+    width: 30% !important;
+  }
+}

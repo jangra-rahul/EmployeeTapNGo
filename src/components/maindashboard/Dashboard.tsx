@@ -11,7 +11,10 @@ import faq_icon from "../../assets/images/svg/faq_icon.svg";
 import manu_icon from "../../assets/images/svg/manu_icon.svg";
 import black_logo from "../../assets/images/svg/black_logo.svg";
 import close_icon from "../../assets/images/svg/close_manu.svg";
+import noti_icoin from "../../assets/images/svg/notifi_icon.svg";
+import profile from "../../assets/images/svg/profile_icon.svg";
 import { Link, Outlet } from "react-router-dom";
+import { Form } from "react-bootstrap";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -118,10 +121,31 @@ const Dashboard: React.FC = () => {
               />
             </a>
           </div>
-          <div className="d-lg-flex d-none w-100 justify-content-between">
+          <div className="d-lg-flex align-items-center d-none w-100 justify-content-between">
             <div>
               <h6 className="mb-0 fs_14 fw-nonrmal red_ff">Hey!</h6>
               <h4 className="mb-0 fs_24 red_ff mt-1">Andrew J.</h4>
+            </div>
+            <div className="d-flex gap-4 align-items-center">
+              <Form.Select
+                className="rounded-5"
+                aria-label="Default select example"
+              >
+                <option>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </Form.Select>
+              <a href="#">
+                <img src={noti_icoin} alt="noti_icoin" />
+              </a>
+              <div className="d-flex align-items-center gap-1 border bg-white p-1 rounded-5">
+                <img src={profile} alt="profile" />
+                <select name="" id="">
+                  <option value=""></option>
+                  <option value="Logout">Logout</option>
+                </select>
+              </div>
             </div>
           </div>
         </Header>
@@ -199,9 +223,6 @@ const Dashboard: React.FC = () => {
         <Content style={{ margin: "0 16px" }}>
           <Outlet />
         </Content>
-        <Footer style={{ textAlign: "center" }}>
-          Ant Design ©2024 Created by Ant UED
-        </Footer>
       </Layout>
     </Layout>
   );
