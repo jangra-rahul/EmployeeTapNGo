@@ -15,7 +15,7 @@ const FrequentlyAskedQuestion = () => {
 
 
   return (
-    <div className='px-3 py-3 bg-white'>
+    <div className='px-3 py-3 bg-white rounded-2  px-3 mt-4'>
       <h1 className='fs_28 fw-semibold red_ff'>Frequently Asked Question</h1>
 
       <Row className='py-3'>
@@ -52,7 +52,7 @@ const FrequentlyAskedQuestion = () => {
 
         <Col xs={12} md={5} className='mb-4 d-flex flex-column  h-100 justify-content-between'>
         <Accordion defaultActiveKey="0">
-      <Accordion.Item eventKey="1" className='border border-black'>
+      <Accordion.Item eventKey="1" className='border border-black rounded-2' >
         <Accordion.Header className="border-bottom-radius">How can I add funds to my account?  <hr /></Accordion.Header>
        
         <Accordion.Body>
@@ -65,7 +65,7 @@ const FrequentlyAskedQuestion = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="2" className='border border-black  mt-3 '>
+      <Accordion.Item eventKey="2" className='border border-black  mt-3 rounded-2 '>
         <Accordion.Header className=" border-bottom-radius">What payment methods are supported for topping up my account? <hr /></Accordion.Header>
         <Accordion.Body>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
