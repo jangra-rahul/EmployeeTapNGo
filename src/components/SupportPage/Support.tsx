@@ -130,12 +130,12 @@ const Support: React.FC = () => {
         </Col>
       </Row>
       {notifications.map((notification, index) => (
-        <div className='px-3'>
+        <div className='px-3 main_hover_box'>
 
       
         <Row 
           key={notification.id}
-          className={`py-2 border-bottom border border-box ps-4 px-3 ${notification.read ? 'text-muted' : ''}`}
+          className={`py-2 border-bottom border border-box ps-4 px-3  hover_box${notification.read ? 'text-muted' : ''}`}
           style={{ marginBottom: '10px' }}
         >
           <Col xs='auto' className='d-flex align-items-center'>
@@ -171,8 +171,8 @@ const Support: React.FC = () => {
           <Col xs={8} md={9}>
           <div className='d-flex justify-content-between gap-3 '>
             
-            <p className='mb-1 fw-semibold'>{notification.title}</p>
-            <p className='mb-1 fw-medium '>{notification.message}</p>
+            <p className='mb-1 fw-semibold red_ff mb-0'>{notification.title}</p>
+            <p className='mb-1 fw-medium  red_ff mb-0'>{notification.message}</p>
           </div>
           </Col>
           <Col xs={12} md={2} className='d-flex flex-column align-items-md-end justify-content-center '>
@@ -196,6 +196,7 @@ const Support: React.FC = () => {
         </div>
       ))}
     </div>
+    
   );
 };
 

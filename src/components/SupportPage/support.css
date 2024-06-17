@@ -8,3 +8,13 @@
     border-radius: 1px ;
     border-color: #F0F0F0;
   }
+
+
+  .hover_box{
+    background-color: transparent;
+  }
+
+  .main_hover_box:hover  .hover_box{
+    background-color: #e7effe !;
+  }
+  

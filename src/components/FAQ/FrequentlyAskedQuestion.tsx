@@ -3,13 +3,16 @@ import { Dropdown } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
 import { FaChevronRight } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "../FAQ/FaqDashboard.css"
 import Plus from "../../assets/images/svg/secondPlus.svg"
-const FrequentlyAskedQuestion: React.FC = () => {
+import Accordion from 'react-bootstrap/Accordion';
+const FrequentlyAskedQuestion = () => {
   const [show, setShow] = useState(false);
 
   const toggleDropdown = () => {
     setShow(!show);
   };
+
 
   return (
     <div className='px-3 py-3 bg-white'>
@@ -48,79 +51,139 @@ const FrequentlyAskedQuestion: React.FC = () => {
         </Col>
 
         <Col xs={12} md={5} className='mb-4 d-flex flex-column  h-100 justify-content-between'>
-          <div className='border border-secondary px-3 py-2 m-0 '>
-            <div className='m-0 p-0 mb-0 d-flex justify-content-between'>
-              <p className="p-0 m-0 red_ff fs_16 fw-medium">How can I add funds to my account?</p>
-              <img className='' src={Plus} alt="" />
-            </div>
-            <hr />
-            <p className=''> To top up your account, navigate to the "Account" or "Profile" <br/> section in the dashboard, and you should find an option for "Add <br/> Funds" or "Top-Up." Follow the on-screen instructions to complete <br/> the transaction using your preferred payment method.</p>
-          </div>
-
-          <div className='border border-secondary px-3 py-3  mt-3 '> 
-            <div className='m-0 p-0 mb-0 d-flex justify-content-between'>
-            <p className='p-0 m-0 red_ff fs_16 fw-medium'>What payment methods are supported for topping up my <br />  account? </p>
-            <img className='' src={Plus} alt="" />
-            </div>
-            </div>
-          <div className='border border-secondary px-2 py-3 mt-3 '> 
-            <div className='m-0 p-0 mb-0 d-flex justify-content-between '>
-            <p className='p-0 m-0 red_ff fs_16 fw-medium'>Is there a minimum or maximum limit for money top-ups?</p>
-            <img className='' src={Plus} alt="" />
-            </div>
-            </div>
-          <div className='border border-secondary px-2 py-3 mt-3  '> 
-            <div className='m-0 p-0 mb-0 d-flex justify-content-between'>
-            <p className='p-0 m-0 red_ff fs_16 fw-medium'>How long does it take for my account to reflect the  newly <br/> added funds? </p>
-            <img className='' src={Plus} alt="" />
-            </div>
-            </div>
-          <div className='border border-secondary px-2 py-3 mt-3'> 
-            <div className='m-0 p-0 mb-0 d-flex justify-content-between'>
-            <p className='p-0 m-0 red_ff fs_16 fw-medium'>Are there any fees associated with topping up my account? </p>
-            <img className='' src={Plus} alt="" />
-            </div>
-            </div>
+        <Accordion defaultActiveKey="0">
+      <Accordion.Item eventKey="1" className='border border-black'>
+        <Accordion.Header className="border-bottom-radius">How can I add funds to my account?  <hr /></Accordion.Header>
+       
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="2" className='border border-black  mt-3 '>
+        <Accordion.Header className=" border-bottom-radius">What payment methods are supported for topping up my account? <hr /></Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="3" className='border border-black mt-3 rounded-2'>
+        <Accordion.Header className=" border-bottom-radius">Is there a minimum or maximum limit for money top-ups? <hr /></Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="4" className='border border-black mt-3 rounded-2'>
+        <Accordion.Header className=" border-bottom-radius">How long does it take for my account to reflect the newly added funds? <hr /></Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="5" className='border border-black mt-3 rounded-2'>
+        <Accordion.Header className=" border-bottom-radius">Are there any fees associated with topping up my account? <hr /></Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
          
         </Col>
 
         <Col xs={12} md={5} className='mb-4 d-flex flex-column  h-100 justify-content-between'>
-          <div className='border border-secondary px-3 py-2 m-0 '>
-            <div className='m-0 p-0 mb-0 d-flex justify-content-between'>
-              <p className='p-0 m-0 red_ff fs_16 fw-medium'>How can I add funds to my account?</p>
-              <img className='' src={Plus} alt="" />
-            </div>
-            <hr />
-            <p className=''> To top up your account, navigate to the "Account" or "Profile" <br/> section in the dashboard, and you should find an option for "Add <br/> Funds" or "Top-Up." Follow the on-screen instructions to complete <br/> the transaction using your preferred payment method.</p>
-          </div>
-
-          <div className='border border-secondary px-3 py-3  mt-3 '> 
-            <div className='m-0 p-0 mb-0 d-flex justify-content-between'>
-            <p className='p-0 m-0 red_ff fs_16 fw-medium'>What payment methods are  topping up my <br /> account? </p>
-            <img className='' src={Plus} alt="" />
-            </div>
-            </div>
-          <div className='border border-secondary px-3 py-3 mt-3 '> 
-            <div className='m-0 p-0 mb-0 d-flex justify-content-between '>
-            <p className='p-0 m-0 red_ff fs_16 fw-medium'>Is there a minimum or maximum limit for money top-ups?</p>
-            <img className='' src={Plus} alt="" />
-            </div>
-            </div>
-          <div className='border border-secondary px-3 py-3 mt-3 '> 
-            <div className='m-0 p-0 mb-0 d-flex justify-content-between'>
-            <p className='p-0 m-0 red_ff fs_16 fw-medium'>How long does it take for my account to reflect the newly <br/>added funds? </p>
-            <img className='' src={Plus} alt="" />
-            </div>
-            </div>
-          <div className='border border-secondary px-3 py-3 mt-3'> 
-            <div className='m-0 p-0 mb-0 d-flex justify-content-between'>
-            <p className='p-0 m-0 red_ff fs_16 fw-medium'>Are there any fees associated with topping up my account? </p>
-            <img className='' src={Plus} alt="" />
-            </div>
-            </div>
+        <Accordion defaultActiveKey="0">
+      <Accordion.Item eventKey="1" className='border border-black  rounded-2'>
+        <Accordion.Header className=" border-bottom-radius">How can I add funds to my account? <hr /></Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="2" className='border border-black mt-3 rounded-2'>
+        <Accordion.Header className=" border-bottom-radius">What payment methods are supported for topping up my account? <hr /></Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="3" className='border border-black mt-3 rounded-2'>
+        <Accordion.Header className=" border-bottom-radius">Is there a minimum or maximum limit for money top-ups? <hr /></Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="4" className='border border-black mt-3 rounded-2'>
+        <Accordion.Header className=" border-bottom-radius"> How long does it take for my account to reflect the newly added funds? <hr /></Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="5" className='border border-black mt-3 rounded-2'>
+        <Accordion.Header className=" border-bottom-radius">Are there any fees associated with topping up my account? <hr /></Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
          
         </Col>
 
+    
        <div className='d-flex justify-content-center align-content-center mt-5 '>
         <p>Didn't get you question answered?  <a href='#'>Contact Us</a>
         </p>
