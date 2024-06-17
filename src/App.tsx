@@ -9,6 +9,10 @@ import Dashboard from "./components/maindashboard/Dashboard";
 import MainDashbord from "./pages/MainDashbord";
 import HomeDashboard from "./pages/HomeDashboard";
 import UsagesDashboard from "./pages/UsagesDashboard";
+import SubcriptionDashboard from "./pages/SubcriptionDashboard";
+import FamilyMemberDashboard from './pages/FamilyMemberDashboard';
+import FrequentlyAskedQuestion from "./components/FAQ/FrequentlyAskedQuestion";
+import Support from "./components/SupportPage/Support";
 
 function App() {
   return (
@@ -20,6 +24,10 @@ function App() {
           <Route index element={<HomeDashboard />} />
           <Route path="home-dashboard" element={<HomeDashboard />} />
           <Route path="usage-dashboard" element={<UsagesDashboard />} />
+          <Route path="subcription-dashboard" element={<SubcriptionDashboard />} />
+          <Route path="familyMember-dashboard" element={<FamilyMemberDashboard />} />
+          <Route path="FaqDashboard" element={<FrequentlyAskedQuestion />} />
+          <Route path="Support-Dashboard" element={<Support/>} />
         </Route>
         <Route path="/home-dashboard" element={<HomeDashboard />} />
         <Route path="/forgot-credential" element={<ForgotCredential />} />

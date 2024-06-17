@@ -66,34 +66,43 @@ const Dashboard: React.FC = () => {
             </div></Link>
           </Menu.Item>
           <Menu.Item key="3">
+            <Link to="/subcription-dashboard">
             <div className="d-flex  gap-2 align-items-center">
               <img src={Subscription_icon} alt="Subscription_icon" />
               <span className="mb-0 fs_14 red_ff">Subscription</span>
-            </div>
+            </div></Link>
           </Menu.Item>
           <Menu.Item key="4">
+            <Link to="/familyMember-dashboard">
             <div className="d-flex  gap-2 align-items-center">
               <img src={FamilyM_icon} alt="FamilyM_icon" />
               <span className="mb-0 fs_14 red_ff"> Family Member</span>
             </div>
+            </Link>
           </Menu.Item>
           <Menu.Item key="5">
+          
             <div className="d-flex  gap-2 align-items-center">
               <img src={Offer_icon} alt="Offer_icon" />
               <span className="mb-0 fs_14 red_ff">My Offers</span>
             </div>
+          
           </Menu.Item>
           <Menu.Item key="6">
+          <Link to="/FaqDashboard">
             <div className="d-flex  gap-2 align-items-center">
               <img src={faq_icon} alt="faq_icon" />
               <span className="mb-0 fs_14 red_ff">FAQ</span>
             </div>
+            </Link>
           </Menu.Item>
           <Menu.Item key="7">
+            <Link to="/Support-Dashboard">
             <div className="d-flex  gap-2 align-items-center">
               <img src={suport_icon} alt="home_icon" />
               <span className="mb-0 fs_14 red_ff">Support</span>
             </div>
+            </Link>
           </Menu.Item>
         </Menu>
       </Sider>

@@ -72,7 +72,7 @@ const Usages: React.FC = () => {
   return (
     <>
     
-      <div className='bg-white custom-padding'>
+      <div className='bg-white custom-padding rounded-2'>
         <Row>
           <Col xs={12} md={8}>
             <span className='fs_24 fw-semibold red_ff'>Spending Overview</span>

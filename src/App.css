@@ -40,6 +40,7 @@
   --fs-3xl: 24px;
   --fs-4xl: 36px;
   --fs-5xl: 40px;
+  --fs-6xl: 32px;
   /* ---------------------- Color ---------------------- */
   --clr-primary: #1364f1;
   --clr-lightblack: #151515;
@@ -73,6 +74,9 @@
 }
 .fs_40 {
   font-size: var(--fs-5xl);
+}
+.fs_32 {
+  font-size: var(--fs-6xl);
 }
 
 .color_blue {
