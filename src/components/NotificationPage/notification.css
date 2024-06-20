@@ -1,0 +1,76 @@
+.Custom_button{
+    background-color: #ffffff;
+    color: #1364F1;
+    border: 1px solid #1364F1;
+  }
+
+  .border-box{
+    border-radius: 1px ;
+    border-color: #F0F0F0;
+  }
+
+
+  .hover_box{
+    background-color: transparent;
+  }
+
+  .main_hover_box:hover  .hover_box{
+    background-color: #e7effe !;
+  }
+  .Custom_button{
+    border: 1px solid #1364F1;
+    color: #1364F1;
+    background-color:transparent;
+
+    
+  }
+ 
+  
+  .m--2{
+margin-left: -10%;
+  }
+  .w-8{
+    width: 8%;
+  }
+  .margin-top-custom {
+    margin-top: 20px; 
+  }
+  .checkbox{
+    height: 24px;
+    width: 24px;
+    background-color: #e7effe;
+  }
+  .circle0{
+    height: 46px;
+    width: 46px ;
+    background-color: #1364F1;
+    color: white;
+    border-radius: 30px ;
+  }
+  .circle1{
+    height: 46px;
+    width: 46px ;
+    background-color: #F3F3F399;
+    color: black;
+    border-radius: 30px ;
+  }
+  
+  .Accept-button{
+    background-color: #0E80291A;
+    color: #0E8029;
+    border: none;
+  }
+  .Decline-button{
+    background-color: #EB001B1A;
+    color: #EB001BBF;
+    border: none;
+  }
+  .border-color{
+    border: 1px solid #CECECE4D;
+  }
+
+
+.table-responsive {
+  overflow-x: auto;
+}
+

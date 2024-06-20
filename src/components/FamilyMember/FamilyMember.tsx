@@ -6,10 +6,9 @@ import greenball from "../../assets/images/svg/greenball.svg";
 import plus from "../../assets/images/svg/plus.svg";
 import HDFC_Card from "../../assets/images/svg/HDFC_Card.svg";
 import Arrow from "../../assets/images/svg/arrow.svg";
-import '../../components/FamilyMember/FamilyMember.css';
 import ModalComponent from './ModalComponent';
 import DownloadCardModal from './DownloadCardModal';
-
+import '../../components/FamilyMember/FamilyMember.css';
 const FamilyMember = () => {
   const [showDownloadModal, setShowDownloadModal] = useState(false);
   const [showAddMemberModal, setShowAddMemberModal] = useState(false);
@@ -39,10 +38,10 @@ const FamilyMember = () => {
               <div className='d-flex bg-lightblue p-0 justify-content-between'>
                 <div className='ms-2 pt-2'>
                   <p className='fs_20 fw-semibold text-nowrap m-0 pb-1'>Andrew's Card</p>
-                  <p className='fs_14 m-0 font-color red_ff'>Personal Card</p>
+                  <p className='fs_14 m-0 font-color1 red_ff'>Personal Card</p>
                   <div className='d-flex align-items-center'>
                     <img src={greenball} alt="Active" />
-                    <p className='fs_14 ms-2 p-0 font-color red_ff m-0 d-flex align-items-center'>Active</p>
+                    <p className='fs_14 ms-2 p-0 font-color1 red_ff m-0 d-flex align-items-center'>Active</p>
                   </div>
                 </div>
                 <div className='text-end pt-4 p-0 m-0'>
@@ -71,15 +70,15 @@ const FamilyMember = () => {
               <div className='d-flex pt-2 bg-white px-3 justify-content-between flex-wrap'>
                 <div className='mb-4 red_ff'>
                   <p className='fs_20 fw-semibold red_ff m-0 pb-3'>Overview</p>
-                  <p className='fs_14 m-0 font-color red_ff'>Current Balance</p>
+                  <p className='fs_14 m-0 font-color1 red_ff'>Current Balance</p>
                   <p className='fs_32 mb-4 fw-semibold red_ff'>$12345.00</p>
                   <div className='d-flex red_ff align-items-center gap-3 flex-wrap'>
                     <div>
-                      <p className='m-0 font-color red_ff'>Lifetime Credit Used</p>
+                      <p className='m-0 font-color1 red_ff'>Lifetime Credit Used</p>
                       <p className='fs_18 fw-semibold mt-1 red_ff'>$1000000.00</p>
                     </div>
                     <div>
-                      <p className='m-0 font-color red_ff'>Account Type</p>
+                      <p className='m-0 font-color1 red_ff'>Account Type</p>
                       <p className='fs_18 fw-semibold mt-1 red_ff'>Prepaid</p>
                     </div>
                   </div>
@@ -93,19 +92,19 @@ const FamilyMember = () => {
                 <p className='ps-3 fs_20 fw-semibold red_ff'>Card Details</p>
                 <div className='d-flex align-items-center px-3 gap-3 justify-content-between flex-wrap'>
                   <div>
-                    <p className='m-0 fs_14 font-color'>Card Number</p>
+                    <p className='m-0 fs_14 font-color1'>Card Number</p>
                     <p className='fs_18 fw-semibold mt-1 red_ff'>1234 5678 0123 4567</p>
                   </div>
                   <div>
-                    <p className='m-0 fs_14 font-color'>Name on Card</p>
+                    <p className='m-0 fs_14 font-color1'>Name on Card</p>
                     <p className='fs_18 fw-semibold mt-1 red_ff'>Andrew James</p>
                   </div>
                   <div>
-                    <p className='m-0 fs_14 font-color'>Card Type</p>
+                    <p className='m-0 fs_14 font-color1'>Card Type</p>
                     <p className='fs_18 fw-semibold mt-1 red_ff'>Physical</p>
                   </div>
                   <div>
-                    <p className='m-0 fs_14 font-color'>Issued On</p>
+                    <p className='m-0 fs_14 font-color1'>Issued On</p>
                     <p className='fs_18 fw-semibold mt-1 red_ff'>02/24</p>
                   </div>
                 </div>
@@ -117,6 +116,7 @@ const FamilyMember = () => {
             </Card.Footer>
           </Card>
         </Col>
+
 
         <Col xs={12} md={3} className='mb-4'>
           <Card className='border-color d-flex flex-column h-100 p-0 m-0 bg-white'>

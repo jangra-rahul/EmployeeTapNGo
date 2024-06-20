@@ -1,20 +1,49 @@
-.Custom_button{
-    background-color: #ffffff;
-    color: #1364F1;
-    border: 1px solid #1364F1;
+.table > :not(caption) > * > * {
+    padding: .5rem .5rem;
+    color: var(--bs-table-color-state,var(--bs-table-color-type,var(--bs-table-color)));
+    background-color: none;
+    border-bottom-width: var(--bs-border-width);
+
+  }
+  .table > :not(caption) > * > * {
+    padding: .5rem .5rem;
+    color: var(--bs-table-color-state,var(--bs-table-color-type,var(--bs-table-color)));
+    background-color: var(--bs-table-bg);
+    border-bottom-width: var(--bs-border-width);
+    box-shadow: none;
+  }
+  .table th {
+    text-align: start;
+    vertical-align: middle;
+    padding: 10px;
+      border-bottom-width: medium;
+
+  }
+  .table td {
+    text-align:start;
+    vertical-align: middle;
+    padding: 10px;
+border-radius: 5%;
+      border-bottom-width: medium;
+  }
+  .font-color{
+    color: #F79E1B;
+  }
+  .Progress-button{
+    background-color: #0E80291A;
+    color: #0E8029;
+    border: none;
+  }
+  .Action-button{
+    background-color: #FFFAE5;
+    color: #F79F1A;
+    border: none;
+  }
+  .bg-pdf{
+    background-color: #F3F3F399;
+  }
+  .initial{
+    background-color: #F8F8F8;
+    color: #151515;
   }
 
-  .border-box{
-    border-radius: 1px ;
-    border-color: #F0F0F0;
-  }
-
-
-  .hover_box{
-    background-color: transparent;
-  }
-
-  .main_hover_box:hover  .hover_box{
-    background-color: #e7effe !;
-  }
-  

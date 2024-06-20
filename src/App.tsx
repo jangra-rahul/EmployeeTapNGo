@@ -12,7 +12,10 @@ import UsagesDashboard from "./pages/UsagesDashboard";
 import SubcriptionDashboard from "./pages/SubcriptionDashboard";
 import FamilyMemberDashboard from './pages/FamilyMemberDashboard';
 import FrequentlyAskedQuestion from "./components/FAQ/FrequentlyAskedQuestion";
-import Support from "./components/SupportPage/Support";
+import Notifications from "./pages/Notifications";
+import SupportPage from "./pages/SupportPage";
+import MyofferPage from "./pages/MyofferPage";
+import Profilepage from "./pages/Profilepage";
 
 function App() {
   return (
@@ -27,7 +30,10 @@ function App() {
           <Route path="subcription-dashboard" element={<SubcriptionDashboard />} />
           <Route path="familyMember-dashboard" element={<FamilyMemberDashboard />} />
           <Route path="FaqDashboard" element={<FrequentlyAskedQuestion />} />
-          <Route path="Support-Dashboard" element={<Support/>} />
+          <Route path="notification" element={<Notifications/>} />
+          <Route path="Myoffers" element={<MyofferPage/>} />
+          <Route path="Support-Dashboard" element={<SupportPage/>} />
+          <Route path="Profile" element={<Profilepage/>} />
         </Route>
         <Route path="/home-dashboard" element={<HomeDashboard />} />
         <Route path="/forgot-credential" element={<ForgotCredential />} />

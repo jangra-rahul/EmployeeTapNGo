@@ -1,0 +1,27 @@
+.w-40{
+    width: 40%;
+}
+.w-70{
+    width: 70%;
+}
+.vertical-divider {
+    border-left: 1px solid #ddd; 
+    height: 100%;
+    margin: 0 15px; 
+  }
+
+  .postpaid-button{
+    background-color: #1364F11A;
+    color: #1364F1;
+  }
+  .C-pointer{
+    cursor: pointer;
+  }
+  .custom-modal-width  {
+  width: 800px;
+  }
+  
+  .custom-modal-width .modal-body {
+    padding: 20px;
+  }
+  

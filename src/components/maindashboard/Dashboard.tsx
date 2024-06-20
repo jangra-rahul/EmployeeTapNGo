@@ -60,48 +60,48 @@ const Dashboard: React.FC = () => {
           </Menu.Item>
           <Menu.Item key="2">
             <Link to="/usage-dashboard">
-            <div className="d-flex  gap-2 align-items-center">
-              <img src={Usage_icon} alt="Usage_icon" />
-              <span className="mb-0 fs_14 red_ff">Usage</span>
-            </div></Link>
+              <div className="d-flex  gap-2 align-items-center">
+                <img src={Usage_icon} alt="Usage_icon" />
+                <span className="mb-0 fs_14 red_ff">Usage</span>
+              </div></Link>
           </Menu.Item>
           <Menu.Item key="3">
             <Link to="/subcription-dashboard">
-            <div className="d-flex  gap-2 align-items-center">
-              <img src={Subscription_icon} alt="Subscription_icon" />
-              <span className="mb-0 fs_14 red_ff">Subscription</span>
-            </div></Link>
+              <div className="d-flex  gap-2 align-items-center">
+                <img src={Subscription_icon} alt="Subscription_icon" />
+                <span className="mb-0 fs_14 red_ff">Subscription</span>
+              </div></Link>
           </Menu.Item>
           <Menu.Item key="4">
             <Link to="/familyMember-dashboard">
-            <div className="d-flex  gap-2 align-items-center">
-              <img src={FamilyM_icon} alt="FamilyM_icon" />
-              <span className="mb-0 fs_14 red_ff"> Family Member</span>
-            </div>
+              <div className="d-flex  gap-2 align-items-center">
+                <img src={FamilyM_icon} alt="FamilyM_icon" />
+                <span className="mb-0 fs_14 red_ff"> Family Member</span>
+              </div>
             </Link>
           </Menu.Item>
           <Menu.Item key="5">
-          
+            <Link to="/Myoffers">
             <div className="d-flex  gap-2 align-items-center">
               <img src={Offer_icon} alt="Offer_icon" />
               <span className="mb-0 fs_14 red_ff">My Offers</span>
             </div>
-          
+            </Link>
           </Menu.Item>
           <Menu.Item key="6">
-          <Link to="/FaqDashboard">
-            <div className="d-flex  gap-2 align-items-center">
-              <img src={faq_icon} alt="faq_icon" />
-              <span className="mb-0 fs_14 red_ff">FAQ</span>
-            </div>
+            <Link to="/FaqDashboard">
+              <div className="d-flex  gap-2 align-items-center">
+                <img src={faq_icon} alt="faq_icon" />
+                <span className="mb-0 fs_14 red_ff">FAQ</span>
+              </div>
             </Link>
           </Menu.Item>
           <Menu.Item key="7">
             <Link to="/Support-Dashboard">
-            <div className="d-flex  gap-2 align-items-center">
-              <img src={suport_icon} alt="home_icon" />
-              <span className="mb-0 fs_14 red_ff">Support</span>
-            </div>
+              <div className="d-flex  gap-2 align-items-center">
+                <img src={suport_icon} alt="home_icon" />
+                <span className="mb-0 fs_14 red_ff">Support</span>
+              </div>
             </Link>
           </Menu.Item>
         </Menu>
@@ -146,11 +146,18 @@ const Dashboard: React.FC = () => {
                 <option value="2">Two</option>
                 <option value="3">Three</option>
               </Form.Select>
+
               <a href="#">
-                <img src={noti_icoin} alt="noti_icoin" />
+                <Link to="/notification">
+                  <img src={noti_icoin} alt="noti_icoin" />
+                </Link>
+
               </a>
               <div className="d-flex align-items-center gap-1 border bg-white p-1 rounded-5">
+                <Link to="/Profile">
+                
                 <img src={profile} alt="profile" />
+                </Link>
                 <select name="" id="">
                   <option value=""></option>
                   <option value="Logout">Logout</option>
