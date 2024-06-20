@@ -14,6 +14,20 @@
   align-items: center;
   padding: 0 16px;
 }
+.bg-p{
+  color: #C0C5CD;
+}
+.bg-sidebar{
+  background-color: #021536;
+}
+.footer {
+  text-align: center;
+  background-color: #021536; 
+  color: white; 
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+}
 
 .menu-button {
   display: none;

@@ -10,17 +10,39 @@ select {
   width: 3em !important;
 }
 
+.border_bottom{
+border-bottom: 1px solid #1364F1 ;
+}
 .custom_col {
-  width: 20% !important;
+  width: 17% !important;
+}
+label {
+  display: inline-block;
+  padding-left: 5px;
 }
 
+.modal {
+  top: 45%;
+left: -15%;
+  --bs-modal-width: 280px;
+  --bs-modal-padding: 1rem;
+}
 .bg_yellow {
   background-color: #ffca00;
+}
+.text-color{
+  color:#404040 ;
+}
+.text-blue{
+  color:#1364F1 ;
 }
 
 .card_hight {
   height: 123px !important;
 }
+
+
+
 
 .z_index {
   z-index: 2345;
@@ -32,17 +54,55 @@ select {
   right: -15px;
 }
 
+.dropdown-toggle::after {
+  display: none;
+  margin-left: .255em;
+
+}
 .box {
   background-color: #f8f8f8;
 }
+.form-select {
+  --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23343a40%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m2 5 6 6 6-6%27/%3e%3c/svg%3e");
+  display: block;
+  width: 100%;
+ 
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .custom_col {
+    width: 30% !important;
+  }
+  
 
+}
 @media (max-width: 768px) {
   .custom_col {
     width: 30% !important;
   }
 }
+
 @media (max-width: 768px) {
-  .custom_col {
-    width: 30% !important;
+  .modal {
+    --bs-modal-width: 60%; 
+    --bs-modal-padding: 1rem; 
+    top: 45%; 
+    left: 90%;
+    transform: translateX(-50%);
+  }
+  .modal-content{
+    width: 60%;
+  }
+}
+
+@media (max-width: 360px) {
+  .modal {
+    --bs-modal-width: 50%; 
+    --bs-modal-padding: 0.8rem; 
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

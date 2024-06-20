@@ -29,10 +29,10 @@ const Profile = () => {
     <>
       <Row className="justify-content-center">
         <div className='d-flex flex-wrap gap-3 mt-3 p-0 m-0 ps-3 ms-3'>
-          <p className={`fs_16 md:fs_28 red_ff fw-semibold C-pointer m-0 p-0 ${activeComponent === 'Profile' ? 'active' : ''}`} onClick={handleComponentChange('Profile')}>Profile</p>
-          <p className={`fs_16 md:fs_28 red_ff fw-semibold C-pointer m-0 p-0  ${activeComponent === 'Cards' ? 'active' : ''}`} onClick={handleComponentChange('Cards')}>Cards</p>
-          <p className={`fs_16 md:fs_28 red_ff fw-semibold C-pointer m-0 p-0  ${activeComponent === 'SocialMedia' ? 'active' : ''}`} onClick={handleComponentChange('SocialMedia')}>Social Media</p>
-          <p className={` fs_16  red_ff fw-semibold C-pointer m-0 p-0  ${activeComponent === 'CarRegistration' ? 'active' : ''}`} onClick={handleComponentChange('CarRegistration')}>Car Registration</p>
+          <p className={`md:fs_16 fs_28 red_ff text-color fw-semibold  C-pointer m-0 p-0 ${activeComponent === 'Profile' ? 'active' : ''}`} onClick={handleComponentChange('Profile')}>Profile</p>
+          <p className={`md:fs_16 fs_28 red_ff text-color fw-light C-pointer m-0 p-0  ${activeComponent === 'Cards' ? 'active' : ''}`} onClick={handleComponentChange('Cards')}>Cards</p>
+          <p className={`md:fs_16 fs_28 red_ff text-color fw-light C-pointer m-0 p-0  ${activeComponent === 'SocialMedia' ? 'active' : ''}`} onClick={handleComponentChange('SocialMedia')}>Social Media</p>
+          <p className={` md:fs_16  fs_28 red_ff text-color fw-light C-pointer m-0 p-0  ${activeComponent === 'CarRegistration' ? 'active' : ''}`} onClick={handleComponentChange('CarRegistration')}>Car Registration</p>
         </div>
       </Row>
       <hr className='p-0 m-0' />

@@ -4,6 +4,9 @@
 .w-70{
     width: 70%;
 }
+.text-color{
+  color: #202020BF;
+}
 .vertical-divider {
     border-left: 1px solid #ddd; 
     height: 100%;

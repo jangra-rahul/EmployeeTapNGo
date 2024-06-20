@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Col, Form, Nav, Row, Tab } from "react-bootstrap";
+import { Col, Form, Nav, Row, Tab,Modal,Button  } from "react-bootstrap";
 import qus_icon from "../../assets/images/svg/qus_icon.svg";
 import dowload_icon from "../../assets/images/svg/dowload_icon.svg";
+import { GoChevronDown } from "react-icons/go";
 import cercle_img from "../../assets/images/svg/cercle_img.svg";
 import blue_image from "../../assets/images/svg/blue_box.svg";
 import yellow_image from "../../assets/images/svg/yellow_box.svg";
@@ -13,6 +14,11 @@ type TabType = "Manual" | "Auto" | "Subscription";
 
 const Home: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<TabType>("Manual");
+  const [showModal, setShowModal] = useState(false);
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
+
+
 
   const handleTabClick = (tab: TabType) => {
     setSelectedTab(tab);
@@ -37,12 +43,15 @@ const Home: React.FC = () => {
                     </h3>
                   </div>
                   <div className="d-flex gap-2 align-items-center">
-                    <img src={qus_icon} alt="qus_icon" />
+
+                  <img src={qus_icon} alt="qus_icon" onClick={handleShowModal} style={{ cursor: "pointer" }} />
+
                     <img src={dowload_icon} alt="dowload_icon" />
                   </div>
                 </div>
               </div>
             </Col>
+
             <Col md={6} className="mt-4 mt-md-0">
               <div className="card d-flex flex-column justify-content-between h-100 p-md-4 p-3 border-0">
                 <div className="d-flex justify-content-between align-items-center">
@@ -82,50 +91,50 @@ const Home: React.FC = () => {
                 </div>
                 <div className="d-flex mt-3 justify-content-between align-items-center">
                   <div>
-                    <p className="mb-0 fs_16 red_ff fw-semibold">
+                    <p className="mb-0 fs_16 red_ff fw-normal">
                       Manual Recharge
                     </p>
-                    <p className="mb-0 red_ff fs_14">04 January 2024</p>
+                    <p className="mb-0 red_ff fs_14 text-color">04 January 2024</p>
                   </div>
                   <h6 className="fs_20 red_ff fw-semibold mb-0">$1.33</h6>
                 </div>
                 <div className="border mt-3"></div>
                 <div className="d-flex mt-3 justify-content-between align-items-center">
                   <div>
-                    <p className="mb-0 fs_16 red_ff fw-semibold">
-                      Manual Recharge
+                    <p className="mb-0 fs_16 red_ff fw-normal">
+                      Auto Top-Up
                     </p>
-                    <p className="mb-0 red_ff fs_14">04 January 2024</p>
+                    <p className="mb-0 red_ff fs_14 text-color">04 January 2024</p>
                   </div>
                   <h6 className="fs_20 red_ff fw-semibold mb-0">$1.33</h6>
                 </div>
                 <div className="border mt-3"></div>
                 <div className="d-flex mt-3 justify-content-between align-items-center">
                   <div>
-                    <p className="mb-0 fs_16 red_ff fw-semibold">
+                    <p className="mb-0 fs_16 red_ff fw-normal">
                       Manual Recharge
                     </p>
-                    <p className="mb-0 red_ff fs_14">04 January 2024</p>
+                    <p className="mb-0 red_ff fs_14 text-color">04 January 2024</p>
                   </div>
                   <h6 className="fs_20 red_ff fw-semibold mb-0">$1.33</h6>
                 </div>
                 <div className="border mt-3"></div>
                 <div className="d-flex mt-3 justify-content-between align-items-center">
                   <div>
-                    <p className="mb-0 fs_16 red_ff fw-semibold">
+                    <p className="mb-0 fs_16 red_ff fw-normal">
                       Manual Recharge
                     </p>
-                    <p className="mb-0 red_ff fs_14">04 January 2024</p>
+                    <p className="mb-0 red_ff fs_14 text-color">04 January 2024</p>
                   </div>
                   <h6 className="fs_20 red_ff fw-semibold mb-0">$1.33</h6>
                 </div>
                 <div className="border mt-3"></div>
                 <div className="d-flex mt-3 justify-content-between align-items-center">
                   <div>
-                    <p className="mb-0 fs_16 red_ff fw-semibold">
-                      Manual Recharge
+                    <p className="mb-0 fs_16 red_ff fw-normal">
+                      Auto Top-Up
                     </p>
-                    <p className="mb-0 red_ff fs_14">04 January 2024</p>
+                    <p className="mb-0 red_ff fs_14 text-color">04 January 2024</p>
                   </div>
                   <h6 className="fs_20 red_ff fw-semibold mb-0">$1.33</h6>
                 </div>
@@ -137,13 +146,35 @@ const Home: React.FC = () => {
         <Col xl={5} className="mt-4 mt-xl-0">
           <div className="card h-100 border-0 p-md-4 p-3">
             <div className="d-sm-flex justify-content-between align-items-center">
-              <h4>Prepaid Recharge</h4>
+              <span className="d-flex gap-2">
+              <h4 className="fs_24 fw-semibold red_ff" > Recharge Prepaid </h4>
+              </span>
               <div className="d-flex mt-3 mt-sm-0 align-items-center gap-3">
-                <p className="mb-0">Auto Top-up</p>
-                <Form>
-                  <Form.Check type="switch" id="custom-switch" />
-                </Form>
-              </div>
+  <p >Auto Top-up</p>
+  <div className="border rounded-3 m-0 ">
+
+ 
+  <Form className="border-1 rounded-1 py-2 px-2">
+    <Form.Check
+      type="switch"
+      id="custom-switch"
+      label={
+        <span >
+          {(document.getElementById('custom-switch') as HTMLInputElement)?.checked ? 'On' : 'Off'}
+        </span>
+      }
+      onChange={(event) => {
+        const switchElement = event.target;
+        const toggleTextElement = switchElement.nextElementSibling;
+        if (toggleTextElement) {
+      
+          toggleTextElement.textContent = event.target.checked ? 'On' : 'Off';
+        }
+      }}
+    />
+  </Form>
+  </div>
+</div>
             </div>
 
             <Row className="mt-4">
@@ -236,6 +267,23 @@ const Home: React.FC = () => {
           </div>
         </Col>
       </Row>
+
+
+      <Modal show={showModal} onHide={handleCloseModal}>
+       
+        <Modal.Body>
+      <div className="d-flex justify-content-center">
+
+      <p className=" fs_14 red_ff fw-normal">Lost Card / Request  <br/> Replacement for Card ?</p>
+      </div>
+
+       <div className="w-100 d-flex justify-content-center align-items-center">
+
+      <p  className=" w-50 d-flex justify-content-center text-blue border_bottom fs_14 fw-medium red_ff "> Click Here</p>
+       </div>
+        </Modal.Body>
+      
+      </Modal>
     </div>
   );
 };

@@ -31,7 +31,7 @@ const ForgotCredential = () => {
 
           <Form>
             <Form.Group controlId="formEmailOrMobile" className="mb-4">
-              <Form.Label className="red_ff fs_16 fw-semibold">
+              <Form.Label className="red_ff fs_16 fw-normal">
                 Enter Details*
               </Form.Label>
               <Form.Control
@@ -44,7 +44,7 @@ const ForgotCredential = () => {
             <Image src={and_icon} className="my-2 w-100" alt="and_icon" />
 
             <Form.Group controlId="formCorporateCard" className="mb-4 mt-3">
-              <Form.Label className="red_ff fs_16 fw-semibold">
+              <Form.Label className="red_ff fs_16 fw-normal">
                 Corporate Card*
               </Form.Label>
               <Form.Control

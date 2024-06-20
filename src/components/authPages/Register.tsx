@@ -20,12 +20,12 @@ const Register = () => {
         <Row>
           <Col md={6} className="mb-3">
             <Form.Group controlId="formFirstName">
-              <Form.Label className="fs-6 red_ff color_lightblack fw-medium">
+              <Form.Label className="fs_16 red_ff color_lightblack fw-normal">
                 First Name
               </Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Enter First Name"
+                placeholder=""
                 className=" border px-3 py-2 rounded-2 border-body border-2"
               />
             </Form.Group>
@@ -33,12 +33,12 @@ const Register = () => {
 
           <Col md={6} className="mb-3">
             <Form.Group controlId="formLastName">
-              <Form.Label className="fs-6 red_ff color_lightblack fw-medium">
+              <Form.Label className="fs_16 red_ff color_lightblack fw-normal">
                 Last Name
               </Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Enter Last Name"
+                placeholder=""
                 className=" border px-3 py-2 rounded-2 border-body border-2"
               />
             </Form.Group>
@@ -46,12 +46,12 @@ const Register = () => {
 
           <Col md={12} className="mb-3">
             <Form.Group controlId="formEmailAddress">
-              <Form.Label className="fs-6 red_ff color_lightblack fw-medium">
+              <Form.Label className="fs_16 red_ff color_lightblack fw-normal">
                 Email Address
               </Form.Label>
               <Form.Control
                 type="email"
-                placeholder="Enter Email Address"
+                placeholder=""
                 className=" border px-3 py-2 rounded-2 border-body border-2"
               />
             </Form.Group>
@@ -59,12 +59,12 @@ const Register = () => {
 
           <Col md={6} className="mb-3">
             <Form.Group controlId="formMobileNumber">
-              <Form.Label className="fs-6 red_ff color_lightblack fw-medium">
+              <Form.Label className="fs_16 red_ff color_lightblack fw-normal">
                 Mobile Number
               </Form.Label>
               <Form.Control
                 type="number"
-                placeholder="Enter Mobile Number"
+                placeholder=""
                 className=" border px-3 py-2 rounded-2 border-body border-2"
               />
             </Form.Group>
@@ -72,11 +72,12 @@ const Register = () => {
 
           <Col md={6} className="mb-3">
             <Form.Group controlId="formDOB">
-              <Form.Label className="fs-6 red_ff color_lightblack fw-medium">
+              <Form.Label className="fs_16 red_ff color_lightblack fw-normal">
                 Date of Birth
               </Form.Label>
               <Form.Control
                 type="date"
+                placeholder=""
                 className=" border px-3 py-2 rounded-2 border-body border-2"
               />
             </Form.Group>
@@ -84,12 +85,12 @@ const Register = () => {
 
           <Col md={12} className="mb-3">
             <Form.Group controlId="formCorporateCard">
-              <Form.Label className="fs-6 red_ff color_lightblack fw-medium">
+              <Form.Label className="fs_16 red_ff color_lightblack fw-normal">
                 Corporate Card
               </Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Enter Corporate Card Number"
+                placeholder=""
                 className=" border px-3 py-2 rounded-2 border-body border-2"
               />
             </Form.Group>
@@ -109,20 +110,16 @@ const Register = () => {
           className="mt-2 d-flex align-items-center"
         >
           <Form.Check type="checkbox" id="accept" className="me-2" />
-          <Form.Label className="fs_14 mt-2 red_ff fw-medium">
+          <Form.Label className="fs_14 mt-2 red_ff fw-normal">
             I accept
-            <a onClick={openVehicleModal} href="#" className="ms-1 me-1 tdn">
               T&C
-            </a>
             and
-            <a href="#" className="ms-1 tdn">
               &nbsp;Terms of Service&nbsp;
-            </a>
             for using this platform
           </Form.Label>
         </Form.Group>
 
-        <p className="red_ff color_lightblack fw-medium mt-3 fs-14">
+        <p className="red_ff color_lightblack fw-normal mt-3 fs_14 d-flex justify-content-center">
           Already a user?&nbsp;
           <a className="color_blue" href="#">
             Login

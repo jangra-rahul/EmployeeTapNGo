@@ -30,7 +30,9 @@ const FamilyMember = () => {
       <Row>
         <Col xs={12} md={3} className='mb-4 m-0'>
           <Card className='border-color d-flex flex-column justify-content-between pb-3 h-100 m-0'>
+          
             <Card.Body className='p-0'>
+
               <div className='d-flex justify-content-between m-0 p-0 py-3 align-items-center px-3'>
                 <p className='fs_20 fw-semibold m-0 p-0'>Cards List</p>
                 <img className='custom-plus-width m-0 p-0' src={plus} alt="Add Card" />
@@ -48,12 +50,14 @@ const FamilyMember = () => {
                   <img src={card} alt="Card" className='img-fluid' />
                 </div>
               </div>
+
             </Card.Body>
-            <Card.Footer className='d-flex px-3 justify-content-center m-0 p-0 border-0 bg-white'>
+
+            <div className='d-flex px-3 justify-content-center mt-3 border-0 bg-white'>
               <Button className="w-100 red_ff fs_16 rounded-1 text-white py-2 border-0 button-color fw-medium" onClick={handleShowAddMemberModal}>
                 Add Family Member
               </Button>
-            </Card.Footer>
+            </div>
           </Card>
         </Col>
 

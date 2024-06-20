@@ -88,8 +88,8 @@ const LoginAndSignupHeader: React.FC = () => {
         <a className="d-flex justify-content-center" href="#">
           <img className="" src={logo} alt="logo" />
         </a>
-        <div className="bg-white rounded-2 mt-4 py-md-3 px-md-4 p-3">
-          <Row>
+        <div className="bg-white rounded-2 mt-4 py-md-3  px-md-5 p-3">
+          <Row className="pt-5">
             <Col
               sm={6}
               className="pe-0 text-center"
@@ -98,17 +98,15 @@ const LoginAndSignupHeader: React.FC = () => {
               <Nav.Link
                 href="#"
                 className={
-                  selectedTab === "login" ? "active-tab  color_blue" : ""
+                  selectedTab === "login" ? "active-tab text-blue " : ""
                 }
               >
-                <h3 className="red_ff fs_24">Login</h3>
+                <p className="red_ff fs_24 fw-normal text-color">Login</p>
               </Nav.Link>
-              {selectedTab === "login" ? (
+              {selectedTab === "login"  ? (
                 <div className="mt-2 custom_border border-body border-1 border"></div>
               ) : (
-                <>
-                  <div className="mt-2  border-body border-1 border"></div>
-                </>
+                <div className="mt-2 border-body border-1 border"></div>
               )}
             </Col>
             <Col
@@ -122,14 +120,12 @@ const LoginAndSignupHeader: React.FC = () => {
                   selectedTab === "register" ? "active-tab color_blue" : ""
                 }
               >
-                <h3 className="red_ff fs_24">Register</h3>
+                <p className="red_ff fs_24 fw-normal text-color">Register</p>
               </Nav.Link>
               {selectedTab === "register" ? (
-                <div className="mt-2 custom_border border-1 border"></div>
+                <div className="mt-2 custom_border border-body border-1 border"></div>
               ) : (
-                <>
-                  <div className="mt-2  border-body border-1 border"></div>
-                </>
+                <div className="mt-2 border-body border-1 border"></div>
               )}
             </Col>
           </Row>

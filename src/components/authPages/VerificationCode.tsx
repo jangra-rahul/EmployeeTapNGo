@@ -70,7 +70,7 @@ const VerificationCode: React.FC<Props> = ({ isModalOpen, closeModal }) => {
             <Modal.Title className="text-center mt-3 red_ff fs_24">
               Verification Code
             </Modal.Title>
-            <p className="red_ff fs_16 mt-2 fw-normal text-center mb-0">
+            <p className="red_ff fs_16 mt-2 text-color fw-normal text-center mb-0">
               We have sent the OTP code to xyz@gmail.com for the verification
               process.
             </p>
@@ -93,13 +93,13 @@ const VerificationCode: React.FC<Props> = ({ isModalOpen, closeModal }) => {
               </Row>
             </Container>
           </Modal.Body>
-          <Modal.Footer className="border-0">
-            <Button variant="link" className="color_blue" onClick={closeModal}>
+          <Modal.Footer className="border-0 d-flex flex-column  ">
+            <Button variant="link" className="color_blue  pb-3" onClick={closeModal}>
               Resend Code
             </Button>
             <Button
               variant="primary"
-              className="bg_blue border-0 py-2 rounded-1 fs_16 text-white source_ff"
+              className="bg_blue border-0 py-2 rounded-1 fs_16 text-white source_ff w-100"
               onClick={handleModal}
             >
               Submit

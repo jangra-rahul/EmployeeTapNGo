@@ -12,10 +12,19 @@ input {
   outline: none !important;
 }
 
+.text-blue{
+  color: blue;
+}
+.text-color{
+  color:#404040 ;
+}
 .bg_blue {
   background-color: #1364f1;
 }
 
+.bottom-line{
+  border-bottom: 1px solid #1364F1;
+}
 .tdn {
   text-decoration: underline !important ;
 }

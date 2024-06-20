@@ -4,33 +4,34 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <Container className="mt-4">
-      <Row className="justify-content-center">
+
+    <Container className="mt-4 ">
+      <Row className="justify-content-center ">
         <Form>
           <Form.Group controlId="formCorporateCard" className="mb-3">
-            <Form.Label className="fs-6 red_ff color_lightblack fw-medium">
+            <Form.Label className="fs_16 red_ff color_lightblack fw-normal">
               Corporate Card
             </Form.Label>
             <Form.Control
               type="text"
-              placeholder="Enter Corporate Card Number"
+              placeholder=""
               className=" border px-3 py-2 rounded-2 border-body border-2"
             />
           </Form.Group>
 
           <Form.Group controlId="formMobileNumber" className="mb-3">
-            <Form.Label className="fs-6 red_ff color_lightblack fw-medium">
+            <Form.Label className="fs_16 red_ff color_lightblack fw-normal">
               Mobile Number
             </Form.Label>
             <Form.Control
               type="number"
-              placeholder="Enter Mobile Number"
+              placeholder=""
               className=" border px-3 py-2 rounded-2 border-body border-2"
             />
           </Form.Group>
 
           <Form.Group controlId="formDOB" className="mb-3">
-            <Form.Label className="fs-6 red_ff color_lightblack fw-medium">
+            <Form.Label className="fs_16 red_ff color_lightblack fw-normal">
               Date of Birth
             </Form.Label>
             <Form.Control
@@ -47,8 +48,8 @@ const Login = () => {
             Log In
           </Button>
         </Form>
-        <footer className="mt-3">
-          <p className="red_ff color_lightblack fw-medium fs-14">
+        <footer className="mt-3 mb-4">
+          <p className="red_ff color_lightblack fw-normal fs_14">
             Forgot Credentials?&nbsp;
             <Link to="/forgot-credential" className="color_blue">
               Click here!

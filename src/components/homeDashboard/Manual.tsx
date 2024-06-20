@@ -5,33 +5,33 @@ import icon from "../../assets/images/svg/icon.svg";
 const Manual = () => {
   return (
     <div>
-      <p className="mb-0 fs_14 red_ff">
+      <p className="mb-0 fs_14 red_ff fw-normal">
         Please choose the desired amount to recharge your card
       </p>
-      <div className="row mt-md-3 mt-1 px-2">
+      <div className="row mt-md-3 mt-1 px-1 gap-3">
         <div className="custom_col mt-2 mt-md-0 px-1">
-          <div className="card d-flex flex-column align-items-center justify-content-center p-2">
-            <span className="fs_18 red_ff">$100</span>
+          <div className="card d-flex flex-column align-items-center justify-content-center p-1">
+            <span className="fs_18 red_ff fw-normal py-1">$100</span>
           </div>
         </div>
         <div className="custom_col mt-2 mt-md-0 px-1">
-          <div className="card d-flex flex-column align-items-center justify-content-center p-2">
-            <span className="fs_18 red_ff">$200</span>
+          <div className="card d-flex flex-column align-items-center justify-content-center p-1 ">
+            <span className="fs_18 red_ff fw-normal py-1">$200</span>
           </div>
         </div>
         <div className="custom_col mt-2 mt-md-0 px-1">
-          <div className="card d-flex flex-column align-items-center justify-content-center p-2">
-            <span className="fs_18 red_ff">$500</span>
+          <div className="card d-flex flex-column align-items-center justify-content-center p-1">
+            <span className="fs_18 red_ff fw-normal py-1">$500</span>
           </div>
         </div>
         <div className="custom_col mt-2 mt-md-0 px-1">
-          <div className="card d-flex flex-column align-items-center justify-content-center p-2">
-            <span className="fs_18 red_ff">$1000</span>
+          <div className="card d-flex flex-column align-items-center justify-content-center p-1">
+            <span className="fs_18 red_ff fw-normal py-1">$1000</span>
           </div>
         </div>
         <div className="custom_col mt-2 mt-md-0 px-1">
-          <div className="card d-flex flex-column align-items-center justify-content-center p-2">
-            <span className="fs_18 red_ff">Custom</span>
+          <div className="card d-flex flex-column align-items-center justify-content-center p-1">
+            <span className="fs_18 red_ff py-1">Custom</span>
           </div>
         </div>
       </div>
@@ -52,8 +52,8 @@ const Manual = () => {
                 alt="plush_img"
               />
             </span>
-            <div className="card card_hight p-2 d-flex justify-content-between flex-column">
-              <p className="fs_13 red_ff">Current Balance</p>{" "}
+            <div className="card card_hight ps-3  py-1  d-flex justify-content-between flex-column">
+              <p className="fs_13 red_ff">Current <br/> Balance</p>{" "}
               <h5 className="red_ff fs_18">$00</h5>
             </div>
           </div>
@@ -66,8 +66,8 @@ const Manual = () => {
                 alt="plush_img"
               />
             </span>
-            <div className="card card_hight p-2 d-flex justify-content-between flex-column">
-              <p className="fs_13 red_ff">Current Balance</p>{" "}
+            <div className="card card_hight ps-3  py-1 d-flex justify-content-between flex-column">
+              <p className="fs_13 red_ff">Current <br/> Balance</p>{" "}
               <h5 className="red_ff fs_18">$00</h5>
             </div>
           </div>
@@ -80,14 +80,14 @@ const Manual = () => {
                 alt="plush_img"
               />
             </span>
-            <div className="card card_hight p-2 d-flex justify-content-between flex-column">
-              <p className="fs_13 red_ff">Current Balance</p>{" "}
+            <div className="card card_hight ps-3  py-1 d-flex justify-content-between flex-column">
+              <p className="fs_13 red_ff">Current <br/> Balance</p>{" "}
               <h5 className="red_ff fs_18">$00</h5>
             </div>
           </div>
           <div className="col-md-3 col-6 mt-2 mt-md-0 px-1">
-            <div className="card card_hight p-2 d-flex justify-content-between flex-column">
-              <p className="fs_13 red_ff">Current Balance</p>{" "}
+            <div className="card card_hight ps-3  py-1 d-flex justify-content-between flex-column">
+              <p className="fs_13 red_ff">Current <br/> Balance</p>{" "}
               <h5 className="red_ff fs_18">$00</h5>
             </div>
           </div>
@@ -102,7 +102,7 @@ const Manual = () => {
         <div className="d-flex align-items-center mt-3 justify-content-between">
           <p className="mb-0 fs_16 red_ff">
             Surcharge :{" "}
-            <select className="border-0" name="" id="">
+            <select className="border-0 bg-white" name="" id="">
               <option value="Domestic ">Domestic </option>
               <option value="Domestic 1">Domestic 1 </option>
               <option value="Domestic 2">Domestic 2</option>

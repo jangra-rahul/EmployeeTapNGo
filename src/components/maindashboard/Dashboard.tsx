@@ -105,6 +105,10 @@ const Dashboard: React.FC = () => {
             </Link>
           </Menu.Item>
         </Menu>
+        <Footer className="footer fs_14 ">
+            <p className="m-0 p-0 fs_14 red_ff font-light bg-p ps-2"> © 2024. Adopt Cashless.</p>
+          <p className="bg-p fs_14 red_ff font-light"> All rights reserved.</p>
+        </Footer>
       </Sider>
       <Layout className="site-layout">
         <Header className="site-layout-background w-100 header-responsive">
@@ -141,7 +145,7 @@ const Dashboard: React.FC = () => {
                 className="rounded-5"
                 aria-label="Default select example"
               >
-                <option>Open this select menu</option>
+                <option>Family Member Account</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
@@ -173,7 +177,7 @@ const Dashboard: React.FC = () => {
           visible={drawerVisible}
           className="drawer-responsive"
         >
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center justify-content-between bg-sidebar">
             <a href="#">
               <img
                 width={130}
@@ -194,52 +198,78 @@ const Dashboard: React.FC = () => {
           </div>
           <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
             <Menu.Item key="1">
+
+              <Link to="/home-dashboard">
               <div className="d-flex  gap-2 align-items-center">
                 <img src={home_icon} alt="home_icon" />
                 <span className="mb-0 fs_14 red_ff">Home</span>
               </div>
+              </Link>
             </Menu.Item>
             <Menu.Item key="2">
+              <Link to="/usage-dashboard">
+             
               <div className="d-flex  gap-2 align-items-center">
                 <img src={Usage_icon} alt="Usage_icon" />
                 <span className="mb-0 fs_14 red_ff">Usage</span>
               </div>
+              </Link>
             </Menu.Item>
             <Menu.Item key="3">
+              <Link to ="/subcription-dashboard">
+             
               <div className="d-flex  gap-2 align-items-center">
                 <img src={Subscription_icon} alt="Subscription_icon" />
                 <span className="mb-0 fs_14 red_ff">Subscription</span>
               </div>
+              </Link>
             </Menu.Item>
             <Menu.Item key="4">
+              <Link to="/familyMember-dashboard">
+           
               <div className="d-flex  gap-2 align-items-center">
                 <img src={FamilyM_icon} alt="FamilyM_icon" />
                 <span className="mb-0 fs_14 red_ff"> Family Member</span>
               </div>
+              </Link>
+
             </Menu.Item>
             <Menu.Item key="5">
+              <Link to="/Myoffers">
+            
               <div className="d-flex  gap-2 align-items-center">
                 <img src={Offer_icon} alt="Offer_icon" />
                 <span className="mb-0 fs_14 red_ff">My Offers</span>
               </div>
+              </Link>
             </Menu.Item>
             <Menu.Item key="6">
+            <Link to="/FaqDashboard">
               <div className="d-flex  gap-2 align-items-center">
                 <img src={faq_icon} alt="faq_icon" />
                 <span className="mb-0 fs_14 red_ff">FAQ</span>
               </div>
+              </Link>
             </Menu.Item>
             <Menu.Item key="7">
+              <Link to="/Support-Dashboard">
+             
               <div className="d-flex  gap-2 align-items-center">
                 <img src={suport_icon} alt="home_icon" />
                 <span className="mb-0 fs_14 red_ff">Support</span>
               </div>
+              </Link>
             </Menu.Item>
           </Menu>
+          <Footer className="footer">
+            <p className="m-0 p-0 "> © 2024. Adopt Cashless.</p>
+          <p > All rights reserved.</p>
+        </Footer>
         </Drawer>
         <Content style={{ margin: "0 16px" }}>
           <Outlet />
         </Content>
+      
       </Layout>
     </Layout>
   );
