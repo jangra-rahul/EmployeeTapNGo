@@ -59,8 +59,9 @@
 .button-color{
   background-color: #1364F1 !important;
 }
-.w-30{
-  width: 30% !important;
+.w-22{
+  width:22px !important;
+  height: 22px !important;
 }
 .w-22{
   width: 20% !important;
@@ -69,6 +70,16 @@
 @media (max-width: 768px) {
   .wid-smal-50 {
     width: 50% !important;
+  }
+}
+@media (max-width: 768px) {
+  .custom-padding {
+   padding-left: 24px !important;
+  }
+}
+@media (max-width: 768px) {
+  .custom-margin-left {
+   margin-left: 6px !important;
   }
 }
 @media (max-width: 768px) {

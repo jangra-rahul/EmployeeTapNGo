@@ -108,7 +108,7 @@ const FamilyMember = () => {
       <p className='fs_18 fw-semibold mt-1 red_ff'>Physical</p>
     </div>
   </Col>
-  <Col xs={6} md={3} className='d-flex justify-content-center'>
+  <Col xs={6} md={3} className='d-flex '>
     <div>
       <p className='m-0 fs_14 font-color1'>Name on Card</p>
       <p className='fs_18 fw-semibold mt-1 red_ff'>Andrew James</p>
@@ -145,7 +145,7 @@ const FamilyMember = () => {
                 <span className='circle bg-0 rounded-circle d-flex justify-content-center align-content-center text-wrap'>
                   <div className='d-flex'>
 
-                    <img src={Arrow} alt="" />
+                    <img width={30} src={Arrow} alt="" />
                   </div>
                 </span>
                 <span className='circle bg-1 rounded-circle'></span>
@@ -153,9 +153,9 @@ const FamilyMember = () => {
                 <span className='circle bg-3 rounded-circle'></span>
                 <span className='circle bg-4 rounded-circle'></span>
               </div>
-              <div className='d-flex gap-3 ps-3 pt-2'>
+              <div className='d-flex gap-3 ps-3 pt-2 custom-padding'>
                 <span className='circle bg-5 rounded-circle'></span>
-                <span className='circle bg-6 rounded-circle'></span>
+                <span className='circle bg-6 custom-margin-left rounded-circle'></span>
               </div>
               <hr />
               <div className='px-3'>

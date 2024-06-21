@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Layout, Menu, Drawer } from "antd";
 import { Link, Outlet } from "react-router-dom";
 import { Form } from "react-bootstrap";
-
+import { FaAngleDown } from "react-icons/fa6";
 import logo from "../../assets/images/svg/logo.svg";
 import home_icon from "../../assets/images/svg/home_icon.svg";
 import Usage_icon from "../../assets/images/svg/usage_icon.svg";
@@ -140,11 +140,11 @@ const Dashboard: React.FC = () => {
           <div className="d-lg-flex align-items-center d-flex  w-100 justify-content-between">
             <div className="d-none d-md-flex ">
               <h6 className="mb-0 fs_14  fw-nonrmal red_ff">Hey!</h6>
-              <h4 className="mb-0 fs_24 red_ff mt-1">Andrew J.</h4>
+              <h4 className="mb-0 fs_24 red_ff mt-1 text-nowrap">Andrew J.</h4>
             </div>
-            <div className="d-flex gap-4 align-items-center ">
+            <div className="d-flex gap-4 align-items-center w-100 justify-content-end ">
               <Form.Select
-                className="rounded-5 d-none d-md-flex"
+                className="rounded-5 d-none d-md-flex w-20"
                 aria-label="Default select example"
               >
                 <option>Family Member Account</option>
@@ -157,14 +157,13 @@ const Dashboard: React.FC = () => {
                   <img src={noti_icoin} alt="noti_icoin" />
                 </Link>
               </a>
-              <div className="d-flex align-items-center gap-1 border bg-white p-1 rounded-5">
+              <div className="d-flex align-items-center gap-1 line-height border py-1 px-2 bg-white rounded-5">
                 <Link to="/Profile">
                   <img src={profile} alt="profile" />
                 </Link>
-                <select className="w-50" name="" id="">
-                  <option value=""></option>
-                  <option value="Logout">Logout</option>
-                </select>
+                <Link to="/Profile">
+                <FaAngleDown style={{color:"black"}} />
+                </Link>
               </div>
             </div>
           </div>

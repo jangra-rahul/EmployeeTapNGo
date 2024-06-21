@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
-import { Row,Form ,Col,Button } from 'react-bootstrap';
+import { Row, Form, Col, Button, Modal } from 'react-bootstrap';
 import user from "../../assets/images/svg/userimg.svg";
 import DownloadCardModal from '../FamilyMember/DownloadCardModal';
 import Cards from './Cards';
+import successfull_icon from "../../assets/images/svg/successfull_icon.svg"
 import SocialMedia from './SocialMedia';
 import CarRegistration from './Carregisteration';
-import PostpaidAccountModal from './PostpaidAccountModal'; 
+import PostpaidAccountModal from './PostpaidAccountModal';
 import "./profile.css"
 
 type ComponentType = 'Profile' | 'Cards' | 'SocialMedia' | 'CarRegistration';
 
 const Profile = () => {
+
   const [showDownloadModal, setShowDownloadModal] = useState(false);
-  const [showPostpaidModal, setShowPostpaidModal] = useState(false); 
+  const [showPostpaidModal, setShowPostpaidModal] = useState(false);
   const [activeComponent, setActiveComponent] = useState<ComponentType>('Profile');
 
+  const [showModal, setShowModal] = useState(false);
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
+
   const handleCloseDownloadModal = () => setShowDownloadModal(false);
-  const handleShowPostpaidModal = () => setShowPostpaidModal(true); 
-  const handleClosePostpaidModal = () => setShowPostpaidModal(false); 
+  const handleShowPostpaidModal = () => setShowPostpaidModal(true);
+  const handleClosePostpaidModal = () => setShowPostpaidModal(false);
 
   const handleComponentChange = (component: ComponentType) => () => setActiveComponent(component);
 
@@ -106,7 +112,7 @@ const Profile = () => {
                       <Form.Control type="text" placeholder="Prepaid" />
                     </Form.Group>
                     <div className='ps-3 w-100'>
-                      <Button type="submit" className='w-100 mt-3'>Save Changes</Button>
+                      <Button type="submit" className='w-100 mt-3' onClick={handleShowModal} style={{ cursor: "pointer" }} >Save Changes</Button>
                     </div>
                   </Form>
                 </div>
@@ -141,8 +147,27 @@ const Profile = () => {
         </Col>
       </Row>
 
+      <div className="custom-Modal2">
+        <Modal className="custom-Modal2 " show={showModal} onHide={handleCloseModal}>
+          <Modal.Body className=" ">
+            <div className='w-100 d-flex justify-content-center'>
+
+
+              <img className='' width={50} src={successfull_icon} alt="" />
+            </div>
+            <div className="d-flex justify-content-center">
+
+              <p className=" fs_24 red_ff fw-medium text-nowrap">Details Added Successfully</p>
+            </div>
+
+            <div className="w-100 d-flex justify-content-center align-items-center"> 
+              <p className=" w-100 d-flex justify-content-center  text-color fs_14 fw-medium red_ff  ">You have successfully added your car <br/> Registration details.</p>
+            </div>
+          </Modal.Body>
+        </Modal>
+      </div>
       <DownloadCardModal show={showDownloadModal} handleClose={handleCloseDownloadModal} />
-      <PostpaidAccountModal show={showPostpaidModal} handleClose={handleClosePostpaidModal} /> 
+      <PostpaidAccountModal show={showPostpaidModal} handleClose={handleClosePostpaidModal} />
     </>
   );
 };

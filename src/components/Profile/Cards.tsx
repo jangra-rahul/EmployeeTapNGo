@@ -102,7 +102,7 @@ const Cards: React.FC<CardsProps> = ({ onShowProfile }) => {
                 <span className='circle bg-0 rounded-circle d-flex justify-content-center align-content-center text-wrap'>
                 <div className='d-flex'>
 
-                  <img src={Arrow} alt="" />
+                  <img width={30} src={Arrow} alt="" />
                 </div>
                 </span>
                 <span className='circle bg-1 rounded-circle'></span>
