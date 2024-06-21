@@ -120,18 +120,18 @@ const Support = () => {
       </Col>
      
       <Col className='bg-white'> 
-        <div className='d-flex justify-content-between mt-3'>
+        <div className=' d-flex flex-dir-col justify-content-between mt-3  '>
           <div className='d-flex'>
             <div>
-              <p className='fs_24 fw-medium red_ff'>Request Card</p>
+              <p className='fs_24 fw-medium red_ff text-sm-nowrap '>Request Card</p>
               <p>#12143235</p>
             </div>
-            <div>
-              <button className='Progress-button px-3 py-1 rounded-2 mx-3 '><img src={greenball} alt="" /> In Progress</button>
-              <button className='Action-button px-3 py-1 rounded-2'> Action Required</button>
+            <div className='responsive-botton'>
+              <button className='Progress-button sm-fs-10 px-3 py-1 rounded-2 mx-3'><img src={greenball} alt="" /> In Progress</button>
+              <button className='Action-button sm-fs-10 px-3 py-1 rounded-2'> Action Required</button>
             </div>
           </div>
-          <div>
+          <div className='d-sm-flex'>
             <p>Created on</p>
             <p>08-02-2024</p>
           </div>
@@ -145,11 +145,11 @@ const Support = () => {
               <Form.Control as="textarea" placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id es' rows={3} />
             </Form.Group>
           </Form>
-          <span className="attachment d-flex w-25 mt-3 bg-pdf">
+          <span className="attachment d-flex w-25 sm-w-50 mt-3 bg-pdf">
             <p className='pt-3 ps-2'> 
               <img src={pdf} alt="Attachment Icon" style={{height:"28px",width:"20px"}} />
             </p>
-            <span className='px-2 pt-2 '>
+            <span className='px-2 pt-2  '>
               <p className='m-0 p-0 fs_13 fw-light red_ff '>Issue Screenshot</p>
               <p className='m-0 p-0 fs_13 fw-light red_ff '>3.1MB</p>
             </span>

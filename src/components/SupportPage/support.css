@@ -47,3 +47,38 @@ border-radius: 5%;
     color: #151515;
   }
 
+  @media (max-width:768px) {
+    .responsive-botton{
+      display: flex;
+      align-items: flex-start;
+   padding: 2px 2px;
+   margin: 0;
+
+    }
+  }
+  @media (max-width:768px) {
+    .sm-fs-10{
+        font-size: 0.5rem;
+    }
+  }
+  @media (max-width:768px) {
+    .flex-dir-col{
+       flex-direction: column;
+    }
+  }
+  @media (max-width:768px) {
+    .text-sm-nowrap{
+      text-wrap: nowrap;
+    }
+  }
+  @media (max-width:768px) {
+    .sm-w-50{
+      width: 53% !important;
+    }
+  }
+  @media (max-width:768px) {
+    .d-sm-flex{
+      display: flex;
+      gap: 5px;
+    }
+  }

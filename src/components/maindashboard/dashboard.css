@@ -79,10 +79,11 @@
   width: 70% !important;
 }
 
+
 /* Show menu button and hide the Sider on small screens */
 @media (max-width: 992px) {
   .header-responsive .menu-button {
-    display: block;
+    display: grid;
   }
   .sider-responsive {
     display: none;

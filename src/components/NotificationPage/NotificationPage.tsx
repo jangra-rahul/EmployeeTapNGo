@@ -1,8 +1,5 @@
-
-
 import React from 'react';
-import Table from 'react-bootstrap/Table';
-import { Row, Button, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import "./notification.css";
 
 const NotificationPage = () => {
@@ -16,88 +13,81 @@ const NotificationPage = () => {
     },
     {
       initial: 'B',
-      title: 'Card Authorization Request',
+      title: 'Budget Threshold Reached',
       description: 'You have reached 90% of your monthly dining out budget. Consider adjusting your spending to stay within budget limits and...',
       time: '30 min',
     },
     {
       initial: 'F',
-      title: 'Card Authorization Request',
+      title: 'Financial Goal Progress',
       description: 'Congratulations! You\'ve made significant progress towards your \'Vacation Fund\' goal. You are now 70% closer to your target....',
       time: '30 min',
     },
     {
       initial: 'U',
-      title: 'Card Authorization Request',
+      title: 'Unusual Spending Patterns',
       description: 'We\'ve noticed a spike in your online shopping expenses this month. If this is expected, no action is needed. However, if you...',
       time: '30 min',
     },
     {
       initial: 'R',
-      title: 'Card Authorization Request',
-      description: 'You have several uncategorized transactions in your account. To ensure accurate spending analysis, please take a moment...',
-      time: '30 min',
-    },
-    {
-      initial: 'R',
-      title: 'Card Authorization Request',
-      description: 'You have several uncategorized transactions in your account. To ensure accurate spending analysis, please take a moment...',
-      time: '30 min',
-    },
-    {
-      initial: 'R',
-      title: 'Card Authorization Request',
+      title: 'Reminder to Categorize Expenses',
       description: 'You have several uncategorized transactions in your account. To ensure accurate spending analysis, please take a moment...',
       time: '30 min',
     },
   ];
+
   return (
     <>
       <div className='bg-white px-3 py-2 mt-2 rounded-2'>
         <Row className='bg-white mx-2'>
-          <Col xs={12} md={6} className='fs_24 fw-semibold my-2 bg-white'>
+          <Col xs={3} md={6} className=' fw-semibold my-2 notification-header'>
             Notifications
           </Col>
-          <Col xs={12} md={6} className='d-flex justify-content-md-end justify-content-center my-2 bg-white'>
-            <div className='d-flex gap-3'>
-              <button className='Custom_button fw-medium red_ff fs_16 px-2 rounded-2'>Archive all</button>
-              <button className='Custom_button fw-medium red_ff fs_16 px-2 rounded-2'>Mark all as Read</button>
+          <Col xs={9} md={6} className='d-flex justify-content-md-end justify-content-center my-2'>
+            <div className='d-flex gap-3 text-reponsive'>
+              <Button className='Custom_button fw-medium text-reponsive red_ff fs_14 px-2 rounded-2'>Archive all</Button>
+              <Button className='Custom_button fw-medium text-reponsive red_ff fs_14 px-2 rounded-2'>Mark all as Read</Button>
             </div>
           </Col>
         </Row>
         <hr />
         <Row className='d-flex bg-white py-3 mx-2'>
-          <Table striped bordered hover className='table-responsive'>
-            <tbody>
-              {notifications.map((notification, index) => (
-                <div key={index} className="mb-3">
-                  <tr className='border common-border d-flex justify-content-between rounded-3'>
-                    <div className='d-flex gap-2 align-items-center'>
-                      <td className='ps-3 '><input className='checkbox' type="checkbox" /></td>
-                      <td className={`circle${index % 2} d-flex justify-content-center align-items-center fs_20 rounded-5`}>{notification.initial}</td>
-                      <td className='fs_18 fw-medium red_ff'>{notification.title}</td>
-                    </div>
-                    <td className='d-flex align-items-center text-start fs_16 red_ff'>{notification.description}</td>
-                    <td className='d-flex gap-3 justify-content-around'>
-                      {notification.actions ? (
-                        <>
-                          <Button className='Accept-button'>Accept</Button>
-                          <Button className='Decline-button'>Decline</Button>
-                        </>
-                      ) : (
-                        <p className='pe-3'>{notification.time}</p>
-                      )}
-                    </td>
-                  </tr>
-                </div>
-              ))}
-            </tbody>
-          </Table>
+          {notifications.map((notification, index) => (
+            <div key={index} className='notification-item mb-3'>
+              <Row className='border common-border d-flex justify-content-between rounded-3 p-2'>
+                <Col xs={1} className='d-flex align-items-center  p-0 m-0 ms-1' style={{width:"30px"}}>
+                  <input className='checkbox' type="checkbox" />
+                </Col>
+                <Col xs={1} className={`circle${index % 2} circle0 initial-reps d-flex justify-content-center align-items-center  fs_20 rounded-circle`}>
+                  {notification.initial}
+                </Col>
+
+                <Col xs={8} md={3} className='d-flex align-items-center text-wrap md-fs_18 sm-fs_16   fw-medium red_ff'>
+                  {notification.title}
+                </Col>
+                <Col xs={12} md={5} className='d-flex align-items-center text-start respon-desc sm-fs_16 red_ff description-text'>
+                  {notification.description}
+                </Col>
+                
+                <Col xs={12} md={2} className='d-flex align-items-center justify-content-md-end justify-content-start mt-2 mt-md-0'>
+                  {notification.actions ? (
+                    <>
+                      <Button className='Accept-button mx-1'>Accept</Button>
+                      <Button className='Decline-button mx-1'>Decline</Button>
+                    </>
+                  ) : (
+                    <p className='mb-0'>{notification.time}</p>
+                  )}
+                </Col>
+              </Row>
+            </div>
+          ))}
         </Row>
       </div>
     </>
   );
 }
 
-
 export default NotificationPage;
+

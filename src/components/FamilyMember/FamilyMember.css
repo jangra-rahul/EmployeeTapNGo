@@ -59,3 +59,20 @@
 .button-color{
   background-color: #1364F1 !important;
 }
+.w-30{
+  width: 30% !important;
+}
+.w-22{
+  width: 20% !important;
+}
+
+@media (max-width: 768px) {
+  .wid-smal-50 {
+    width: 50% !important;
+  }
+}
+@media (max-width: 768px) {
+  .wid-smal-100 {
+    width: 100% !important;
+  }
+}

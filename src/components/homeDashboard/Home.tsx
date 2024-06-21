@@ -268,22 +268,18 @@ const Home: React.FC = () => {
         </Col>
       </Row>
 
-
-      <Modal show={showModal} onHide={handleCloseModal}>
-       
-        <Modal.Body>
+<div className="custom-Modal">
+      <Modal className="custom-Modal modal-sm" show={showModal} onHide={handleCloseModal}>
+        <Modal.Body  className="">
       <div className="d-flex justify-content-center">
-
       <p className=" fs_14 red_ff fw-normal">Lost Card / Request  <br/> Replacement for Card ?</p>
       </div>
-
        <div className="w-100 d-flex justify-content-center align-items-center">
-
       <p  className=" w-50 d-flex justify-content-center text-blue border_bottom fs_14 fw-medium red_ff "> Click Here</p>
        </div>
         </Modal.Body>
-      
       </Modal>
+      </div>
     </div>
   );
 };

@@ -39,7 +39,7 @@ const CarRegistration = () => {
           </Form.Group>
         </Col>
 
-        <Button variant="primary" type="submit" className="mt-3 w-50  md:w-50">Add Now</Button>
+        <Button variant="primary" type="submit" className="mt-3 w-50  sm-w-100 ">Add Now</Button>
       </Form>
     </div>
   );

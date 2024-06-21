@@ -30,7 +30,7 @@ const FamilyMember = () => {
       <Row>
         <Col xs={12} md={3} className='mb-4 m-0'>
           <Card className='border-color d-flex flex-column justify-content-between pb-3 h-100 m-0'>
-          
+
             <Card.Body className='p-0'>
 
               <div className='d-flex justify-content-between m-0 p-0 py-3 align-items-center px-3'>
@@ -95,28 +95,39 @@ const FamilyMember = () => {
               <div>
                 <p className='ps-3 fs_20 fw-semibold red_ff'>Card Details</p>
                 <div className='d-flex align-items-center px-3 gap-3 justify-content-between flex-wrap'>
-                  <div>
-                    <p className='m-0 fs_14 font-color1'>Card Number</p>
-                    <p className='fs_18 fw-semibold mt-1 red_ff'>1234 5678 0123 4567</p>
-                  </div>
-                  <div>
-                    <p className='m-0 fs_14 font-color1'>Name on Card</p>
-                    <p className='fs_18 fw-semibold mt-1 red_ff'>Andrew James</p>
-                  </div>
-                  <div>
-                    <p className='m-0 fs_14 font-color1'>Card Type</p>
-                    <p className='fs_18 fw-semibold mt-1 red_ff'>Physical</p>
-                  </div>
-                  <div>
-                    <p className='m-0 fs_14 font-color1'>Issued On</p>
-                    <p className='fs_18 fw-semibold mt-1 red_ff'>02/24</p>
-                  </div>
+                <Row className='w-100 justify-content-between'>
+  <Col xs={6} md={3} className='d-flex'>
+    <div>
+      <p className='m-0 fs_14 font-color1'>Card Number</p>
+      <p className='fs_18 fw-semibold mt-1 red_ff'>1234 5678 0123 4567</p>
+    </div>
+  </Col>
+  <Col xs={6} md={3} className='d-flex justify-content-center'>
+    <div>
+      <p className='m-0 fs_14 font-color1'>Card Type</p>
+      <p className='fs_18 fw-semibold mt-1 red_ff'>Physical</p>
+    </div>
+  </Col>
+  <Col xs={6} md={3} className='d-flex justify-content-center'>
+    <div>
+      <p className='m-0 fs_14 font-color1'>Name on Card</p>
+      <p className='fs_18 fw-semibold mt-1 red_ff'>Andrew James</p>
+    </div>
+  </Col>
+  <Col xs={6} md={3} className='d-flex justify-content-center'>
+    <div>
+      <p className='m-0 fs_14 font-color1'>Issued On</p>
+      <p className='fs_18 fw-semibold mt-1 red_ff'>02/24</p>
+    </div>
+  </Col>
+</Row>
                 </div>
-              </div>
+                </div>
+
             </Card.Body>
-            <Card.Footer className='d-flex justify-content-end gap-3 mt-5 pt-5 flex-wrap bg-white border-0'>
-              <Button className='w-40 top-up-button my-3 mx-3 red_ff fs_16'>Top-Up Card</Button>
-              <Button className='w-40 top-up-button my-3 mx-3 red_ff fs_16'>Manage card</Button>
+            <Card.Footer className='d-flex justify-content-end gap-3 mt-5 pt-5  bg-white border-0'>
+              <Button className=' w-sm-40 top-up-button my-3 mx-3 red_ff fs_16'>Top-Up Card</Button>
+              <Button className=' w-sm-40 top-up-button my-3 mx-3 red_ff fs_16'>Manage card</Button>
             </Card.Footer>
           </Card>
         </Col>
@@ -132,10 +143,10 @@ const FamilyMember = () => {
               <p className='px-3 fs_18 pb-3 fw-semibold m-0'>Color</p>
               <div className='d-flex justify-content-evenly'>
                 <span className='circle bg-0 rounded-circle d-flex justify-content-center align-content-center text-wrap'>
-                <div className='d-flex'>
+                  <div className='d-flex'>
 
-                  <img src={Arrow} alt="" />
-                </div>
+                    <img src={Arrow} alt="" />
+                  </div>
                 </span>
                 <span className='circle bg-1 rounded-circle'></span>
                 <span className='circle bg-2 rounded-circle'></span>

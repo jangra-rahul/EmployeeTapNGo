@@ -29,8 +29,8 @@ const FrequentlyAskedQuestion = () => {
                 Money Top-Up <FaChevronRight style={{ marginLeft: 'auto' }} />
               </div>
               <Dropdown show={show} drop="down" onToggle={() => setShow(false)}>
-                <Dropdown.Toggle id="dropdown-basic-button" as="div" style={{ display: 'none' }} />
-                <Dropdown.Menu style={{ position: 'absolute', top: '100%', left: '0' }}>
+                <Dropdown.Toggle id="dropdown-basic-button" as="div"  />
+                <Dropdown.Menu >
                   <Dropdown.Item href="#/10">$10</Dropdown.Item>
                   <Dropdown.Item href="#/20">$20</Dropdown.Item>
                   <Dropdown.Item href="#/50">$50</Dropdown.Item>
