@@ -589,7 +589,7 @@ const UsagesList = () => {
   </Form.Group>
 )}        
 <Image
-  className="mb-2"
+  className="mb-2 pt-1"
   width={30}
   src={search}
   alt="Search"
@@ -597,7 +597,7 @@ const UsagesList = () => {
 />
 
 
-              <Image className="mb-2" width={30} src={bar} alt="Bar" />
+              <Image className="mb-2 pt-1" width={30} src={bar} alt="Bar" />
             </div>
           </Row>
         </div>
