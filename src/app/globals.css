@@ -135,7 +135,7 @@ a {
 }
 
 .red_ff {
-  font-family: "Red Hat Text", sans-serif;
+  font-family: "Red Hat Text", sans-serif !important;
   font-style: normal;
 }
 
