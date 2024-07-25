@@ -40,6 +40,7 @@ const Usages: React.FC = () => {
             backgroundColor: "#FFCA00",
             data: [90, 20, 130, 80, 50, 90, 30, 60, 90, 20, 80, 30],
             barThickness: 20,
+          
           },
           {
             label: "Spending",
@@ -65,11 +66,17 @@ const Usages: React.FC = () => {
           intersect: true,
         },
         legend: {
-          labels: {
-            fontColor: "rgba(0,0,0,.7)",
-          },
-          align: "start",
+            labels: {
+              boxWidth: 10,
+              fontColor: "rgba(0,0,0,.7)", // Adjust this value to make the boxes narrower
+            },
+            styles:{
+display:"none"
+            },
+            className: "custom-legend",
+          align: "cenetr",
           position: "top",
+        
         },
         scales: {
           xAxes: [
@@ -135,7 +142,8 @@ const Usages: React.FC = () => {
                 </div>
                 <div className=" border border-1 flex-auto">
                   {/* Chart */}
-                  <div className="relative d-flex justify-content-end mt-3 pe-2 ">
+                  <span className="relative d-flex justify-content-end mt-4 pe-2 mb-4 ">
+                    
                     <select
                       className="form-select w-auto"
                       value={year}
@@ -147,10 +155,11 @@ const Usages: React.FC = () => {
                         </option>
                       ))}
                     </select>
-                  </div>
+                  </span>
 
-                  <div className="relative h-350-px">
-                    <canvas id="bar-chart"></canvas>
+                  <div className="relative h-350-px  pb-3">
+                  
+                    <canvas id="bar-chart" ></canvas>
                   </div>
                 </div>
               </div>

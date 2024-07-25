@@ -25,30 +25,31 @@ const Myoffer = () => {
   return (
     <>
       <Layout>
-        <div className='px-3 '>
+        <div className='px-3 bg-white  mt-4 rounded-4 mx-3'>
 
         <div className=' bg-white rounded-3'>
-        <Container className='w-100 p-0 m-0 rounded-3'>
-          <Row className='pe-2 mt-3 '>
-            <div className='d-none d-md-block ps-4'>
-              <Image className='w-100 ' src={banner} alt="Banner" onClick={handleModalOpen} />
+        <div className='w-100 p-0 m-0 rounded-3'>
+          <h1 className='pt-4 ps-3 fs_28 fw-semibold red_ff'>My Offers</h1>
+          <Row className='px-2 mt-3 '>
+            <div className='d-none d-md-block   mb-4 h-100 '>
+              <Image className='w-100 my-4 h-100' src={banner} alt="Banner" onClick={handleModalOpen}/>
             </div>
-            <div className='d-block d-md-none'>
+            <div className='d-block d-md-none  px-4 py-4 '>
               <Image className='w-100 h-100' src={resposiveImage} alt="Banner" onClick={handleModalOpen} />
             </div>
           </Row>
-          <Row className='mt-3 gap-2 m-0 p-0 gap-md-0'>
-            <Col xs={12} md={3} className='mb-3 mb-md-5'>
-              <Image src={sale} alt="Sale 1" className='w-100' />
+          <Row className=' gap-2 m-0 p-0 gap-md-0 h-100'>
+            <Col xs={12} md={3} className='mb-3 mb-md-5 h-100 '>
+              <Image src={sale} alt="Sale 1" className='w-100 h-100' />
             </Col>
-            <Col xs={12} md={3} className='mb-3 mb-md-5'>
-              <Image src={secondsale} alt="Sale 2" className='w-100' />
+            <Col xs={12} md={3} className='mb-3 mb-md-5 h-100'>
+              <Image src={secondsale} alt="Sale 2" className='w-100 h-100' />
             </Col>
-            <Col xs={12} md={3} className='mb-3 mb-md-5'>
-              <Image src={thirdsale} alt="Sale 3" className='w-100' />
+            <Col xs={12} md={3} className='mb-3 mb-md-5 h-100'>
+              <Image src={thirdsale} alt="Sale 3" className='w-100 h-100' />
             </Col>
-            <Col xs={12} md={3} className='mb-3 mb-md-5'>
-              <Image src={fourthsale} alt="Sale 4" className='w-100' />
+            <Col xs={12} md={3} className='mb-3 mb-md-5 h-100'>
+              <Image src={fourthsale} alt="Sale 4" className='w-100 h-100' />
             </Col>
           </Row>
 
@@ -75,7 +76,7 @@ const Myoffer = () => {
               </Button>
             </Modal.Footer>
           </Modal>
-        </Container>
+        </div>
         </div>
         </div>
       </Layout>

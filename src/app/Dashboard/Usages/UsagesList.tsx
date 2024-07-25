@@ -9,11 +9,18 @@ import Share from "../../../../public/assets/images/svg/share.svg";
 import download from "../../../../public/assets/images/svg/download.svg";
 import Image from "next/image";
 
+
 type ComponentType = "Usage" | "Tax Invoice" | "Statements";
 const UsagesList = () => {
+ 
+  const [showSearchBar, setShowSearchBar] = useState(false);
   const [activeComponent, setActiveComponent] =
     useState<ComponentType>("Usage");
+    const handleSearchClick = () => {
 
+      setShowSearchBar(!showSearchBar);
+    
+    };
   const handleComponentChange = (component: ComponentType) => () =>
     setActiveComponent(component);
   const data = [
@@ -33,9 +40,105 @@ const UsagesList = () => {
       status: "Paid",
       amount: "$1.33",
     },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
   ];
 
   const data1 = [
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
     {
       code: "001491",
       date: "04 Jan 2024",
@@ -84,6 +187,48 @@ const UsagesList = () => {
       Recharge: "$1020",
       balance: "$1020",
     },
+    {
+      Description: "Monthly Statement",
+      date: "01-02-2024",
+      TotalUsage: "$1020",
+      Recharge: "$1020",
+      balance: "$1020",
+    },
+    {
+      Description: "Monthly Statement",
+      date: "01-02-2024",
+      TotalUsage: "$1020",
+      Recharge: "$1020",
+      balance: "$1020",
+    },
+    {
+      Description: "Monthly Statement",
+      date: "01-02-2024",
+      TotalUsage: "$1020",
+      Recharge: "$1020",
+      balance: "$1020",
+    },
+    {
+      Description: "Monthly Statement",
+      date: "01-02-2024",
+      TotalUsage: "$1020",
+      Recharge: "$1020",
+      balance: "$1020",
+    },
+    {
+      Description: "Monthly Statement",
+      date: "01-02-2024",
+      TotalUsage: "$1020",
+      Recharge: "$1020",
+      balance: "$1020",
+    },
+    {
+      Description: "Monthly Statement",
+      date: "01-02-2024",
+      TotalUsage: "$1020",
+      Recharge: "$1020",
+      balance: "$1020",
+    },
   ];
 
   const [selectedTab, setSelectedTab] = useState<
@@ -97,9 +242,9 @@ const UsagesList = () => {
   const renderTableData = () => {
     if (selectedTab === "Usage") {
       return (
-        <table className="table">
+        <table className="table table-responsive">
           <thead>
-            <tr>
+            <tr >
               <th
                 scope="col"
                 className="red-ff fs_16 fw-medium text-start Usage-text-color"
@@ -142,32 +287,32 @@ const UsagesList = () => {
           </thead>
           <tbody>
             {data.map((row, index) => (
-              <tr key={index}>
-                <td className="text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+              <tr key={index}  style={{borderBottom:"1px solid #cccccc"}}>
+                <td className="text-nowrap ps-2 text-start  fs_14 fw-normal Usage-text-color red_ff">
                   {row.code}
                 </td>
-                <td className="text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                <td className="text-nowrap text-start  ps-2  fs_14 fw-normal Usage-text-color red_ff">
                   {row.date}
                 </td>
-                <td className="text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                <td className="text-nowrap text-start  ps-2  fs_14 fw-normal Usage-text-color red_ff">
                   {row.name}
                 </td>
-                <td className="text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                <td className="text-nowrap text-start ps-2   fs_14 fw-normal Usage-text-color red_ff">
                   {row.company}
                 </td>
-                <td className="text-success fs_14 red_ff  text-start text-nowrap">
+                <td className="text-success fs_14 red_ff  ps-2  text-start text-nowrap">
                   {row.status}
                 </td>
-                <td className="fs_14 red_ff fw-medium  text-start text-nowrap ">
+                <td className="fs_14 red_ff fw-medium  ps-2  text-start text-nowrap ">
                   {row.amount}
                 </td>
                 <td>
-                  <p className="action text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                  <p className="action text-nowrap text-start  ps-2  fs_14 fw-normal Usage-text-color red_ff">
                     share <Image src={Share} alt="share" />
                   </p>
                 </td>
                 <td>
-                  <p className="action text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                  <p className="action text-nowrap text-start  ps-2  fs_14 fw-normal Usage-text-color red_ff">
                     download <Image src={download} alt="download" />
                   </p>
                 </td>
@@ -178,9 +323,9 @@ const UsagesList = () => {
       );
     } else if (selectedTab === "TaxInvoice") {
       return (
-        <table className="table">
+        <table className="table table-responsive">
           <thead>
-            <tr>
+            <tr >
               <th
                 scope="col"
                 className="red-ff fs_16 fw-medium text-start Usage-text-color "
@@ -217,32 +362,32 @@ const UsagesList = () => {
           </thead>
           <tbody>
             {data1.map((row, index) => (
-              <tr key={index}>
-                <td className="text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+              <tr key={index} style={{borderBottom:"1px solid #cccccc"}}>
+                <td className="text-nowrap text-start  ps-2 fs_14 fw-normal Usage-text-color red_ff">
                   {row.code}
                 </td>
-                <td className="text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                <td className="text-nowrap text-start  ps-2 fs_14 fw-normal Usage-text-color red_ff">
                   {row.date}
                 </td>
-                <td className="text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                <td className="text-nowrap text-start  ps-2 fs_14 fw-normal Usage-text-color red_ff">
                   {row.name}
                 </td>
-                <td className="text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                <td className="text-nowrap text-start  ps-2 fs_14 fw-normal Usage-text-color red_ff">
                   {row.company}
                 </td>
-                <td className="text-success fs_14 red_ff  text-start text-nowrap">
+                <td className="text-success fs_14 red_ff ps-2  text-start text-nowrap">
                   {row.status}
                 </td>
-                <td className="fs_14 red_ff fw-medium  text-start text-nowrap">
+                <td className="fs_14 red_ff fw-medium  ps-2 text-start text-nowrap">
                   {row.amount}
                 </td>
                 <td>
-                  <p className="action text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                  <p className="action text-nowrap text-start  ps-2 fs_14 fw-normal Usage-text-color red_ff">
                     share <Image src={Share} alt="share" />
                   </p>
                 </td>
                 <td>
-                  <p className="action text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                  <p className="action text-nowrap text-start  ps-2 fs_14 fw-normal Usage-text-color red_ff">
                     download <Image src={download} alt="download" />
                   </p>
                 </td>
@@ -253,12 +398,12 @@ const UsagesList = () => {
       );
     } else if (selectedTab === "Statements") {
       return (
-        <table className="table">
+        <table className="table table-responsive">
           <thead>
             <tr>
               <th
                 scope="col"
-                className="red-ff fs_16 fw-medium text-start Usage-text-color"
+                className="red-ff fs_16 fw-medium  text-start Usage-text-color"
               >
                 Description
               </th>
@@ -296,39 +441,39 @@ const UsagesList = () => {
           </thead>
           <tbody>
             {data2.map((row, index) => (
-              <tr key={index}>
-                <td className="text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+              <tr key={index} style={{borderBottom:"1px solid #cccccc"}}>
+                <td className="text-nowrap text-start ps-2  fs_14 fw-normal Usage-text-color red_ff">
                   {row.Description}
-                  <div className="border mt-3"></div>
+               
                 </td>
-                <td className="text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                <td className="text-nowrap text-start ps-2  fs_14 fw-normal Usage-text-color red_ff">
                   {row.date}
-                  <div className="border mt-3"></div>
+               
                 </td>
-                <td className="text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                <td className="text-nowrap text-start ps-2  fs_14 fw-normal Usage-text-color red_ff">
                   {row.TotalUsage}
-                  <div className="border mt-3"></div>
+               
                 </td>
-                <td className="text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                <td className="text-nowrap text-start ps-2  fs_14 fw-normal Usage-text-color red_ff">
                   {row.Recharge}
-                  <div className="border mt-3"></div>
+                
                 </td>
-                <td className="text-success fs_14 red_ff  text-start text-nowrap">
+                <td className="text-success fs_14 red_ff ps-2  text-start text-nowrap">
                   {row.balance}
-                  <div className="border mt-3"></div>
+                 
                 </td>
-                <td className="fs_14 red_ff fw-medium  text-start text-nowrap"></td>
+                <td className="fs_14 red_ff fw-medium ps-2  text-start text-nowrap"></td>
                 <td>
-                  <p className="action text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                  <p className="action text-nowrap text-start ps-2   fs_14 fw-normal Usage-text-color red_ff">
                     share <Image src={Share} alt="share" />
                   </p>
-                  <div className="border mt-3"></div>
+               
                 </td>
                 <td>
-                  <p className="action text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff">
+                  <p className="action text-nowrap text-start ps-2   fs_14 fw-normal Usage-text-color red_ff">
                     download <Image src={download} alt="download" />
                   </p>
-                  <div className="border mt-3"></div>
+                
                 </td>
               </tr>
             ))}
@@ -341,13 +486,14 @@ const UsagesList = () => {
   return (
     <>
       <div className="row">
-        <div className="rounded-2 mt-4 py-md-3 px-md-4 p-3">
-          <Row className="justify-content-between align-items-center">
+        <div className="rounded-2  py-md-3 px-md-4  p-3">
+          <Row className="justify-content-between align-items-center  " style={{borderBottom:"1.5px solid #cccccc"}}>
+          
             <div className="col-6">
-              <Row className="d-none d-md-flex Usage-gap-lg-2">
+              <Row className="d-none d-md-flex Usage-gap-lg-2 ">
                 <Col
                   sm={4}
-                  className="pe-0 text-center "
+                  className="ps-0 text-center "
                   onClick={() => handleTabClick("Usage")}
                 >
                   <Nav.Link
@@ -355,15 +501,15 @@ const UsagesList = () => {
                     className={selectedTab === "Usage" ? "" : ""}
                   >
                     <p
-                      className={`fs_24 Usage-custom-margin border-1 fw-medium List-text-color m-0 p-0 ${
-                        selectedTab === "Usage" ? "Usage-active" : ""
-                      }  `}
+                      className={`fs_24 Usage-custom-margin  fw-semibold List-text-color   m-0  ${
+                        selectedTab === "Usage" ? "Usage-active " : ""
+                      }  ` }
                     >
                       Usage
                     </p>
                   </Nav.Link>
                   <div
-                    className={` border  ${selectedTab === "Usage" ? "" : ""}`}
+                    className={` ${selectedTab === "Usage" ? "" : ""}`}
                   ></div>
                 </Col>
                 <Col
@@ -376,7 +522,7 @@ const UsagesList = () => {
                     className={selectedTab === "TaxInvoice" ? "" : ""}
                   >
                     <p
-                      className={`fs_24 Usage-custom-margin border-1 fw-medium List-text-color red_ff m-0 p-0  text-nowrap ${
+                      className={`fs_24 Usage-custom-margin  fw-semibold List-text-color red_ff  p-0 m-0 text-nowrap ${
                         selectedTab === "TaxInvoice" ? " Usage-active" : ""
                       } `}
                     >
@@ -384,7 +530,7 @@ const UsagesList = () => {
                     </p>
                   </Nav.Link>
                   <div
-                    className={` border  ${
+                    className={`   ${
                       selectedTab === "TaxInvoice" ? " " : ""
                     }`}
                   ></div>
@@ -399,7 +545,7 @@ const UsagesList = () => {
                     className={selectedTab === "Statements" ? "" : ""}
                   >
                     <p
-                      className={`fs_24 Usage-custom-margin border-1 fw-medium List-text-color red_ff m-0 p-0 ${
+                      className={`fs_24 Usage-custom-margin  fw-semibold List-text-color red_ff m-0 p-0  ${
                         selectedTab === "Statements" ? "Usage-active" : ""
                       }`}
                     >
@@ -407,7 +553,7 @@ const UsagesList = () => {
                     </p>
                   </Nav.Link>
                   <div
-                    className={` border  ${
+                    className={`   ${
                       selectedTab === "Statements" ? "" : ""
                     }`}
                   ></div>
@@ -432,8 +578,25 @@ const UsagesList = () => {
                 <div className="arrow-down"></div>
               </Form.Group>
             </div>
-            <div className="col-6 d-flex gap-3 border-bottom border-2 px-0 justify-content-end">
-              <Image className="mb-2" width={30} src={search} alt="Search" />
+            <div className="col-6 d-flex gap-2 border-2 px-0 justify-content-end">
+              
+              {/* <Image className="mb-2" width={30} src={search} alt="Search" /> */}
+
+      {showSearchBar && (
+  <Form.Group className="position-relative">
+    <Form.Control type="search" placeholder="Search" />
+    <div className="arrow-down"></div>
+  </Form.Group>
+)}        
+<Image
+  className="mb-2"
+  width={30}
+  src={search}
+  alt="Search"
+  onClick={handleSearchClick}
+/>
+
+
               <Image className="mb-2" width={30} src={bar} alt="Bar" />
             </div>
           </Row>

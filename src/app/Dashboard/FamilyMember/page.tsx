@@ -34,7 +34,7 @@ const FamilyMember = () => {
 
 
      <div className='py-3 mt-3 px-4 rounded-2 bg-white'>
-      <h1 className='pb-2 fw-semibold fs_28  red_ff dashboard-text-color'>Family Members</h1>
+      <h1 className='pb-2 fw-semibold fs_28  red_ff dashboard-text-color pt-4'>Family Members</h1>
       <Row className='px-2'>
         <Col xs={12} md={3} className='mb-4 m-0 p-0'>
           <Card className='border-color d-flex flex-column justify-content-between pb-3 h-100 m-0'>
@@ -46,14 +46,15 @@ const FamilyMember = () => {
                 <Image className='custom-plus-width m-0 p-0' src={plus} alt="Add Card" />
               </div>
               <div className='d-flex bg-lightblue p-0 justify-content-between'>
-                <div className='ms-2 pt-2'>
+                <div className='ms-3 ps-2 pt-3 '>
                   <p className='fs_18 fw-medium red_ff dashboard-text-color text-nowrap m-0 pb-1'>Andrew,s Card</p>
                   <p className='fs_14 m-0 font-color1 red_ff light-text-color'>Personal Card</p>
-                  <div className='d-flex align-items-center '>
+                  <div className='d-flex align-items-center pt-1 '>
                     <Image src={greenball} alt="Active" />
-                    <p className='fs_14 ms-2 p-0 font-color1 red_ff m-0 d-flex align-items-center light-text-color'>Active</p>
+                    <p className='fs_14 ms-2 p-0  font-color1 red_ff m-0 d-flex align-items-center light-text-color'>Active</p>
                   </div>
                 </div>
+                
                 <div className='text-end pt-4 p-0 m-0'>
                   <Image src={card} alt="Card" className='img-fluid' />
                 </div>
@@ -72,7 +73,7 @@ const FamilyMember = () => {
         <Col xs={12} md={6} className='mb-4'>
           <Card className='border-color d-flex flex-column justify-content-between h-100 p-0 m-0'>
             <Card.Body className='p-0'>
-              <div className='d-flex justify-content-between m-0 p-0 pt-2 align-items-center px-3'>
+              <div className='d-flex justify-content-between m-0 p-0 pt-3 align-items-center px-3'>
                 <p className='fs_20 fw-semibold red_ff dashboard-text-color  m-0'>Analytics</p>
                 <Button className='red_ff fs_16 rounded-1 text-white fs-sm-10 py-2 px-3 border-0 button-color fw-medium' onClick={handleShowDownloadModal}>
                   Download Card
@@ -95,8 +96,8 @@ const FamilyMember = () => {
                     </div>
                   </div>
                 </div>
-                <div className='text-end p-0 m-0'>
-                  <Image className="mb-3 img-fluid" src={HDFC_Card} alt="Card" />
+                <div className='text-end p-0 m-0   h-100'>
+                  <Image className="mb-3 w-100 h-100 " src={HDFC_Card} alt="Card" />
                 </div>
               </div>
               <hr />
@@ -104,25 +105,25 @@ const FamilyMember = () => {
                 <p className='ps-3 fs_20 fw-semibold red_ff dashboard-text-color'>Card Details</p>
                 <div className='d-flex align-items-center px-3 gap-3 justify-content-between flex-wrap'>
                 <Row className='w-100 justify-content-between'>
-  <Col xs={6} md={3} className='d-flex'>
+  <Col xs={6} md={8} lg={6} xl={5} className='d-flex'>
     <div>
       <p className='m-0 fs_14 light-text-color fw-normal red_ff'>Card Number</p>
-      <p className='fs_18 fw-medium mt-1 red_ff'>1234 5678 0123 4567</p>
+      <p className='fs_18 fw-medium mt-1 red_ff flex-wrap'>1234 5678 0123 4567</p>
     </div>
   </Col>
-  <Col xs={6} md={3} className='d-flex justify-content-center'>
+  <Col xs={6} md={4} lg={2} xl={2} className='d-flex justify-content-center'>
     <div>
       <p className='m-0 fs_14 light-text-color fw-normal red_ff'>Card Type</p>
       <p className='fs_18 fw-medium mt-1 red_ff'>Physical</p>
     </div>
   </Col>
-  <Col xs={6} md={3} className='d-flex '>
+  <Col xs={6} md={6} lg={2} xl={3} className='d-flex '>
     <div>
       <p className='m-0 fs_14 light-text-color fw-normal red_ff'>Name on Card</p>
       <p className='fs_18 fw-medium mt-1 red_ff'>Andrew James</p>
     </div>
   </Col>
-  <Col xs={6} md={3} className='d-flex justify-content-center'>
+  <Col xs={6} md={6}  xl={2} className='d-flex justify-content-center'>
     <div>
       <p className='m-0 fs_14 light-text-color fw-normal red_ff'>Issued On</p>
       <p className='fs_18 fw-medium mt-1 red_ff'>02/24</p>
@@ -134,8 +135,8 @@ const FamilyMember = () => {
 
             </Card.Body>
             <Card.Footer className='d-flex justify-content-end gap-3 mt-5 pt-5  bg-white border-0'>
-              <Button className=' w-sm-40 top-up-button my-2 mx-1 red_ff fs_16 border-0 '>Top-Up Card</Button>
-              <Button className=' w-sm-40 top-up-button my-2 mx-1 red_ff fs_16 border-0'>Manage card</Button>
+              <Button className=' w-sm-40 top-up-button  px-4 my-2 mx-1 red_ff fs_16 border-0 '>Top-Up Card</Button>
+              <Button className=' w-sm-40 top-up-button my-2 px-4 mx-1 red_ff fs_16 border-0'>Manage card</Button>
             </Card.Footer>
           </Card>
         </Col>
@@ -149,16 +150,16 @@ const FamilyMember = () => {
               </div>
               <hr />
               <p className='px-3 fs_18 pb-3 fw-semibold m-0'>Color</p>
-              <div className='d-flex justify-content-evenly flex-wrapno'>
-  <span className='circle bg-0 rounded-circle d-flex justify-content-center align-items-center text-wrap'>
-    <div className='d-flex '>
+              <div className='d-flex justify-content-evenly flex-nowrap'>
+  <span className='circle bg-0  rounded-circle d-flex justify-content-center align-items-center text-wrap'>
+    <div className='d-flex  '>
       <Image width={20} src={Arrow} alt="" />
     </div>
   </span>
-  <span className='circle bg-1  rounded-circle'></span>
-  <span className='circle bg-2 rounded-circle'></span>
-  <span className='circle bg-3 rounded-circle'></span>
-  <span className='circle bg-4 rounded-circle'></span>
+  <span className='circle bg-1   rounded-circle'></span>
+  <span className='circle bg-2   rounded-circle'></span>
+  <span className='circle bg-3   rounded-circle'></span>
+  <span className='circle bg-4   rounded-circle'></span>
  
 </div>
 <div className=' d-flex justify-content-evenly flex-nowrap  pt-2 '>

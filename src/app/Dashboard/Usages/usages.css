@@ -28,8 +28,9 @@
 }
 .Usage-active {
   color: #1364f1 !important;
+
   border-bottom: 3px solid #1364f1 !important; /* blue color */
-  padding-bottom: 0.5px;
+  padding-bottom: 5px !important;
 }
 #bar-chart {
   height: 322px !important;
@@ -125,4 +126,19 @@
 
 .h-400-px {
   height: 400px;
+}
+
+
+.table-responsive {
+
+  max-height: 300px; /* yeh height aapke hisaab se set karein */
+
+  overflow-y: auto;
+
+}
+.custom-legend{
+margin-top: -20px !important;
+  display: none  !important;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }

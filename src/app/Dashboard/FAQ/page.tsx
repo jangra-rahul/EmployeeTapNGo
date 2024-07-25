@@ -25,7 +25,7 @@ const FrequentlyAskedQuestion = () => {
 
 
 
-        <div className='px-3  bg-white rounded-2   px-3 mt-4'>
+        <div className='px-3  bg-white    px-3 mt-4'>
           <h1 className='fs_28 fw-semibold red_ff dashboard-text-color py-3 mt-2 pt-4 px-3'>Frequently Asked Question</h1>
 
           <Row className='py-3 mt-2 px-4' >
@@ -67,7 +67,11 @@ const FrequentlyAskedQuestion = () => {
                     <div className='dashboard-text-color fs_16 fw-semibold red_ff'>
 
                       How can I add funds to my account?
+
                     </div>
+                    <p>
+                      
+                    </p>
 
                     <hr /></Accordion.Header>
 
@@ -135,7 +139,7 @@ const FrequentlyAskedQuestion = () => {
                     culpa qui officia deserunt mollit anim id est laborum.
                   </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="5" className='border border-black mt-3 rounded-2'>
+                <Accordion.Item eventKey="5" className='border border-black mt-3 '>
                   <Accordion.Header className=" border-bottom-radius dashboard-text-color fs_16 fw-semibold red_ff">
                     <div className='dashboard-text-color fs_16 fw-semibold red_ff'>
 
@@ -158,7 +162,7 @@ const FrequentlyAskedQuestion = () => {
 
             <Col xs={12} md={5} className='mb-4 d-flex flex-column  h-100 justify-content-between'>
               <Accordion defaultActiveKey="0">
-                <Accordion.Item eventKey="1" className='border border-black  rounded-2'>
+                <Accordion.Item eventKey="1" className='border border-black  '>
                   <Accordion.Header className=" border-bottom-radius dashboard-text-color fs_16 fw-semibold red_ff">
                    <div className='dashboard-text-color fs_16 fw-semibold red_ff'>
 
@@ -176,7 +180,7 @@ const FrequentlyAskedQuestion = () => {
                     culpa qui officia deserunt mollit anim id est laborum.
                   </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="2" className='border border-black mt-3 rounded-2'>
+                <Accordion.Item eventKey="2" className='border border-black mt-3 '>
                   <Accordion.Header className=" border-bottom-radius">
                     <div className='dashboard-text-color fs_16 fw-semibold red_ff'>
 
@@ -194,7 +198,7 @@ const FrequentlyAskedQuestion = () => {
                     culpa qui officia deserunt mollit anim id est laborum.
                   </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="3" className='border border-black mt-3 rounded-2'>
+                <Accordion.Item eventKey="3" className='border border-black mt-3 '>
                   <Accordion.Header className=" border-bottom-radius">
                     <div className='dashboard-text-color fs_16 fw-semibold red_ff'>
                       Is there a minimum or maximum limit for money top-ups?
@@ -211,7 +215,7 @@ const FrequentlyAskedQuestion = () => {
                     culpa qui officia deserunt mollit anim id est laborum.
                   </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="4" className='border border-black mt-3 rounded-2'>
+                <Accordion.Item eventKey="4" className='border border-black mt-3 '>
                   <Accordion.Header className=" border-bottom-radius">
                     <div className='dashboard-text-color fs_16 fw-semibold red_ff'>
 
@@ -228,7 +232,7 @@ const FrequentlyAskedQuestion = () => {
                     culpa qui officia deserunt mollit anim id est laborum.
                   </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="5" className='border border-black mt-3 rounded-2'>
+                <Accordion.Item eventKey="5" className='border border-black mt-3 '>
                   <Accordion.Header className=" border-bottom-radius">
                     <div className='dashboard-text-color fs_16 fw-semibold red_ff'>
 

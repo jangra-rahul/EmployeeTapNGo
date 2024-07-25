@@ -23,7 +23,7 @@ const DownloadCardModal: React.FC<DownloadCardModalProps> = ({ show, handleClose
                 <Image src={Apple_wallet} alt="Apple Wallet" className="me-3 ms-3" />
                 <span className='fs-18 red_ff'>Apple Wallet</span>
               </div>
-              <input type="radio" name="wallet" className='me-4 '/>
+              <input type="radio" name="wallet" className='me-4 ' style={{width:"30px",height:"40px",backgroundColor:"white"}}/>
             </Card.Body>
           </Card>
           <Card className='mb-2 border-0 m-0'>
@@ -32,16 +32,16 @@ const DownloadCardModal: React.FC<DownloadCardModalProps> = ({ show, handleClose
                 <Image src={Samsung_wallet} alt="Samsung Wallet" className="me-3 ms-3" />
                 <span className="fs-18 red_ff"> Samsung Wallet</span>
               </div>
-              <input type="radio" name="wallet" className='me-4 ' />
+              <input type="radio" name="wallet" className='me-4 ' style={{width:"30px",height:"40px",backgroundColor:"white"}}/>
             </Card.Body>
           </Card>
           <Card className='mb-2 border-0 m-0'>
             <Card.Body className='d-flex justify-content-between align-items-center'>
               <div className='d-flex align-items-center'>
-                <Image src={Google_wallet} alt="Google Wallet" className="me-3 ms-3" />
+                <Image src={Google_wallet} alt="Google Wallet" className="me-3 ms-3"  />
                 <span className='fs-18 red_ff'>Google Wallet</span>
               </div>
-              <input type="radio" name="wallet" className='me-4 ' />
+              <input type="radio" name="wallet" className='me-4 ' style={{width:"30px",height:"40px",backgroundColor:"white"}} />
             </Card.Body>
           </Card>
         </Row>
