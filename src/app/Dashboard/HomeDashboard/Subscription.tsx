@@ -7,16 +7,22 @@ import Image from "next/image";
 const PlanCard = ({ planName, price, features, additionalClass }) => {
   return (
     <div className={`col-md-6 ${additionalClass}`}>
-      <div className="subscription-box p-3 rounded-2">
-        <h4 className="fs_16 fw-medium red_ff subcription-text-color">{planName}</h4>
+      <div className="subscription-box w-100 p-3 rounded-2">
+        <h4 className="fs_16 fw-medium red_ff subcription-text-color">
+          {planName}
+        </h4>
         <div className="d-flex align-items-end">
-          <span className="fs_24 red_ff  fw-semibold subcription-text-color">${price}</span>
+          <span className="fs_24 red_ff  fw-semibold subcription-text-color">
+            ${price}
+          </span>
           <span className="fs-6 mb-1">/Month</span>
         </div>
         {features.map((feature, index) => (
           <div className="d-flex align-items-center mt-3 gap-2" key={index}>
             <Image src={yellow_icon} alt="yellow_icon" />
-            <span className="fs_14 subcription-text-color red_ff fw-normal">{feature}</span>
+            <span className="fs_14 subcription-text-color red_ff fw-normal">
+              {feature}
+            </span>
           </div>
         ))}
       </div>
@@ -29,22 +35,42 @@ const Subscription = () => {
     {
       planName: "Starter Plan",
       price: 49,
-      features: ["Basic Reporting", "Email Reminders", "Budgeting Tools", "Budgeting Tools"],
+      features: [
+        "Basic Reporting",
+        "Email Reminders",
+        "Budgeting Tools",
+        "Budgeting Tools",
+      ],
     },
     {
       planName: "Basic Plan",
       price: 49,
-      features: ["Basic Reporting", "Email Reminders", "Budgeting Tools", "Budgeting Tools"],
+      features: [
+        "Basic Reporting",
+        "Email Reminders",
+        "Budgeting Tools",
+        "Budgeting Tools",
+      ],
     },
     {
       planName: "Premium Plan",
       price: 49,
-      features: ["Basic Reporting", "Email Reminders", "Budgeting Tools", "Budgeting Tools"],
+      features: [
+        "Basic Reporting",
+        "Email Reminders",
+        "Budgeting Tools",
+        "Budgeting Tools",
+      ],
     },
     {
       planName: "Premium Plan",
       price: 49,
-      features: ["Basic Reporting", "Email Reminders", "Budgeting Tools", "Budgeting Tools"],
+      features: [
+        "Basic Reporting",
+        "Email Reminders",
+        "Budgeting Tools",
+        "Budgeting Tools",
+      ],
     },
   ];
 
@@ -55,7 +81,7 @@ const Subscription = () => {
           <PlanCard
             key={index}
             {...plan}
-            additionalClass={index === 2 || index === 3 ? 'mt-4' : ''}
+            additionalClass={index === 2 || index === 3 ? "mt-4" : ""}
           />
         ))}
       </div>
@@ -67,8 +93,6 @@ const Subscription = () => {
 };
 
 export default Subscription;
-
-
 
 // "use client"
 // import React from "react";
