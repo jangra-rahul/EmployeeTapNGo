@@ -21,11 +21,11 @@ const FrequentlyAskedQuestion = () => {
   return (
     <>
       <Layout>
-<div className='px-2'>
+<div className='px-2 '>
 
 
 
-        <div className='px-3  bg-white    px-3 mt-4'>
+        <div className='px-3  bg-white rounded-3   px-3 mt-4'>
           <h1 className='fs_28 fw-semibold red_ff dashboard-text-color py-3 mt-2 pt-4 px-3'>Frequently Asked Question</h1>
 
           <Row className='py-3 mt-2 px-4' >
@@ -39,7 +39,7 @@ const FrequentlyAskedQuestion = () => {
                     Money Top-Up <FaChevronRight style={{ marginLeft: 'auto' }} />
                   </div>
                   <Dropdown show={show} drop="down" onToggle={() => setShow(false)}>
-                    <Dropdown.Toggle id="dropdown-basic-button" as="div" />
+                    {/* <Dropdown.Toggle id="dropdown-basic-button" as="div" /> */}
                     <Dropdown.Menu >
                       <Dropdown.Item href="#/10">$10</Dropdown.Item>
                       <Dropdown.Item href="#/20">$20</Dropdown.Item>

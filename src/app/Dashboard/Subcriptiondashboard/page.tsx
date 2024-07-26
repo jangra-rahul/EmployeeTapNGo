@@ -93,7 +93,7 @@ const Subscription = () => {
                     
                         {isSelect=== index?<><div className='fs_14 w-100 text-center  '>
                           <span className='w-100 d-flex justify-content-center'>
-                          <p className='text-center fw-semibold fs_16 red_ff w-25 ' style={{borderBottom:"2px solid #1364F1",color:"#1364F1"}}>cancle</p>
+                          <p className='text-center fw-semibold fs_16 red_ff w-25 ' style={{borderBottom:"2px solid #1364F1",color:"#1364F1"}}>Cancle</p>
                           </span>
                         
                           <button className='fs_14 w-100 text-dark fw-smedium red_ff fs_16 current-plan-bg border-0 rounded-3 py-2 text-center'> Current Plan</button>

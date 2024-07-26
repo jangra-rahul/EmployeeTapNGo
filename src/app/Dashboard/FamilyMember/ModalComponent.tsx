@@ -15,15 +15,16 @@ const ModalComponent: React.FC<ModalComponentProps> = ({ show, handleClose, hand
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton className='border-0 m-0 p-0 pt-4 pe-4'>
-      </Modal.Header>
-      <Modal.Body>
-        <Modal.Title className='fs_24 red_ff d-flex justify-content-center dashboard-text-color pb-2 mb-2 fw-semibold'>Add Family Member</Modal.Title>
+      </Modal.Header >
+      <Modal.Body centered>
+        <Modal.Title className='fs_24 red_ff d-flex justify-content-center dashboard-text-color pb-2 mb-3 mt-3 fw-semibold'>Add Family Member</Modal.Title>
         <Form onSubmit={handleSubmit} className='mx-3'>
           <Form.Group as={Row} className="mb-3" controlId="formCardNumber">
-            <Form.Label className='fs-18 red_ff p-0 m-0 pb-2 text-dark'>
+            <Form.Label className='fs-18 red_ff p-0 m-0 pb-2 text-dark' >
               Card Number
             </Form.Label>
-            <Form.Control className='py-2' type="text" prefix='verify' />
+           
+      <Form.Control  className='custom-input py-2' type="text" placeholder="Verify" />
           </Form.Group>
 
           <Form.Group as={Row} className="mb-3" controlId="formNameOnCard">
@@ -67,7 +68,7 @@ const ModalComponent: React.FC<ModalComponentProps> = ({ show, handleClose, hand
             </div>
           </Form.Group>
 
-          <Button variant="primary" type="submit" className='w-100 red_ff fs-16'>
+          <Button variant="primary" type="submit" className='w-100 red_ff fs-16 py-3 fw-semibold'>
             Submit
           </Button>
         </Form>

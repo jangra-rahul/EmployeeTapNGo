@@ -45,7 +45,7 @@ const DownloadCardModal: React.FC<DownloadCardModalProps> = ({ show, handleClose
             </Card.Body>
           </Card>
         </Row>
-        <Button variant="primary" className='w-100 mt-3'>Download</Button>
+        <Button variant="primary" className='w-100 mt-3 py-3'>Download</Button>
       </Modal.Body>
     </Modal>
   );

@@ -33,7 +33,7 @@ const FamilyMember = () => {
 <div  className='px-2'>
 
 
-     <div className='py-3 mt-3 px-4 rounded-2 bg-white'>
+     <div className='py-1 mt-3 px-4 rounded-2 bg-white'>
       <h1 className='pb-2 fw-semibold fs_28  red_ff dashboard-text-color pt-4'>Family Members</h1>
       <Row className='px-2'>
         <Col xs={12} md={3} className='mb-4 m-0 p-0'>
@@ -97,7 +97,7 @@ const FamilyMember = () => {
                   </div>
                 </div>
                 <div className='text-end p-0 m-0   h-100'>
-                  <Image className="mb-3 w-100 h-100 " src={HDFC_Card} alt="Card" />
+                  <Image className="mb-3  h-100 img-fluid " src={HDFC_Card} alt="Card" />
                 </div>
               </div>
               <hr />
@@ -135,14 +135,14 @@ const FamilyMember = () => {
 
             </Card.Body>
             <Card.Footer className='d-flex justify-content-end gap-3 mt-5 pt-5  bg-white border-0'>
-              <Button className=' w-sm-40 top-up-button  px-4 my-2 mx-1 red_ff fs_16 border-0 '>Top-Up Card</Button>
-              <Button className=' w-sm-40 top-up-button my-2 px-4 mx-1 red_ff fs_16 border-0'>Manage card</Button>
+              <Button className=' w-sm-40 top-up-button  fw-medium px-4 my-2 mx-1 red_ff fs_16 border-0 '>Top-Up Card</Button>
+              <Button className=' w-sm-40 top-up-button my-2 fw-medium px-4 mx-1 red_ff fs_16 border-0'>Manage card</Button>
             </Card.Footer>
           </Card>
         </Col>
 
 
-        <Col xs={12} md={3} className='mb-4'>
+        <Col xs={12} md={3}  className='mb-4'>
           <Card className='border-color d-flex flex-column h-100 p-0 m-0 bg-white'>
             <Card.Body className='p-0'>
               <div className='p-0 pt-3 px-3'>
