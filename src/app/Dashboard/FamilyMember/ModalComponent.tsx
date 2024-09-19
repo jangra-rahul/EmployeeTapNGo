@@ -4,6 +4,7 @@ import Apple_wallet from "../../../../public/assets/images/svg/apple-wallet.svg"
 import Samsung_wallet from "../../../../public/assets/images/svg/samsung-wallet.svg";
 import Google_wallet from "../../../../public/assets/images/svg/google_wallet.svg";
 import exclamation from "../../../../public/assets/images/svg/exclamation.svg";
+import Image from "next/image";
 
 interface ModalComponentProps {
   show: boolean;
@@ -72,7 +73,7 @@ const ModalComponent: React.FC<ModalComponentProps> = ({
             controlId="formTwoWaySync"
           >
             <Form.Label column sm={4} className="px-0">
-              Two way sync <img src={exclamation} alt="" />
+              Two way sync <Image src={exclamation} alt="" />
             </Form.Label>
             <div className="d-flex gap-3 px-0">
               <Form.Check

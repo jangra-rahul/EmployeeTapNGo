@@ -17,7 +17,7 @@ import "../OtpVerification/otp.css";
 import Link from "next/link";
 import logo from "../../../../public/assets/images/svg/logo.svg";
 
-const VerificationCard = ({ closeCard }) => {
+const VerificationCard = () => {
   const [otpValues, setOtpValues] = useState<string[]>([
     "",
     "",
@@ -56,8 +56,7 @@ const VerificationCard = ({ closeCard }) => {
   };
 
   const closeVerifyModal = () => {
-    setIsVerifyModalOpen(false);
-    closeCard(); // Close the verification card if needed
+    setIsVerifyModalOpen(false); // Close the verification card if needed
   };
 
   // Render next screen if showNextScreen is true
@@ -121,7 +120,7 @@ const VerificationCard = ({ closeCard }) => {
         <Card.Body className="position-relative">
           <Link href="/Dashboard/ForgotCredential">
             <Image
-              onClick={closeCard}
+              // onClick={closeCard}
               className="position-absolute mt-2 me-2 end-0 top-0"
               width={15}
               src={cross_icon}

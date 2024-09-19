@@ -26,8 +26,8 @@ type TabType = "Manual" | "Auto" | "Subscription";
 
 const Home: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<TabType>("Manual");
-  const [showModal, setShowModal] = useState(false);
-  const handleShowModal = () => setShowModal(true);
+  // const [showModal, setShowModal] = useState(false);
+  // const handleShowModal = () => setShowModal(true);
   const [toggleState, setToggleState] = useState(false);
   const [showNewModal, setShowNewModal] = useState(false);
   const [showNewModalAssignCredit, setShowNewModalAssignCredit] =
@@ -36,25 +36,25 @@ const Home: React.FC = () => {
   const handleTabClick = (tab: TabType) => {
     setSelectedTab(tab);
   };
-  const handleDocumentClick = (event) => {
-    // Check if the click was outside the modal
-    if (showModal) {
-      setShowModal(false);
-    }
-  };
+  // const handleDocumentClick = () => {
+  //   // Check if the click was outside the modal
+  //   if (showModal) {
+  //     setShowModal(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    if (showModal) {
-      document.addEventListener("click", handleDocumentClick);
-    } else {
-      document.removeEventListener("click", handleDocumentClick);
-    }
+  // useEffect(() => {
+  //   if (showModal) {
+  //     document.addEventListener("click", handleDocumentClick);
+  //   } else {
+  //     document.removeEventListener("click", handleDocumentClick);
+  //   }
 
-    // Clean up the event listener when the component is unmounted
-    return () => {
-      document.removeEventListener("click", handleDocumentClick);
-    };
-  }, [showModal]);
+  //   // Clean up the event listener when the component is unmounted
+  //   return () => {
+  //     document.removeEventListener("click", handleDocumentClick);
+  //   };
+  // }, [showModal]);
 
   const [showDownloadModal, setShowDownloadModal] = useState(false);
   const [showCreditModeModal, setShowCreditModeModal] = useState(false);
@@ -83,9 +83,9 @@ const Home: React.FC = () => {
   const handleShowNewModal = () => setShowNewModal(true);
   return (
     <Layout>
-      {showModal && (
+      {/* {showModal && (
         <div className={`${showModal === true && "custom_all_dark"}`}></div>
-      )}
+      )} */}
       <div style={{ height: "96%" }} className="px-2">
         <div className="pb-4 pt-3 h-100 ps-2">
           <Row className="h-100">

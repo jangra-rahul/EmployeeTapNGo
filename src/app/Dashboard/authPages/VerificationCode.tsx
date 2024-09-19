@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Modal, Button, Container, Row, Col } from "react-bootstrap";
 import cross_icon from "../../../../public/assets/images/svg/cross_icon.svg";
-import Success_icon from "../../../../public/assets/images/svg/Success_icon.svg";
+import Success_icon from "../../../../public/assets/images/svg/success_icon.svg";
 import Image from "next/image";
 
 interface Props {

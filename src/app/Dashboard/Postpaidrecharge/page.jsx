@@ -23,7 +23,7 @@ const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [showModal1, setShowModal1] = useState(false);
   const [limitshowModal1, setLimitShowModal1] = useState(false);
-  const handleShowModal = () => setShowModal(true);
+  // const handleShowModal = () => setShowModal(true);
   const handleShowModal1 = () => setShowModal1(true);
   const handleLimitShowModal = () => setLimitShowModal1(true);
   const [toggleState, setToggleState] = useState(false);
@@ -32,25 +32,25 @@ const Page = () => {
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
   };
-  const handleDocumentClick = (event) => {
-    // Check if the click was outside the modal
-    if (showModal) {
-      setShowModal(false);
-    }
-  };
+  // const handleDocumentClick = (event) => {
+  //   // Check if the click was outside the modal
+  //   if (showModal) {
+  //     setShowModal(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    if (showModal) {
-      document.addEventListener("click", handleDocumentClick);
-    } else {
-      document.removeEventListener("click", handleDocumentClick);
-    }
+  // useEffect(() => {
+  //   if (showModal) {
+  //     document.addEventListener("click", handleDocumentClick);
+  //   } else {
+  //     document.removeEventListener("click", handleDocumentClick);
+  //   }
 
-    // Clean up the event listener when the component is unmounted
-    return () => {
-      document.removeEventListener("click", handleDocumentClick);
-    };
-  }, [showModal]);
+  //   // Clean up the event listener when the component is unmounted
+  //   return () => {
+  //     document.removeEventListener("click", handleDocumentClick);
+  //   };
+  // }, [showModal]);
 
   const [showDownloadModal, setShowDownloadModal] = useState(false);
   const handleCloseDownloadModal = () => setShowDownloadModal(false);
