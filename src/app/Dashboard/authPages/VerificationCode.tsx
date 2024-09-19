@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Modal, Button, Container, Row, Col } from "react-bootstrap";
 import cross_icon from "../../../../public/assets/images/svg/cross_icon.svg";
-import success_icon from "../../../../public/assets/images/svg/success_icon.svg";
+import right_img from "../../../../public/assets/images/svg/right_img.svg";
 import Image from "next/image";
 
 interface Props {
@@ -130,7 +130,7 @@ const VerificationCode: React.FC<Props> = ({ isModalOpen, closeModal }) => {
           <Modal.Header className="flex-column">
             <Modal.Title className="text-center  flex-column d-flex mt-3 red_ff fs_24">
               <div className="d-flex justify-content-center">
-                <Image width={100} src={success_icon} alt="Success_icon" />
+                <Image width={100} src={right_img} alt="right_img" />
               </div>
               Verification Successful
             </Modal.Title>

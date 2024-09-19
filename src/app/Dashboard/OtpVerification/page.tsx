@@ -11,7 +11,7 @@ import {
   Form,
 } from "react-bootstrap";
 import cross_icon from "../../../../public/assets/images/svg/cross_icon.svg";
-import success_icon from "../../../../public/assets/images/svg/success_icon.svg";
+import right_img from "../../../../public/assets/images/svg/right_img.svg";
 import wrong_icon from "../../../../public/assets/images/svg/wrong_icon.svg";
 import "../OtpVerification/otp.css";
 import Link from "next/link";
@@ -96,7 +96,7 @@ const VerificationCard = () => {
               />
             </Form.Group>
             <div className="d-flex align-items-center gap-2 mt-2">
-              <Image width={20} src={success_icon} alt="Success_icon" />
+              <Image width={20} src={right_img} alt="right_img" />
               <p className="mb-0 red_ff fs_14" style={{ color: "#666666" }}>
                 Password must be in 8 Character
               </p>
@@ -190,7 +190,7 @@ const VerificationCard = () => {
           <Modal.Header className="flex-column p-5">
             <Modal.Title className="text-center flex-column d-flex mt-3 red_ff fs_24">
               <div className="d-flex justify-content-center">
-                <Image width={70} src={success_icon} alt="Success_icon" />
+                <Image width={70} src={right_img} alt="right_img" />
               </div>
               <h6 style={{ fontWeight: "500" }} className="mt-2 red_ff fs_24">
                 Verification Successful
