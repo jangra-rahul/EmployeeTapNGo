@@ -17,6 +17,8 @@ import Faq_icon from "../../../../public/assets/images/svg/faq_icon.svg";
 import close_icon from "../../../../public/assets/images/svg/close_manu.svg";
 import Support_icon from "../../../../public/assets/images/svg/support_icon.svg";
 import Corporate_icon from "../../../../public/assets/images/svg/corpocate_icon.svg";
+import Employees_icon from "../../../../public/assets/images/svg/Employees_icon.svg";
+import VehicleFleet_icon from "../../../../public/assets/images/svg/VehicleFleet_icon.svg";
 import profile from "../../../../public/assets/images/svg/profile_icon.svg";
 import { Form } from "react-bootstrap";
 import Link from "next/link";
@@ -87,6 +89,8 @@ const Admindashboard: React.FC = () => {
                 className={
                   pathname === "/Dashboard/HomeDashboard"
                     ? "active-color text-white"
+                    : pathname == "/Dashboard/Postpaidrecharge"
+                    ? "active-color text-white"
                     : ""
                 }
               >
@@ -99,6 +103,28 @@ const Admindashboard: React.FC = () => {
                       height={16}
                     />
                     <span className="mb-0 fs_14 red_ff">Home</span>
+                  </div>
+                </Link>
+              </Menu.Item>
+              <Menu.Item
+                key="9"
+                className={
+                  pathname === "/Dashboard/Employees"
+                    ? "active-color text-white"
+                    : pathname == "/Dashboard/EmployeeDetails"
+                    ? "active-color text-white"
+                    : ""
+                }
+              >
+                <Link href="/Dashboard/Employees">
+                  <div className="d-flex gap-2  align-items-center ps-4">
+                    <Image
+                      src={Employees_icon}
+                      alt="home_icon"
+                      width={16}
+                      height={16}
+                    />
+                    <span className="mb-0 fs_14 red_ff">Employees</span>
                   </div>
                 </Link>
               </Menu.Item>
@@ -119,6 +145,26 @@ const Admindashboard: React.FC = () => {
                       height={16}
                     />
                     <span className="mb-0 fs_14 red_ff">Corporate Cards</span>
+                  </div>
+                </Link>
+              </Menu.Item>
+              <Menu.Item
+                key="10"
+                className={
+                  pathname === "/Dashboard/VehicleFleet"
+                    ? "active-color text-white"
+                    : ""
+                }
+              >
+                <Link href="/Dashboard/VehicleFleet">
+                  <div className="d-flex gap-2  align-items-center ps-4">
+                    <Image
+                      src={VehicleFleet_icon}
+                      alt="home_icon"
+                      width={16}
+                      height={16}
+                    />
+                    <span className="mb-0 fs_14 red_ff">Vehicle Fleet </span>
                   </div>
                 </Link>
               </Menu.Item>

@@ -19,7 +19,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <Col
           xs={12}
           lg={12}
-          className="header-background-color pb-5 min-vh-100 custom-right-margin"
+          className="header-background-color px-md-3 pe-md-4 pb-5 min-vh-100 custom-right-margin"
         >
           <Navbar />
           {children}
