@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useRef, useEffect } from "react";
 import { Modal, Button, Container, Row, Col } from "react-bootstrap";
 import cross_icon from "../../../../public/assets/images/svg/cross_icon.svg";
@@ -111,7 +111,12 @@ const VerificationCode: React.FC<Props> = ({ isModalOpen, closeModal }) => {
       </Modal>
 
       {/* Verification Success Modal */}
-      <Modal show={isVerifyModalOpen} onHide={closeVerifyModal} centered>
+      <Modal
+        className="custom-modal"
+        show={isVerifyModalOpen}
+        onHide={closeVerifyModal}
+        centered
+      >
         <div className="position-relative">
           <a className="" href="#">
             <Image

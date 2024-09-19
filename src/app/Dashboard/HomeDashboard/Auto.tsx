@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, Modal } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
 import card_icon from "../../../../public/assets/images/svg/card_icon.svg";
+import Link from "next/link";
 
 type AmountOption = {
   label: string;
@@ -20,7 +21,8 @@ const Auto: React.FC = () => {
 
   const [selectedAmount, setSelectedAmount] = useState<string | null>(null);
   const [selectedTrigger, setSelectedTrigger] = useState<string | null>(null);
-  const [selected, setSelected] = useState<string | Boolean>(false);
+  const [selected, setSelected] = useState<boolean>(false);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   const handleAmountClick = (value: string) => {
     setSelectedAmount(value);
@@ -30,9 +32,12 @@ const Auto: React.FC = () => {
     setSelectedTrigger(value);
   };
 
+  const handleModalClose = () => setShowModal(false);
+  const handleModalShow = () => setShowModal(true);
+
   return (
-    <Container>
-      <div className="d-flex flex-column justify-content-between h-vh-100">
+    <Container className="px-0 h-100">
+      <div className="d-flex flex-column justify-content-between h-100">
         <div>
           <p className="mb-0 fs_14 fw-normal red_ff dashboard-text-color">
             With auto recharge, we will recharge your card / fob when your
@@ -57,7 +62,6 @@ const Auto: React.FC = () => {
               </Col>
             ))}
           </Row>
-
           <h4 className="mt-3 fs_18 fw-semibold red_ff dashboard-text-color">
             Recharge trigger point
           </h4>
@@ -77,46 +81,90 @@ const Auto: React.FC = () => {
               </Col>
             ))}
           </Row>
-        </div>
-        {selected ? (
-          <>
-            <h5 className=" fs_18 red_ff fw-semibold">Payment From</h5>
-            <div className="card p-2 mt-2">
-              <div className="d-flex align-items-center justify-content-between ">
-                <div className="d-flex w-100 align-items-center">
-                  <Image src={card_icon} alt="card_icon" />
-                  <input
-                    className=" w-100 border-0 px-3"
-                    type="password"
-                    name=""
-                    placeholder="**** **** **** 1234"
-                    id=""
-                  />
+          {selected && (
+            <>
+              <h5 className=" fs_18 red_ff fw-semibold">Payment From</h5>
+              <div className="card p-2 mt-2">
+                <div className="d-flex align-items-center justify-content-between ">
+                  <div className="d-flex w-100 align-items-center">
+                    <Image src={card_icon} alt="card_icon" />
+                    <input
+                      className=" w-100 border-0 px-3"
+                      type="password"
+                      placeholder="**** **** **** 1234"
+                    />
+                  </div>
+                  <button className=" bg_yellow py-1 rounded-2 border-0 px-2 red_ff fs_13">
+                    Primary
+                  </button>
                 </div>
-                <button className=" bg_yellow  border-0 px-2 red_ff fs_13">
-                  Primary
-                </button>
               </div>
-            </div>
-            <button className=" red_ff color_blue mb-2 py-2 custom_bolrder mt-3">
-              Add Other Payment Method
-            </button>
-            <span className="mb-5 text-decoration-underline color_blue red_ff mt-2">
-              Manage Card
-            </span>
-          </>
-        ) : (
-          <></>
-        )}
-        <div className="d-flex flex-column justify-content-end mt-4">
-          <Button
-            onClick={() => setSelected(true)}
-            className="w-100 py-2 fs-16 fw-semibold rounded-2 bg-primary text-white"
-          >
-            Set Auto Top-up Now
-          </Button>
+              <button className=" red_ff color_blue mb-2 py-2 custom_bolrder mt-3">
+                Add Other Payment Method
+              </button>
+
+              <span
+                className="mb-5 cursor-pointer text-decoration-underline color_blue red_ff mt-2"
+                onClick={handleModalShow}
+              >
+                Manage Card
+              </span>
+            </>
+          )}
         </div>
+        {!selected ? (
+          <div className="d-flex flex-column justify-content-end mt-4">
+            {/* <Link href="/Dashboard/Payment"> */}
+            <Button
+              onClick={() => setSelected(true)}
+              className="w-100 py-2 fs-16 fw-semibold rounded-2 bg-primary text-white"
+            >
+              Set Auto Top-up Now
+            </Button>
+            {/* </Link> */}
+          </div>
+        ) : (
+          <div className="d-flex flex-column justify-content-end mt-4">
+            <Link href="/Dashboard/Payment">
+              <Button
+                onClick={() => setSelected(true)}
+                className="w-100 py-2 fs-16 fw-semibold rounded-2 bg-primary text-white"
+              >
+                Update Auto Payment
+              </Button>
+            </Link>
+          </div>
+        )}
       </div>
+
+      {/* Modal for Manage Card */}
+      <Modal show={showModal} centered onHide={handleModalClose}>
+        <Modal.Header closeButton className="border-0 px-4">
+          <Modal.Title className="red_ff">Manage Card</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="border-0 pt-1 px-4">
+          <div className="card p-2 mt-2">
+            <div className="d-flex align-items-center justify-content-between ">
+              <div className="d-flex w-100 align-items-center">
+                <Image src={card_icon} alt="card_icon" />
+                <input
+                  className=" w-100 border-0 px-3"
+                  type="password"
+                  placeholder="**** **** **** 1234"
+                />
+              </div>
+              <button className=" bg_yellow py-1 rounded-2 border-0 px-2 red_ff fs_13">
+                Primary
+              </button>
+            </div>
+          </div>
+        </Modal.Body>
+        <Modal.Footer className="border-0 pt-5 mt-5 px-4">
+          <Button className="w-100 py-2 fs-16 fw-semibold mt-5 rounded-2 bg-primary text-white">
+            Add Backup Payment Method
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
   );
 };

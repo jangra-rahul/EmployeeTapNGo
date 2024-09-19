@@ -1,16 +1,48 @@
 "use client";
-import React from "react";
-import { Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Modal } from "react-bootstrap";
 import yellow_icon from "../../../../public/assets/images/svg/yellow_icon.svg";
 import Image from "next/image";
 
-const PlanCard = ({ planName, price, features, additionalClass }) => {
+const PlanCard: ({
+  planName,
+  price,
+  features,
+  additionalClass,
+  Popular,
+}: {
+  planName: any;
+  price: any;
+  features: any;
+  additionalClass: any;
+  Popular?: any;
+}) => React.JSX.Element = ({
+  planName,
+  price,
+  features,
+  additionalClass,
+  Popular,
+}) => {
   return (
     <div className={`col-md-6 ${additionalClass}`}>
       <div className="subscription-box w-100 p-3 rounded-2">
-        <h4 className="fs_16 fw-medium red_ff subcription-text-color">
-          {planName}
-        </h4>
+        <div className="d-flex justify-content-between align-items-center">
+          <h4 className="fs_16 fw-medium red_ff subcription-text-color">
+            {planName}
+          </h4>
+          {Popular ? (
+            <>
+              <span
+                className="fs_13 red_ff px-2 py-1 fw-semibold rounded-2"
+                style={{ backgroundColor: "#E3F4E7", color: "#0E8029" }}
+              >
+                {Popular}
+              </span>
+            </>
+          ) : (
+            <></>
+          )}
+        </div>
         <div className="d-flex align-items-end">
           <span className="fs_24 red_ff  fw-semibold subcription-text-color">
             ${price}
@@ -31,6 +63,11 @@ const PlanCard = ({ planName, price, features, additionalClass }) => {
 };
 
 const Subscription = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShow = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
+
   const plans = [
     {
       planName: "Starter Plan",
@@ -44,7 +81,7 @@ const Subscription = () => {
     },
     {
       planName: "Basic Plan",
-      price: 49,
+      price: 99,
       features: [
         "Basic Reporting",
         "Email Reminders",
@@ -54,17 +91,18 @@ const Subscription = () => {
     },
     {
       planName: "Premium Plan",
-      price: 49,
+      price: 199,
       features: [
         "Basic Reporting",
         "Email Reminders",
         "Budgeting Tools",
         "Budgeting Tools",
       ],
+      Popular: "Popular",
     },
     {
-      planName: "Premium Plan",
-      price: 49,
+      planName: "Platinum Plan",
+      price: 229,
       features: [
         "Basic Reporting",
         "Email Reminders",
@@ -75,7 +113,10 @@ const Subscription = () => {
   ];
 
   return (
-    <div className="container">
+    <div
+      id="subscription"
+      className="container px-0 h-100 d-flex flex-column justify-content-between"
+    >
       <div className="row">
         {plans.map((plan, index) => (
           <PlanCard
@@ -85,9 +126,80 @@ const Subscription = () => {
           />
         ))}
       </div>
-      <div className="mt-5 text-center w-100">
-        <Button className="w-100 py-2">Update Auto Payment</Button>
+      <div className="text-center w-100 mt-4">
+        <Button className="w-100 py-2" onClick={handleShow}>
+          Update Auto Payment
+        </Button>
       </div>
+
+      <Modal
+        style={{
+          maxWidth: "350px",
+          margin: "0 auto",
+          position: "absolute",
+          right: "0",
+          borderRadius: "0",
+        }}
+        show={showModal}
+        centered
+        onHide={handleClose}
+      >
+        <div className="w-100 rounded-1 bg-white">
+          <Modal.Header closeButton>
+            <Modal.Title></Modal.Title>
+            <div>
+              <p className=" mb-0 red_ff fw-normal">Starter Plan</p>
+              <div className="d-flex red_ff align-items-end">
+                <span className=" fs_28 red_ff fw-semibold subcription-text-color">
+                  $200
+                </span>
+                <span className="fs-6 mb-1 fw-normal">/Month</span>
+              </div>
+            </div>
+          </Modal.Header>
+          <Modal.Body>
+            <div className="d-flex align-items-center gap-3">
+              <Image src={yellow_icon} alt="yellow_icon" />
+              <span className="fs_14 subcription-text-color red_ff fw-normal">
+                Basic Reporting
+              </span>
+            </div>
+            <div className="d-flex align-items-center gap-3 mt-4">
+              <Image src={yellow_icon} alt="yellow_icon" />
+              <span className="fs_14 subcription-text-color red_ff fw-normal">
+                Email Reminders
+              </span>
+            </div>
+            <div className="d-flex align-items-center gap-3 mt-4">
+              <Image src={yellow_icon} alt="yellow_icon" />
+              <span className="fs_14 subcription-text-color red_ff fw-normal">
+                Budgeting Tools
+              </span>
+            </div>
+            <div className="d-flex align-items-center gap-3 mt-4">
+              <Image src={yellow_icon} alt="yellow_icon" />
+              <span className="fs_14 subcription-text-color red_ff fw-normal">
+                Expense Tracking
+              </span>
+            </div>
+            <div className="d-flex align-items-center gap-3 mt-4">
+              <Image src={yellow_icon} alt="yellow_icon" />
+              <span className="fs_14 subcription-text-color red_ff fw-normal">
+                Customer Support
+              </span>
+            </div>
+          </Modal.Body>
+          <Modal.Footer className="border-0">
+            <Button
+              className="w-100 py-3"
+              variant="primary"
+              onClick={handleClose}
+            >
+              Subscribe Now
+            </Button>
+          </Modal.Footer>
+        </div>
+      </Modal>
     </div>
   );
 };

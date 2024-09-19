@@ -137,7 +137,10 @@ const Support = () => {
       <Layout>
         <div className="px-3">
           <div className="border-rounded">
-            <Row className=" py-3 mt-4 p-sm-0 rounded-3 bg-white ">
+            <Row
+              className=" py-3 mt-4 p-sm-0 rounded-3 bg-white "
+              style={{ minHeight: "84vh" }}
+            >
               <Col className="px-4 pt-2 ">
                 <div className="d-flex align-items-center justify-content-between mt-3 pb-2 ">
                   <p className="fs_28 fw-semibold red_ff text-nowrap dashboard-text-color m-0 p-0 fs-sm-20">
@@ -152,33 +155,26 @@ const Support = () => {
                     </button>
                   </span>
                 </div>
-                <div className="d-flex mt-3 cusor gap-3 rounded-3">
-                  <div className="fs_18  fw-semibold  red_ff text-dark">
+                <div className="d-flex mt-3 cusor gap-4 rounded-3">
+                  <div className="fs_18  fw-semibold  red_ff ">
                     <div
-                      variant={showOpenTickets ? "link" : ""}
-                      className={
-                        showOpenTickets
-                          ? " support-page-active cusor "
-                          : "text-dark"
-                      }
+                      className={`fs_18 fw-semibold red_ff  ${
+                        showOpenTickets ? "support-page-active" : ""
+                      }`}
                       onClick={() => setShowOpenTickets(true)}
                     >
-                      <p className=" fs_13 red_ff fw-semibold mb-2">
-                        {" "}
+                      <p className=" fs_16 red_ff  fw-semibold mb-2">
                         Open Tickets
                       </p>
                     </div>
                   </div>
                   <div
-                    variant={!showOpenTickets ? "link" : ""}
-                    className={
-                      !showOpenTickets
-                        ? "support-page-active cusor"
-                        : "text-dark"
-                    }
+                    className={`fs_18 fw-semibold red_ff ${
+                      !showOpenTickets ? "support-page-active" : ""
+                    }`}
                     onClick={() => setShowOpenTickets(false)}
                   >
-                    <p className=" fs_13 red_ff fw-semibold mb-2">
+                    <p className=" fs_16 red_ff fw-semibold mb-2">
                       {" "}
                       Resolved Tickets
                     </p>

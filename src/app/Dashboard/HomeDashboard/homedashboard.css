@@ -1,3 +1,12 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"); */
+
+.red_ff {
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
 select {
   outline: none;
 }
@@ -31,7 +40,7 @@ label {
   background-color: #ffca00;
 }
 .subscription-box {
-  height: 264px;
+  height: 100% !important;
   width: 234px;
   background-color: #f8f8f8;
 }
@@ -119,13 +128,13 @@ label {
 }
 
 .selected-card {
-  background-color: #e7effe;
-  border: 2px solid #e7effe;
+  background-color: #e7effe !important;
+  border: 2px solid #e7effe !important;
   color: white;
 }
 
 .selected-card .dashboard-text-color {
-  color: #4886f4;
+  color: #4886f4 !important;
 }
 
 input {
@@ -133,7 +142,7 @@ input {
 }
 
 .custom_bolrder {
-  border: 2px dotted #1364f1;
+  border: 2px dashed #1364f1;
   background: #1364f10f;
   width: 100%;
 }
@@ -147,7 +156,11 @@ input {
 }
 
 .form-switch .form-check-input:checked {
-  --bs-form-switch-bg: url(../../../../public/assets/images/svg/blue_icon.svg);
+  --bs-form-switch-bg: url(../../../../public/assets/images/svg/blue_icon.svg) !important;
+}
+
+.form-switch .form-check-input {
+  --bs-form-switch-bg: url(../../../../public/assets/images/svg/gray_icon.svg) !important;
 }
 
 .form-check-input:focus {
@@ -165,19 +178,8 @@ input {
   z-index: 15;
 }
 
-.h-vh-100 {
-  height: 83vh !important;
-}
-
-:where(.css-dev-only-do-not-override-m4timi).ant-menu-inline .ant-menu-item,
-:where(.css-dev-only-do-not-override-m4timi).ant-menu-vertical .ant-menu-item,
-:where(.css-dev-only-do-not-override-m4timi).ant-menu-inline
-  .ant-menu-submenu-title,
-:where(.css-dev-only-do-not-override-m4timi).ant-menu-vertical
-  .ant-menu-submenu-title {
-  margin: 10px 0 !important;
-  border-radius: 0 !important;
-  width: 100% !important;
+.bg_darkblue {
+  background-color: #1364f1 !important;
 }
 
 @media (max-width: 576px) {
@@ -222,4 +224,106 @@ input {
     top: 52%;
     left: 1%;
   }
+}
+@media (min-width: 1600px) {
+  .h-vh-100 {
+    height: 55vh !important;
+  }
+}
+@media (max-width: 1599px) {
+  .h-vh-100 {
+    height: 95vh !important;
+  }
+}
+
+.card {
+  margin: 0 !important;
+}
+
+:where(.css-1uq9j6g).ant-menu-inline .ant-menu-item,
+:where(.css-1uq9j6g).ant-menu-vertical .ant-menu-item,
+:where(.css-1uq9j6g).ant-menu-inline .ant-menu-submenu-title,
+:where(.css-1uq9j6g).ant-menu-vertical .ant-menu-submenu-title {
+  margin: 10px 0 !important;
+  border-radius: 0 !important;
+  width: 100% !important;
+}
+
+:where(.css-1uq9j6g).ant-menu .ant-menu-item,
+:where(.css-1uq9j6g).ant-menu .ant-menu-submenu,
+:where(.css-1uq9j6g).ant-menu .ant-menu-submenu-title {
+  border-radius: 0 !important;
+}
+
+input {
+  background-color: transparent !important;
+}
+
+select {
+  background-color: white !important;
+  color: black !important;
+}
+
+.container3 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container3 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 2px solid #eee !important;
+}
+
+/* On mouse-over, add a grey background color */
+.container3:hover input ~ .checkmark {
+  border: 2px solid #eee !important;
+}
+
+/* When the radio button is checked, add a blue background */
+.container3 input:checked ~ .checkmark {
+  border: 0px solid #eee !important;
+  background: blue !important;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container3 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container3 .checkmark:after {
+  top: 7.5px;
+  left: 7.5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white !important;
 }

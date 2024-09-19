@@ -1,12 +1,11 @@
-
-"use client"
+"use client";
 import React, { useState } from "react";
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
-import logo from "../../../../public/assets/images/svg/logo.svg"
+import logo from "../../../../public/assets/images/svg/logo.svg";
 import Login from "./Login";
 import Register from "./Register";
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 import Layout from "@/app/components/Layout/Laytout";
 
 type TabType = "login" | "register";
@@ -19,18 +18,17 @@ const LoginAndSignupHeader: React.FC = () => {
   };
 
   return (
-
     <div className="vh-100 py-3 d-flex flex-column align-items-center justify-content-center bg_theme">
-    <Container>
-      <Link
-       className="d-flex justify-content-center" href="#">
-        <Image  src={logo} alt="logo" />
-      </Link>
-      <div className="d-flex justify-content-center">
-
-      
-      <div className="bg-white rounded-2 mt-4 py-md-3  px-md-5 p-3 w-50">
-        <Row className="pt-5">
+      <Container>
+        <Link className="d-flex justify-content-center" href="#">
+          <Image src={logo} alt="logo" />
+        </Link>
+        <div className="d-flex justify-content-center">
+          <div
+            className="bg-white rounded-2 mt-4 py-md-5  px-md-5 p-3"
+            style={{ maxWidth: "494px" }}
+          >
+            {/* <Row className="pt-5">
           <Col
             sm={6}
             className="pe-0 text-center"
@@ -83,12 +81,12 @@ const LoginAndSignupHeader: React.FC = () => {
           >
             <Register />
           </Tab.Pane>
-        </Tab.Content>
-      </div>
-      </div>
-    </Container>
-  </div>
- 
+        </Tab.Content> */}
+            <Login />
+          </div>
+        </div>
+      </Container>
+    </div>
   );
 };
 

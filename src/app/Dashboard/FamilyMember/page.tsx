@@ -6,19 +6,25 @@ import greenball from "../../../../public/assets/images/svg/greenball.svg";
 import plus from "../../../../public/assets/images/svg/plus.svg";
 import HDFC_Card from "../../../../public/assets/images/svg/HDFC_Card.svg";
 import Arrow from "../../../../public/assets/images/svg/arrow.svg";
+import approal_card from "../../../assets/images/svg/approval_img.png";
 import ModalComponent from "./ModalComponent";
 import DownloadCardModal from "./DownloadCardModal";
 import Image from "next/image";
 import "../FamilyMember/FamilyMember.css";
 import Link from "next/link";
 import Layout from "@/app/components/Layout/Laytout";
+import TransferCardModal from "./TransferModal";
 
 const FamilyMember = () => {
   const [showDownloadModal, setShowDownloadModal] = useState(false);
+  const [showTransferModal, setShowTransferModal] = useState(false);
   const [showAddMemberModal, setShowAddMemberModal] = useState(false);
 
   const handleCloseDownloadModal = () => setShowDownloadModal(false);
   const handleShowDownloadModal = () => setShowDownloadModal(true);
+
+  const handleCloseTransferModal = () => setShowTransferModal(false);
+  const handleShowTransferModal = () => setShowTransferModal(true);
 
   const handleCloseAddMemberModal = () => setShowAddMemberModal(false);
   const handleShowAddMemberModal = () => setShowAddMemberModal(true);
@@ -26,12 +32,16 @@ const FamilyMember = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     handleCloseAddMemberModal();
+    handleCloseTransferModal();
   };
 
   return (
     <Layout>
       <div className="px-2">
-        <div className="py-1 mt-3 px-4 rounded-2 bg-white">
+        <div
+          className="py-1 mt-3 px-4 rounded-2 bg-white"
+          style={{ minHeight: "84vh" }}
+        >
           <h1 className="pb-2 fw-semibold fs_28  red_ff dashboard-text-color pt-4">
             Family Members
           </h1>
@@ -69,6 +79,7 @@ const FamilyMember = () => {
                       <Image src={card} alt="Card" className="img-fluid" />
                     </div>
                   </div>
+                  <Image src={approal_card} alt="Card" className="img-fluid" />
                 </Card.Body>
 
                 <div className="d-flex px-3 justify-content-center mt-3 border-0 bg-white">
@@ -198,11 +209,17 @@ const FamilyMember = () => {
                     </div>
                   </div>
                 </Card.Body>
-                <Card.Footer className="d-flex justify-content-end gap-3 mt-5 pt-5  bg-white border-0">
-                  <Button className=" w-sm-40 top-up-button  fw-medium px-4 my-2 mx-1 red_ff fs_16 border-0 ">
+                <Card.Footer className="d-flex justify-content-end gap-3 mt-5 pt-5 bg-white border-0">
+                  <Button
+                    onClick={handleShowTransferModal}
+                    className="  top-up-button  fw-medium px-4 my-2 mx-1 red_ff fs_14 border-0 "
+                  >
+                    Transfer Balance
+                  </Button>
+                  <Button className="  top-up-button  fw-medium px-4 my-2 mx-1 red_ff fs_14 border-0 ">
                     Top-Up Card
                   </Button>
-                  <Button className=" w-sm-40 top-up-button my-2 fw-medium px-4 mx-1 red_ff fs_16 border-0">
+                  <Button className="  top-up-button my-2 fw-medium px-4 mx-1 red_ff fs_14 border-0">
                     Manage card
                   </Button>
                 </Card.Footer>
@@ -219,7 +236,7 @@ const FamilyMember = () => {
                   </div>
                   <hr />
                   <p className="px-3 fs_18 pb-3 fw-semibold m-0">Color</p>
-                  <div className="d-flex justify-content-evenly flex-nowrap">
+                  <div className="d-flex flex-wrap">
                     <span className="circle bg-0  rounded-circle d-flex justify-content-center align-items-center text-wrap">
                       <div className="d-flex  ">
                         <Image width={20} src={Arrow} alt="" />
@@ -229,8 +246,7 @@ const FamilyMember = () => {
                     <span className="circle bg-2   rounded-circle"></span>
                     <span className="circle bg-3   rounded-circle"></span>
                     <span className="circle bg-4   rounded-circle"></span>
-                  </div>
-                  <div className=" d-flex justify-content-evenly flex-nowrap  pt-2 ">
+
                     <span className="circle bg-5 rounded-circle"></span>
                     <span className="circle bg-6 rounded-circle"></span>
                     <span className="circle bg-4 rounded-circle"></span>
@@ -276,6 +292,21 @@ const FamilyMember = () => {
         <DownloadCardModal
           show={showDownloadModal}
           handleClose={handleCloseDownloadModal}
+        />
+
+        <ModalComponent
+          show={showAddMemberModal}
+          handleClose={handleCloseAddMemberModal}
+          handleSubmit={handleSubmit}
+        />
+        <DownloadCardModal
+          show={showDownloadModal}
+          handleClose={handleCloseDownloadModal}
+        />
+        <TransferCardModal
+          show={showTransferModal}
+          handleClose={handleCloseTransferModal}
+          handleSubmit={handleSubmit}
         />
       </div>
     </Layout>

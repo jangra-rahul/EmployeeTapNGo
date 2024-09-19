@@ -69,25 +69,16 @@ const Navbar = () => {
               </h4>
             </div>
             <div
-              className="d-flex gap-4 align-items-center w-100 res-bg pe-2  justify-content-end"
+              className="d-flex gap-3 align-items-center w-100 res-bg pe-2  justify-content-end"
               style={{ marginTop: "-11px" }}
             >
-              <Form.Select
-                className="rounded-5 py-2 px-3 d-none d-md-flex w-20"
-                aria-label="Default select example"
-              >
-                <option>Family Member Account</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </Form.Select>
               <div>
                 <Link href="/Dashboard/NotificationPage">
                   <Image
                     src={noti_icon}
                     alt="noti_icon"
-                    width={40}
-                    height={40}
+                    width={48}
+                    height={48}
                   />
                 </Link>
               </div>
@@ -102,16 +93,15 @@ const Navbar = () => {
                   <FaAngleDown style={{ color: "black" }} />
                 </div>
               </div> */}
+
               <div className="accordion-container">
                 <Accordion className="w-100">
                   <Accordion.Item
                     eventKey="0"
-                    // className="position-relative bg-white"
                     className={`position-relative  ${
                       isOpen ? "bg-white rounded-5 border border-1" : ""
                     }`}
                   >
-                    {/* <div className="bg-white rounded-top-5"> */}
                     <Accordion.Header onClick={() => setIsOpen(!isOpen)}>
                       <div className="d-flex align-items-center gap-2">
                         <Image
@@ -120,10 +110,12 @@ const Navbar = () => {
                           width={38}
                           height={33}
                         />
-                        <div>
-                          <h6 className="mb-0 fs_14">Sagar M.</h6>
-                          <p className="mb-0 fs_13 mt-1">#23543</p>
-                        </div>
+                        {isOpen && (
+                          <div className="d-md-block d-none">
+                            <h6 className="mb-0 fs_14">Sagar M.</h6>
+                            <p className="mb-0 fs_13 mt-1">#23543</p>
+                          </div>
+                        )}
                       </div>
                     </Accordion.Header>
                     <Accordion.Body
@@ -131,9 +123,16 @@ const Navbar = () => {
                         isOpen ? "open" : "closed"
                       }`}
                     >
-                      <p className="mb-0"> My Profile</p>
+                      <Link href={"/Dashboard/Profile"}>
+                        <p className="mb-0 color_lightblack red_ff ">
+                          My Profile
+                        </p>
+                      </Link>
+
                       <div className="border"></div>
-                      <p className="mb-0">Log out</p>
+                      <Link href={"/Dashboard/authPages"}>
+                        <p className="mb-0 color_lightblack red_ff ">Log out</p>
+                      </Link>
                     </Accordion.Body>
                     {/* </div> */}
                   </Accordion.Item>

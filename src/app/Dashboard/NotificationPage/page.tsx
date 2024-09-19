@@ -52,6 +52,62 @@ const NotificationPage = () => {
         "You have several uncategorized transactions in your account ens.... ure accurate spending analysis, please take a moment...",
       time: "30 min",
     },
+    {
+      initial: "R",
+      title: "Reminder to Categorize Expenses",
+      description:
+        "You have several uncategorized transactions in your account ens.... ure accurate spending analysis, please take a moment...",
+      time: "30 min",
+    },
+    {
+      initial: "R",
+      title: "Reminder to Categorize Expenses",
+      description:
+        "You have several uncategorized transactions in your account ens.... ure accurate spending analysis, please take a moment...",
+      time: "30 min",
+    },
+    {
+      initial: "R",
+      title: "Reminder to Categorize Expenses",
+      description:
+        "You have several uncategorized transactions in your account ens.... ure accurate spending analysis, please take a moment...",
+      time: "30 min",
+    },
+    {
+      initial: "R",
+      title: "Reminder to Categorize Expenses",
+      description:
+        "You have several uncategorized transactions in your account ens.... ure accurate spending analysis, please take a moment...",
+      time: "30 min",
+    },
+    {
+      initial: "R",
+      title: "Reminder to Categorize Expenses",
+      description:
+        "You have several uncategorized transactions in your account ens.... ure accurate spending analysis, please take a moment...",
+      time: "30 min",
+    },
+    {
+      initial: "R",
+      title: "Reminder to Categorize Expenses",
+      description:
+        "You have several uncategorized transactions in your account ens.... ure accurate spending analysis, please take a moment...",
+      time: "30 min",
+    },
+    {
+      initial: "R",
+      title: "Reminder to Categorize Expenses",
+      description:
+        "You have several uncategorized transactions in your account ens.... ure accurate spending analysis, please take a moment...",
+      time: "30 min",
+    },
+    {
+      initial: "R",
+      title: "Reminder to Categorize Expenses",
+      description:
+        "You have several uncategorized transactions in your account ens.... ure accurate spending analysis, please take a moment...",
+      time: "30 min",
+    },
   ];
 
   const handleRowClick = (index) => {
@@ -62,7 +118,10 @@ const NotificationPage = () => {
     <>
       <Layout>
         <div className="px-2 mt-4">
-          <div className="bg-white px-4 py-2 mt-2 rounded-2 ">
+          <div
+            className="bg-white px-4 py-2 mt-2 rounded-2 "
+            style={{ minHeight: "84vh" }}
+          >
             <Row className="bg-white align-items-center ">
               <Col
                 xs={3}
@@ -87,12 +146,11 @@ const NotificationPage = () => {
               </Col>
             </Row>
             <hr />
-            <div style={{ height: "460px", overflow: "auto" }}>
+            <div className="custom_h" style={{ overflow: "auto" }}>
               <Row className=" d-flex bg-white py-3 mx-2  text-dark  ">
                 {notifications.map((notification, index) => (
-                  <div>
+                  <div key={index}>
                     <Row
-                      key={index}
                       className={`border cursor-pointer mt-3 align-items-center common-border d-flex justify-content-between rounded-3 p-2 bg-white ${
                         selectedRow === index ? "selected-tr" : "bg-primary "
                       }`}
@@ -103,7 +161,19 @@ const NotificationPage = () => {
                         className="d-flex align-items-center p-0 m-0 ms-1"
                         style={{ width: "30px" }}
                       >
-                        <input className="checkbox" type="checkbox" />
+                        {/* <input
+                          className="checkbox"
+                          type="checkbox"
+                          onClick={(event) => event.stopPropagation()}
+                        /> */}
+                        <label className="container2 mt-0 mb-4">
+                          <input
+                            onClick={(event) => event.stopPropagation()}
+                            id="accept"
+                            type="checkbox"
+                          />
+                          <span className="checkmark"></span>
+                        </label>
                       </Col>
                       <Col
                         xs={1}
