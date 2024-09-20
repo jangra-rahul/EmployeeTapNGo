@@ -5,21 +5,14 @@ import React, { ReactNode, useState } from "react";
 import { Drawer, Layout, Menu } from "antd";
 import { FaAngleDown } from "react-icons/fa6";
 import logo from "../../../../public/assets/images/svg/logo.svg";
-import menu_icon from "../../../../public/assets/images/svg/manu_icon.svg";
-import black_logo from "../../../../public/assets/images/svg/black_logo.svg";
-import noti_icon from "../../../../public/assets/images/svg/notifi_icon.svg";
 import home_icon from "../../../../public/assets/images/svg/home_icon.svg";
 import usage_icon from "../../../../public/assets/images/svg/usage_icon.svg";
-import subscription_icon from "../../../../public/assets/images/svg/Subscription_icon.svg";
-import Family_icon from "../../../../public/assets/images/svg/FamilyM_icon.svg";
-import Offers_icon from "../../../../public/assets/images/svg/offere_icon.svg";
 import Faq_icon from "../../../../public/assets/images/svg/faq_icon.svg";
-import close_icon from "../../../../public/assets/images/svg/close_manu.svg";
 import Support_icon from "../../../../public/assets/images/svg/support_icon.svg";
 import Corporate_icon from "../../../../public/assets/images/svg/corpocate_icon.svg";
 import Employees_icon from "../../../../public/assets/images/svg/Employees_icon.svg";
 import VehicleFleet_icon from "../../../../public/assets/images/svg/VehicleFleet_icon.svg";
-import profile from "../../../../public/assets/images/svg/profile_icon.svg";
+import Setting_icon from "../../../../public/assets/images/svg/Setting_icon.svg";
 import { Form } from "react-bootstrap";
 import Link from "next/link";
 import "./dashboard.css";
@@ -153,6 +146,8 @@ const Admindashboard: React.FC = () => {
                 className={
                   pathname === "/Dashboard/VehicleFleet"
                     ? "active-color text-white"
+                    : pathname == "/Dashboard/VehicleDetails"
+                    ? "active-color text-white"
                     : ""
                 }
               >
@@ -188,7 +183,7 @@ const Admindashboard: React.FC = () => {
                   </div>
                 </Link>
               </Menu.Item>
-              <Menu.Item
+              {/* <Menu.Item
                 key="3"
                 className={
                   pathname === "/Dashboard/Subcriptiondashboard"
@@ -247,7 +242,7 @@ const Admindashboard: React.FC = () => {
                     <span className="mb-0 fs_14 red_ff">My Offers</span>
                   </div>
                 </Link>
-              </Menu.Item>
+              </Menu.Item> */}
               <Menu.Item
                 key="6"
                 className={
@@ -283,6 +278,26 @@ const Admindashboard: React.FC = () => {
                       height={16}
                     />
                     <span className="mb-0 fs_14 red_ff">Support</span>
+                  </div>
+                </Link>
+              </Menu.Item>
+              <Menu.Item
+                key="11"
+                className={
+                  pathname === "/Dashboard/SettingScreen"
+                    ? "active-color text-white"
+                    : ""
+                }
+              >
+                <Link href="/Dashboard/SettingScreen">
+                  <div className="d-flex gap-2  align-items-center  ps-4">
+                    <Image
+                      src={Setting_icon}
+                      alt="Setting_icon"
+                      width={16}
+                      height={16}
+                    />
+                    <span className="mb-0 fs_14 red_ff">Settings</span>
                   </div>
                 </Link>
               </Menu.Item>

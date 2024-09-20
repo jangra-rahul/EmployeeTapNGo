@@ -5,8 +5,12 @@ import React, { useState } from "react";
 import edit from "../../../../public/assets/images/svg/pensil_icon.svg";
 import account_icon from "../../../../public/assets/images/svg/account_icon.svg";
 import history_icon from "../../../../public/assets/images/svg/history_img.svg";
+import history_icon1 from "../../../../public/assets/images/svg/VehicleFleet_icon1.svg";
+import history_icon2 from "../../../../public/assets/images/svg/VehicleFleet_icon2.svg";
+import history_icon3 from "../../../../public/assets/images/svg/VehicleFleet_icon3.svg";
 import "../VehicleFleet/vehiclefleet.css";
 import { Accordion, Form } from "react-bootstrap";
+import Link from "next/link";
 
 const VehicleFleet = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -28,10 +32,12 @@ const VehicleFleet = () => {
                   <h5 className="fs_24 red_ff mb-0">
                     Vehicle Details - HR31B02
                   </h5>
-                  <div className="d-flex align-items-center gap-1">
-                    <Image src={edit} alt="edit" />
-                    <span className="tdn color_blue">Edit</span>
-                  </div>
+                  <Link href="/Dashboard/VehicleDetails">
+                    <div className="d-flex cusor align-items-center gap-1">
+                      <Image src={edit} alt="edit" />
+                      <span className="tdn color_blue">Edit</span>
+                    </div>
+                  </Link>
                 </div>
                 <div className="border my-4"></div>
                 <h6 className=" fs_18 red_ff mb-0">Vehicle Registration</h6>
@@ -238,7 +244,7 @@ const VehicleFleet = () => {
                   <Accordion.Item className="border-0 " eventKey="1">
                     <Accordion.Header className=" justify-content-between w-100">
                       <div className="d-flex  align-items-center gap-3">
-                        <Image src={history_icon} alt="history_icon" />
+                        <Image src={history_icon1} alt="history_icon" />
                         <div>
                           <h6 className="mb-0 red_ff">HRB25</h6>
                           <p className="mb-0 red_ff">AU</p>
@@ -297,7 +303,7 @@ const VehicleFleet = () => {
                   <Accordion.Item className="border-0 " eventKey="2">
                     <Accordion.Header className=" justify-content-between w-100">
                       <div className="d-flex  align-items-center gap-3">
-                        <Image src={history_icon} alt="history_icon" />
+                        <Image src={history_icon2} alt="history_icon" />
                         <div>
                           <h6 className="mb-0 red_ff">HRB25</h6>
                           <p className="mb-0 red_ff">AU</p>
@@ -356,7 +362,7 @@ const VehicleFleet = () => {
                   <Accordion.Item className="border-0 " eventKey="3">
                     <Accordion.Header className=" justify-content-between w-100">
                       <div className="d-flex  align-items-center gap-3">
-                        <Image src={history_icon} alt="history_icon" />
+                        <Image src={history_icon3} alt="history_icon" />
                         <div>
                           <h6 className="mb-0 red_ff">HRB25</h6>
                           <p className="mb-0 red_ff">AU</p>

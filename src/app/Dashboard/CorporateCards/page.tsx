@@ -22,7 +22,7 @@ const CorporateCards = () => {
                 </div>
               </div>
               <div className="overflow-y-auto" style={{ height: "700px" }}>
-                <table className="w-100 mt-3 h-100 ">
+                <table className="w-100 mt-3  ">
                   <tr style={{ background: "#F0F0F1" }}>
                     <th className=" px-3 fs_16 fw-medium  text-nowrap red-ff-family py-3">
                       Corporate Card

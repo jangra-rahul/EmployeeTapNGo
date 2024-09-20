@@ -94,15 +94,11 @@ const FrequentlyAskedQuestion = () => {
                     <Accordion.Body>
                       <div className="border mb-3"></div>
                       <p className=" fs_13 ">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
+                        To top up your account, navigate to the Account or
+                        Profile section in the dashboard, and you should find an
+                        option for Add Funds or Top-Up Follow the on-screen
+                        instructions to complete the transaction using your
+                        preferred payment method.
                       </p>
                     </Accordion.Body>
                   </Accordion.Item>
@@ -225,7 +221,7 @@ const FrequentlyAskedQuestion = () => {
 
               <Col xs={12} md={5} className="mb-4 d-flex flex-column">
                 <div>
-                  <Accordion defaultActiveKey="0">
+                  <Accordion defaultActiveKey="1">
                     <Accordion.Item
                       eventKey="1"
                       className="border border_black  "
@@ -240,15 +236,11 @@ const FrequentlyAskedQuestion = () => {
                       <Accordion.Body>
                         <div className="border mb-3"></div>
                         <p className=" fs_13">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate velit esse cillum dolore eu
-                          fugiat nulla pariatur. Excepteur sint occaecat
-                          cupidatat non proident, sunt in culpa qui officia
-                          deserunt mollit anim id est laborum.
+                          To top up your account, navigate to the Account or
+                          Profile section in the dashboard, and you should find
+                          an option for Add Funds or Top-Up. Follow the
+                          on-screen instructions to complete the transaction
+                          using your preferred payment method.
                         </p>
                       </Accordion.Body>
                     </Accordion.Item>

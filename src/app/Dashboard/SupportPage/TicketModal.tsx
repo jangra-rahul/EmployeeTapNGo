@@ -1,8 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
-import pdf from "../../../../public/assets/images/svg/pdf.svg";
-import cross from "../../../../public/assets/images/cross.svg";
-import Image from "next/image";
+
 interface TicketModalProps {
   show: boolean;
   handleClose: () => void;
@@ -49,15 +47,26 @@ const TicketModal: React.FC<TicketModalProps> = ({ show, handleClose }) => {
             </div>
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="issue">
-            <Form.Label>Issue</Form.Label>
-            <Form.Select aria-label="Select issue">
-              <option>Select an issue type</option>
-              <option value="bug">Bug</option>
-              <option value="feature">Feature Request</option>
-              <option value="other">Other</option>
-            </Form.Select>
-          </Form.Group>
+          <div className="d-flex gap-2">
+            <Form.Group className="mb-3 w-100" controlId="issue">
+              <Form.Label>Corporate Card</Form.Label>
+              <Form.Select aria-label="Select issue">
+                <option>Select Card</option>
+                <option value="bug">Bug</option>
+                <option value="feature">Feature Request</option>
+                <option value="other">Other</option>
+              </Form.Select>
+            </Form.Group>
+            <Form.Group className="mb-3 w-100" controlId="issue">
+              <Form.Label>Employee</Form.Label>
+              <Form.Select aria-label="Select issue">
+                <option>Select Employee</option>
+                <option value="bug">Bug</option>
+                <option value="feature">Feature Request</option>
+                <option value="other">Other</option>
+              </Form.Select>
+            </Form.Group>
+          </div>
 
           <Form.Group className="mb-3" controlId="message">
             <Form.Label>Message</Form.Label>

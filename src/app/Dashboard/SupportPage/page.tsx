@@ -263,6 +263,30 @@ const Support = () => {
                   <p className="dashboard-text-color">#12143235</p>{" "}
                   <p className="fs_16 red_ff fw-normal mt-0">08-02-2024</p>
                 </div>
+                <div className="d-flex gap-3 mt-2">
+                  <Form.Group className="mb-3 " controlId="issue">
+                    <Form.Label className="red_ff fw-medium">
+                      Corporate Card
+                    </Form.Label>
+                    <Form.Select aria-label="Select issue">
+                      <option>No Corporate Card</option>
+                      <option value="bug">Bug</option>
+                      <option value="feature">Feature Request</option>
+                      <option value="other">Other</option>
+                    </Form.Select>
+                  </Form.Group>
+                  <Form.Group className="mb-3 " controlId="issue">
+                    <Form.Label className="red_ff fw-medium">
+                      Employee
+                    </Form.Label>
+                    <Form.Select aria-label="Select issue">
+                      <option>No Employee</option>
+                      <option value="bug">Bug</option>
+                      <option value="feature">Feature Request</option>
+                      <option value="other">Other</option>
+                    </Form.Select>
+                  </Form.Group>
+                </div>
                 <div>
                   <Form>
                     <Form.Group
