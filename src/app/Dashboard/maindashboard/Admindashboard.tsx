@@ -12,7 +12,7 @@ import Support_icon from "../../../../public/assets/images/svg/support_icon.svg"
 import Corporate_icon from "../../../../public/assets/images/svg/corpocate_icon.svg";
 import Employees_icon from "../../../../public/assets/images/svg/Employees_icon.svg";
 import VehicleFleet_icon from "../../../../public/assets/images/svg/VehicleFleet_icon.svg";
-import Setting_icon from "../../../../public/assets/images/svg/Setting_icon.svg";
+import Setting_icon from "../../../../public/assets/images/svg/setting_icon.svg";
 import { Form } from "react-bootstrap";
 import Link from "next/link";
 import "./dashboard.css";
