@@ -49,7 +49,7 @@ const CorporateCards = () => {
                   />
                 </div>
               </div>
-              <div className="overflow-auto" style={{ height: "700px" }}>
+              <div className="overflow-auto" style={{ height: "1003px" }}>
                 <table className="w-100 ">
                   <thead
                     style={{

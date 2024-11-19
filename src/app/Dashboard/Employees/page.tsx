@@ -48,7 +48,7 @@ const Employees = () => {
                   </div>
                 </div>
               </div>
-              <div className="overflow-auto " style={{ height: "930px" }}>
+              <div className="overflow-auto " style={{ height: "1003px" }}>
                 <div className="">
                   <table className="w-100 ">
                     <thead
