@@ -18,6 +18,10 @@ const Employees = () => {
   const hendalclickbutton = () => {
     setIsVerifyModalOpen(!isVerifyModalOpen);
   };
+  const [showSearchBar, setShowSearchBar] = useState(false);
+  const handleSearchClick = () => {
+    setShowSearchBar(!showSearchBar);
+  };
   return (
     <>
       <Layout>
@@ -26,9 +30,22 @@ const Employees = () => {
             <div className="card   border-0  p-4" style={{ minHeight: "86vh" }}>
               <div className="d-flex mb-3 justify-content-between align-items-center">
                 <h5 className=" red_ff fs_24">Employees</h5>
-                <div className="d-flex align-items-center gap-2">
-                  <Image width={35} src={filter_icon} alt="filter_icon" />
-                  <Image width={35} src={bar_icon} alt="bar_icon" />
+                <div className=" d-flex align-items-center gap-3">
+                  {showSearchBar && (
+                    <Form.Group className="position-relative">
+                      <Form.Control type="search" placeholder="Search" />
+                      <div className="arrow-down"></div>
+                    </Form.Group>
+                  )}
+                  <div className="d-flex align-items-center gap-2">
+                    <Image
+                      onClick={handleSearchClick}
+                      width={38}
+                      src={filter_icon}
+                      alt="filter_icon"
+                    />
+                    <Image width={38} src={bar_icon} alt="bar_icon" />
+                  </div>
                 </div>
               </div>
               <div className="overflow-auto " style={{ height: "930px" }}>
