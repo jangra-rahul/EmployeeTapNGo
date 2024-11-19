@@ -1079,7 +1079,9 @@ const Home: React.FC = () => {
                         </p>
                       </span>
                       <div className="d-flex mt-3 mt-sm-0 text-color align-items-center gap-3">
-                        <p className="fs_16">Auto Top-up</p>
+                        <Link href={"/Dashboard/Modals"}>
+                          <p className="fs_16 text-black">Auto Top-up</p>
+                        </Link>
                         <div className="border rounded-5 mb-3 m-0 ">
                           <Form className="border-1  rounded-1 p-1 d-flex justify-content-center">
                             <Form.Check
@@ -1218,7 +1220,9 @@ const Home: React.FC = () => {
                       </p>
                     </span>
                     <div className="d-flex mt-3 mt-sm-0 text-color align-items-center gap-2">
-                      <p className="fs_14">Auto Top-up</p>
+                      <Link href={"/Dashboard/Modals"}>
+                        <p className="fs_16 text-black">Auto Top-up</p>
+                      </Link>
                       <div className="border rounded-5 mb-3 m-0 ">
                         <Form className="border-1 fs_14 rounded-1  ps-1 pe-2 d-flex justify-content-center">
                           <Form.Check
