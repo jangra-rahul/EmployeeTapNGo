@@ -17,6 +17,18 @@ const Usages: React.FC = () => {
   const [year, setYear] = useState(new Date().getFullYear());
 
   useEffect(() => {
+    const legendMargin = {
+      id: "legendMargin",
+      beforeInit(chart) {
+        console.log(chart.legend.fit);
+        const fitValue = chart.legend.fit;
+
+        chart.legend.fit = function fit() {
+          fitValue.bind(chart.legend)();
+          return (this.height += 20);
+        };
+      },
+    };
     const config = {
       type: "bar",
       data: {
@@ -43,7 +55,6 @@ const Usages: React.FC = () => {
           },
           {
             label: "Spending",
-
             backgroundColor: "#1364F1",
             data: [110, 80, 140, 120, 140, 110, 70, 80, 120, 120, 100, 70],
             barThickness: 20,
@@ -65,15 +76,19 @@ const Usages: React.FC = () => {
           mode: "nearest",
           intersect: true,
         },
+
         legend: {
           labels: {
             boxWidth: 10,
-            fontColor: "rgba(0,0,0,.7)", // Adjust this value to make the boxes narrower
+            fontColor: "rgba(0,0,0,.7)",
+            labels: {
+              padding: 20,
+            },
           },
           // styles: {
           //   display: "none",
           // },
-          className: "custom-legend",
+          // className: "custom-legend",
           align: "start",
           position: "top",
         },
@@ -112,6 +127,23 @@ const Usages: React.FC = () => {
           ],
         },
       },
+      padding: {
+        bottom: 20, // Adds space below the chart
+        top: 20, // Adjust if needed above
+      },
+      scales: {
+        x: {
+          ticks: {
+            padding: 10, // Adds space below the labels on the X-axis
+          },
+        },
+        y: {
+          ticks: {
+            padding: 10, // Adds space to the Y-axis labels if necessary
+          },
+        },
+      },
+      plugins: [legendMargin],
     };
 
     const ctx = document.getElementById(
