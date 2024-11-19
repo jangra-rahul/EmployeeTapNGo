@@ -5,470 +5,519 @@ import bar_icon from "../../../../public/assets/images/svg/bar.svg";
 import filter_icon from "../../../../public/assets/images/svg/search.svg";
 import Image from "next/image";
 import "../../Dashboard/CorporateCards/corporate.css";
-import { Form } from "react-bootstrap";
+import cross_icon from "../../../../public/assets/images/svg/cross_icon.svg";
+import { Form, Modal } from "react-bootstrap";
+import "../Employees/employees.css";
+
 const CorporateCards = () => {
   const [activeComponent, setActiveComponent] = useState("linkCorporateCard");
+  const [showSearchBar, setShowSearchBar] = useState(false);
+  const handleSearchClick = () => {
+    setShowSearchBar(!showSearchBar);
+  };
+
+  const [isVerifyModalOpen, setIsVerifyModalOpen] = useState<boolean>(false);
+
+  const hendalclickbutton = () => {
+    setIsVerifyModalOpen(!isVerifyModalOpen);
+  };
   return (
     <>
       <Layout>
         <div className="row px-2 mt-4">
           <div className="col-lg-8">
-            <div className="card  border-0  p-4" style={{ minHeight: "83vh" }}>
-              <div className="d-flex justify-content-between align-items-center">
+            <div className="card  border-0  p-4" style={{ minHeight: "86vh" }}>
+              <div className="d-flex mb-3 justify-content-between align-items-center">
                 <h5 className=" red_ff fs_24">Corporate Cards</h5>
                 <div className="d-flex align-items-center gap-2">
-                  <Image src={filter_icon} alt="filter_icon" />
-                  <Image src={bar_icon} alt="bar_icon" />
+                  {showSearchBar && (
+                    <Form.Group className="position-relative">
+                      <Form.Control type="search" placeholder="Search" />
+                      <div className="arrow-down"></div>
+                    </Form.Group>
+                  )}
+                  <Image
+                    className=" cursor-pointer"
+                    onClick={handleSearchClick}
+                    src={filter_icon}
+                    alt="filter_icon"
+                  />
+                  <Image
+                    className=" cursor-pointer"
+                    src={bar_icon}
+                    alt="bar_icon"
+                  />
                 </div>
               </div>
-              <div className="overflow-y-auto" style={{ height: "700px" }}>
-                <table className="w-100 mt-3  ">
-                  <tr style={{ background: "#F0F0F1" }}>
-                    <th className=" px-3 fs_16 fw-medium  text-nowrap red-ff-family py-3">
-                      Corporate Card
-                    </th>
-                    <th className=" px-3 fs_16 fw-medium  text-nowrap red-ff-family py-3">
-                      Name
-                    </th>
-                    <th className=" px-3 fs_16 fw-medium  text-nowrap red-ff-family py-3">
-                      Available Credit
-                    </th>
-                    <th className=" px-3 fs_16 fw-medium  text-nowrap red-ff-family py-3">
-                      Status
-                    </th>
-                  </tr>
-                  <tr>
-                    <td className=" pt-4 ">
-                      <p
-                        className="px-3 fs_14 pb-2 text-nowrap"
-                        style={{ color: "#202020" }}
-                      >
-                        {" "}
-                        5668003
-                      </p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4  ">
-                      <p className="px-3 fs_14 pb-2 text-nowrap fw-medium">
-                        Greg Boston
-                      </p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4 ">
-                      <p className="px-3 fs_14 pb-2 text-nowrap"> $0.00</p>
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4 ">
-                      <div className="d-flex px-3 align-items-center gap-4">
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
-                          style={{
-                            backgroundColor: "#E7F2EA",
-                            color: "#0E8029",
-                          }}
+              <div className="overflow-auto" style={{ height: "700px" }}>
+                <table className="w-100 ">
+                  <thead
+                    style={{
+                      position: "sticky",
+                      top: "0px",
+                      zIndex: 1,
+                      backgroundColor: "#F0F0F1",
+                      marginTop: "12px",
+                    }}
+                  >
+                    <tr style={{ background: "#F0F0F1" }}>
+                      <th className=" px-3 fs_16 fw-medium  text-nowrap red-ff-family py-3">
+                        Corporate Card
+                      </th>
+                      <th className=" px-3 fs_16 fw-medium  text-nowrap red-ff-family py-3">
+                        Name
+                      </th>
+                      <th className=" px-3 fs_16 fw-medium  text-nowrap red-ff-family py-3">
+                        Available Credit
+                      </th>
+                      <th className=" px-3 fs_16 fw-medium  text-nowrap red-ff-family py-3">
+                        Status
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="">
+                    <tr>
+                      <td className=" pt-4 ">
+                        <p
+                          className="px-3 fs_14 pb-2 text-nowrap"
+                          style={{ color: "#202020" }}
                         >
-                          Active
-                        </button>
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
-                          style={{
-                            backgroundColor: "#E7EFFE",
-                            color: "#1364F1",
-                          }}
+                          {" "}
+                          5668003
+                        </p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4  ">
+                        <p className="px-3 fs_14 pb-2 text-nowrap fw-medium">
+                          Greg Boston
+                        </p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4 ">
+                        <p className="px-3 fs_14 pb-2 text-nowrap"> $0.00</p>
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4 ">
+                        <div className="d-flex px-3 align-items-center gap-4">
+                          <button
+                            onClick={hendalclickbutton}
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
+                            style={{
+                              backgroundColor: "#E7F2EA",
+                              color: "#0E8029",
+                            }}
+                          >
+                            Active
+                          </button>
+                          <button
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
+                            style={{
+                              backgroundColor: "#E7EFFE",
+                              color: "#1364F1",
+                            }}
+                          >
+                            Unlink Associate
+                          </button>
+                        </div>
+                        <div className="border mt-3"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className=" pt-4 ">
+                        <p
+                          className="px-3 fs_14 mb-3"
+                          style={{ color: "#202020" }}
                         >
-                          Unlink Associate
-                        </button>
-                      </div>
-                      <div className="border mt-3"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className=" pt-4 ">
-                      <p
-                        className="px-3 fs_14 mb-3"
-                        style={{ color: "#202020" }}
-                      >
-                        {" "}
-                        5668003
-                      </p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4  ">
-                      <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4 ">
-                      <p className="px-3 fs_14 mb-3"> $0.00</p>
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-3">
-                      <div className="d-flex px-3 align-items-center gap-4">
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
-                          style={{
-                            backgroundColor: "#E7F2EA",
-                            color: "#0E8029",
-                          }}
+                          {" "}
+                          5668003
+                        </p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4  ">
+                        <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4 ">
+                        <p className="px-3 fs_14 mb-3"> $0.00</p>
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-3">
+                        <div className="d-flex px-3 align-items-center gap-4">
+                          <button
+                            onClick={hendalclickbutton}
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
+                            style={{
+                              backgroundColor: "#E7F2EA",
+                              color: "#0E8029",
+                            }}
+                          >
+                            Active
+                          </button>
+                          <button
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
+                            style={{
+                              backgroundColor: "#E7EFFE",
+                              color: "#1364F1",
+                            }}
+                          >
+                            Unlink Associate
+                          </button>
+                        </div>
+                        <div className="border mt-3"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className=" pt-4 ">
+                        <p
+                          className="px-3 fs_14 mb-3"
+                          style={{ color: "#202020" }}
                         >
-                          Active
-                        </button>
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
-                          style={{
-                            backgroundColor: "#E7EFFE",
-                            color: "#1364F1",
-                          }}
+                          {" "}
+                          5668003
+                        </p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4  ">
+                        <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4 ">
+                        <p className="px-3 fs_14 mb-3"> $0.00</p>
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-3">
+                        <div className="d-flex px-3 align-items-center gap-4">
+                          <button
+                            onClick={hendalclickbutton}
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
+                            style={{
+                              backgroundColor: "#E7F2EA",
+                              color: "#0E8029",
+                            }}
+                          >
+                            Active
+                          </button>
+                          <button
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
+                            style={{
+                              backgroundColor: "#E7EFFE",
+                              color: "#1364F1",
+                            }}
+                          >
+                            Unlink Associate
+                          </button>
+                        </div>
+                        <div className="border mt-3"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className=" pt-4 ">
+                        <p
+                          className="px-3 fs_14 mb-3"
+                          style={{ color: "#202020" }}
                         >
-                          Unlink Associate
-                        </button>
-                      </div>
-                      <div className="border mt-3"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className=" pt-4 ">
-                      <p
-                        className="px-3 fs_14 mb-3"
-                        style={{ color: "#202020" }}
-                      >
-                        {" "}
-                        5668003
-                      </p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4  ">
-                      <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4 ">
-                      <p className="px-3 fs_14 mb-3"> $0.00</p>
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-3">
-                      <div className="d-flex px-3 align-items-center gap-4">
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
-                          style={{
-                            backgroundColor: "#E7F2EA",
-                            color: "#0E8029",
-                          }}
+                          {" "}
+                          5668003
+                        </p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4  ">
+                        <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4 ">
+                        <p className="px-3 fs_14 mb-3"> $0.00</p>
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-3">
+                        <div className="d-flex px-3 align-items-center gap-4">
+                          <button
+                            onClick={hendalclickbutton}
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
+                            style={{
+                              backgroundColor: "#E7F2EA",
+                              color: "#0E8029",
+                            }}
+                          >
+                            Active
+                          </button>
+                          <button
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
+                            style={{
+                              backgroundColor: "#E7EFFE",
+                              color: "#1364F1",
+                            }}
+                          >
+                            Unlink Associate
+                          </button>
+                        </div>
+                        <div className="border mt-3"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className=" pt-4 ">
+                        <p
+                          className="px-3 fs_14 mb-3"
+                          style={{ color: "#202020" }}
                         >
-                          Active
-                        </button>
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
-                          style={{
-                            backgroundColor: "#E7EFFE",
-                            color: "#1364F1",
-                          }}
+                          {" "}
+                          5668003
+                        </p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4  ">
+                        <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4 ">
+                        <p className="px-3 fs_14 mb-3"> $0.00</p>
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-3">
+                        <div className="d-flex px-3 align-items-center gap-4">
+                          <button
+                            onClick={hendalclickbutton}
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
+                            style={{
+                              backgroundColor: "#E7F2EA",
+                              color: "#0E8029",
+                            }}
+                          >
+                            Active
+                          </button>
+                          <button
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
+                            style={{
+                              backgroundColor: "#E7EFFE",
+                              color: "#1364F1",
+                            }}
+                          >
+                            Unlink Associate
+                          </button>
+                        </div>
+                        <div className="border mt-3"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className=" pt-4 ">
+                        <p
+                          className="px-3 fs_14 mb-3"
+                          style={{ color: "#202020" }}
                         >
-                          Unlink Associate
-                        </button>
-                      </div>
-                      <div className="border mt-3"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className=" pt-4 ">
-                      <p
-                        className="px-3 fs_14 mb-3"
-                        style={{ color: "#202020" }}
-                      >
-                        {" "}
-                        5668003
-                      </p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4  ">
-                      <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4 ">
-                      <p className="px-3 fs_14 mb-3"> $0.00</p>
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-3">
-                      <div className="d-flex px-3 align-items-center gap-4">
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
-                          style={{
-                            backgroundColor: "#E7F2EA",
-                            color: "#0E8029",
-                          }}
+                          {" "}
+                          5668003
+                        </p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4  ">
+                        <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4 ">
+                        <p className="px-3 fs_14 mb-3"> $0.00</p>
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-3">
+                        <div className="d-flex px-3 align-items-center gap-4">
+                          <button
+                            onClick={hendalclickbutton}
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
+                            style={{
+                              backgroundColor: "#E7F2EA",
+                              color: "#0E8029",
+                            }}
+                          >
+                            Active
+                          </button>
+                          <button
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
+                            style={{
+                              backgroundColor: "#E7EFFE",
+                              color: "#1364F1",
+                            }}
+                          >
+                            Unlink Associate
+                          </button>
+                        </div>
+                        <div className="border mt-3"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className=" pt-4 ">
+                        <p
+                          className="px-3 fs_14 mb-3"
+                          style={{ color: "#202020" }}
                         >
-                          Active
-                        </button>
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
-                          style={{
-                            backgroundColor: "#E7EFFE",
-                            color: "#1364F1",
-                          }}
+                          {" "}
+                          5668003
+                        </p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4  ">
+                        <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4 ">
+                        <p className="px-3 fs_14 mb-3"> $0.00</p>
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-3">
+                        <div className="d-flex px-3 align-items-center gap-4">
+                          <button
+                            onClick={hendalclickbutton}
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
+                            style={{
+                              backgroundColor: "#E7F2EA",
+                              color: "#0E8029",
+                            }}
+                          >
+                            Active
+                          </button>
+                          <button
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
+                            style={{
+                              backgroundColor: "#E7EFFE",
+                              color: "#1364F1",
+                            }}
+                          >
+                            Unlink Associate
+                          </button>
+                        </div>
+                        <div className="border mt-3"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className=" pt-4 ">
+                        <p
+                          className="px-3 fs_14 mb-3"
+                          style={{ color: "#202020" }}
                         >
-                          Unlink Associate
-                        </button>
-                      </div>
-                      <div className="border mt-3"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className=" pt-4 ">
-                      <p
-                        className="px-3 fs_14 mb-3"
-                        style={{ color: "#202020" }}
-                      >
-                        {" "}
-                        5668003
-                      </p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4  ">
-                      <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4 ">
-                      <p className="px-3 fs_14 mb-3"> $0.00</p>
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-3">
-                      <div className="d-flex px-3 align-items-center gap-4">
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
-                          style={{
-                            backgroundColor: "#E7F2EA",
-                            color: "#0E8029",
-                          }}
+                          {" "}
+                          5668003
+                        </p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4  ">
+                        <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4 ">
+                        <p className="px-3 fs_14 mb-3"> $0.00</p>
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-3">
+                        <div className="d-flex px-3 align-items-center gap-4">
+                          <button
+                            onClick={hendalclickbutton}
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
+                            style={{
+                              backgroundColor: "#E7F2EA",
+                              color: "#0E8029",
+                            }}
+                          >
+                            Active
+                          </button>
+                          <button
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
+                            style={{
+                              backgroundColor: "#E7EFFE",
+                              color: "#1364F1",
+                            }}
+                          >
+                            Unlink Associate
+                          </button>
+                        </div>
+                        <div className="border mt-3"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className=" pt-4 ">
+                        <p
+                          className="px-3 fs_14 mb-3"
+                          style={{ color: "#202020" }}
                         >
-                          Active
-                        </button>
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
-                          style={{
-                            backgroundColor: "#E7EFFE",
-                            color: "#1364F1",
-                          }}
+                          {" "}
+                          5668003
+                        </p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4  ">
+                        <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4 ">
+                        <p className="px-3 fs_14 mb-3"> $0.00</p>
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-3">
+                        <div className="d-flex px-3 align-items-center gap-4">
+                          <button
+                            onClick={hendalclickbutton}
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
+                            style={{
+                              backgroundColor: "#E7F2EA",
+                              color: "#0E8029",
+                            }}
+                          >
+                            Active
+                          </button>
+                          <button
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
+                            style={{
+                              backgroundColor: "#E7EFFE",
+                              color: "#1364F1",
+                            }}
+                          >
+                            Unlink Associate
+                          </button>
+                        </div>
+                        <div className="border mt-3"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className=" pt-4 ">
+                        <p
+                          className="px-3 fs_14 mb-3"
+                          style={{ color: "#202020" }}
                         >
-                          Unlink Associate
-                        </button>
-                      </div>
-                      <div className="border mt-3"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className=" pt-4 ">
-                      <p
-                        className="px-3 fs_14 mb-3"
-                        style={{ color: "#202020" }}
-                      >
-                        {" "}
-                        5668003
-                      </p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4  ">
-                      <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4 ">
-                      <p className="px-3 fs_14 mb-3"> $0.00</p>
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-3">
-                      <div className="d-flex px-3 align-items-center gap-4">
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
-                          style={{
-                            backgroundColor: "#E7F2EA",
-                            color: "#0E8029",
-                          }}
-                        >
-                          Active
-                        </button>
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
-                          style={{
-                            backgroundColor: "#E7EFFE",
-                            color: "#1364F1",
-                          }}
-                        >
-                          Unlink Associate
-                        </button>
-                      </div>
-                      <div className="border mt-3"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className=" pt-4 ">
-                      <p
-                        className="px-3 fs_14 mb-3"
-                        style={{ color: "#202020" }}
-                      >
-                        {" "}
-                        5668003
-                      </p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4  ">
-                      <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4 ">
-                      <p className="px-3 fs_14 mb-3"> $0.00</p>
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-3">
-                      <div className="d-flex px-3 align-items-center gap-4">
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
-                          style={{
-                            backgroundColor: "#E7F2EA",
-                            color: "#0E8029",
-                          }}
-                        >
-                          Active
-                        </button>
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
-                          style={{
-                            backgroundColor: "#E7EFFE",
-                            color: "#1364F1",
-                          }}
-                        >
-                          Unlink Associate
-                        </button>
-                      </div>
-                      <div className="border mt-3"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className=" pt-4 ">
-                      <p
-                        className="px-3 fs_14 mb-3"
-                        style={{ color: "#202020" }}
-                      >
-                        {" "}
-                        5668003
-                      </p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4  ">
-                      <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4 ">
-                      <p className="px-3 fs_14 mb-3"> $0.00</p>
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-3">
-                      <div className="d-flex px-3 align-items-center gap-4">
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
-                          style={{
-                            backgroundColor: "#E7F2EA",
-                            color: "#0E8029",
-                          }}
-                        >
-                          Active
-                        </button>
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
-                          style={{
-                            backgroundColor: "#E7EFFE",
-                            color: "#1364F1",
-                          }}
-                        >
-                          Unlink Associate
-                        </button>
-                      </div>
-                      <div className="border mt-3"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className=" pt-4 ">
-                      <p
-                        className="px-3 fs_14 mb-3"
-                        style={{ color: "#202020" }}
-                      >
-                        {" "}
-                        5668003
-                      </p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4  ">
-                      <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4 ">
-                      <p className="px-3 fs_14 mb-3"> $0.00</p>
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-3">
-                      <div className="d-flex px-3 align-items-center gap-4">
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
-                          style={{
-                            backgroundColor: "#E7F2EA",
-                            color: "#0E8029",
-                          }}
-                        >
-                          Active
-                        </button>
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
-                          style={{
-                            backgroundColor: "#E7EFFE",
-                            color: "#1364F1",
-                          }}
-                        >
-                          Unlink Associate
-                        </button>
-                      </div>
-                      <div className="border mt-3"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className=" pt-4 ">
-                      <p
-                        className="px-3 fs_14 mb-3"
-                        style={{ color: "#202020" }}
-                      >
-                        {" "}
-                        5668003
-                      </p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4  ">
-                      <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-4 ">
-                      <p className="px-3 fs_14 mb-3"> $0.00</p>
-                      <div className="border mt-4"></div>
-                    </td>
-                    <td className=" pt-3">
-                      <div className="d-flex px-3 align-items-center gap-4">
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
-                          style={{
-                            backgroundColor: "#E7F2EA",
-                            color: "#0E8029",
-                          }}
-                        >
-                          Active
-                        </button>
-                        <button
-                          className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
-                          style={{
-                            backgroundColor: "#E7EFFE",
-                            color: "#1364F1",
-                          }}
-                        >
-                          Unlink Associate
-                        </button>
-                      </div>
-                      <div className="border mt-3"></div>
-                    </td>
-                  </tr>
+                          {" "}
+                          5668003
+                        </p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4  ">
+                        <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-4 ">
+                        <p className="px-3 fs_14 mb-3"> $0.00</p>
+                        <div className="border mt-4"></div>
+                      </td>
+                      <td className=" pt-3">
+                        <div className="d-flex px-3 align-items-center gap-4">
+                          <button
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 fw-semibold red_ff fs_14"
+                            style={{
+                              backgroundColor: "#E7F2EA",
+                              color: "#0E8029",
+                            }}
+                          >
+                            Active
+                          </button>
+                          <button
+                            className="border-0 px-4 py-2 text-nowrap rounded-2 red_ff fw-semibold fs_14"
+                            style={{
+                              backgroundColor: "#E7EFFE",
+                              color: "#1364F1",
+                            }}
+                          >
+                            Unlink Associate
+                          </button>
+                        </div>
+                        <div className="border mt-3"></div>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
@@ -659,6 +708,48 @@ const CorporateCards = () => {
               </div>
             </div>
           </div>
+          <Modal
+            className="custom-modal"
+            show={isVerifyModalOpen}
+            onHide={hendalclickbutton}
+            centered
+          >
+            <div className="position-relative">
+              <a className="" href="#">
+                <Image
+                  onClick={hendalclickbutton}
+                  className="position-absolute mt-3 me-3 end-0 top-0"
+                  width={10}
+                  src={cross_icon}
+                  alt="cross_icon"
+                />
+              </a>
+              <Modal.Header className="flex-column">
+                <Modal.Title className="text-center  flex-column d-flex mt-4 red_ff fs_24">
+                  Confirm to In-Active
+                </Modal.Title>
+                <p className="red_ff mt-2 fs_16 fw-normal text-center color_lightblack mb-0">
+                  Are you sure to do this?
+                </p>
+                <div className="d-flex mt-4 align-items-center gap-2">
+                  <button
+                    onClick={hendalclickbutton}
+                    className=" px-5 red_ff py-2 color_blue border-0 rounded-2 text-black"
+                    style={{ backgroundColor: "#E7EFFE" }}
+                  >
+                    Yes
+                  </button>
+                  <button
+                    onClick={hendalclickbutton}
+                    className=" px-5 red_ff py-2 border-0 rounded-2 text-white"
+                    style={{ backgroundColor: "#1364F1" }}
+                  >
+                    No
+                  </button>
+                </div>
+              </Modal.Header>
+            </div>
+          </Modal>
         </div>
       </Layout>
     </>

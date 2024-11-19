@@ -86,7 +86,7 @@ const Home: React.FC = () => {
       {/* {showModal && (
         <div className={`${showModal === true && "custom_all_dark"}`}></div>
       )} */}
-      <div style={{ height: "96%" }} className="px-2">
+      <div style={{ height: "94%" }} className="px-2">
         <div className="pb-4 pt-3 h-100 ps-2">
           <Row className="h-100">
             <Col xxl={7} className="pe-3">
@@ -431,7 +431,7 @@ const Home: React.FC = () => {
                       </a>
                     </div>
                     <div className=" overflow-x-auto">
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex justify-content-between gap-3  mt-4">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -469,7 +469,7 @@ const Home: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex justify-content-between gap-3  mt-4">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -507,7 +507,7 @@ const Home: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex gap-3  mt-4 justify-content-between">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -545,7 +545,7 @@ const Home: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex gap-3  mt-4 justify-content-between">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -583,7 +583,7 @@ const Home: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex gap-3  mt-4 justify-content-between">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -621,7 +621,7 @@ const Home: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex gap-3  mt-4 justify-content-between">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -659,7 +659,7 @@ const Home: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex gap-3  mt-4 justify-content-between">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -697,7 +697,7 @@ const Home: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex gap-3  mt-4 justify-content-between">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -756,7 +756,7 @@ const Home: React.FC = () => {
                         </a>
                       </div>
                       <div className=" overflow-x-auto">
-                        <div className="d-flex gap-3  mt-4">
+                        <div className="d-flex gap-3  mt-4 justify-content-between">
                           <div className="d-flex  gap-3 align-items-center">
                             <Image
                               className=""
@@ -794,7 +794,7 @@ const Home: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="d-flex gap-3  mt-4">
+                        <div className="d-flex gap-3  mt-4 justify-content-between">
                           <div className="d-flex  gap-3 align-items-center">
                             <Image
                               className=""
@@ -832,7 +832,7 @@ const Home: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="d-flex gap-3  mt-4">
+                        <div className="d-flex gap-3  mt-4 justify-content-between">
                           <div className="d-flex  gap-3 align-items-center">
                             <Image
                               className=""
@@ -870,7 +870,7 @@ const Home: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="d-flex gap-3  mt-4">
+                        <div className="d-flex gap-3  mt-4 justify-content-between">
                           <div className="d-flex  gap-3 align-items-center">
                             <Image
                               className=""
@@ -908,7 +908,7 @@ const Home: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="d-flex gap-3  mt-4">
+                        <div className="d-flex gap-3  mt-4 justify-content-between">
                           <div className="d-flex  gap-3 align-items-center">
                             <Image
                               className=""
@@ -946,7 +946,7 @@ const Home: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="d-flex gap-3  mt-4">
+                        <div className="d-flex gap-3  mt-4 justify-content-between">
                           <div className="d-flex  gap-3 align-items-center">
                             <Image
                               className=""
@@ -984,7 +984,7 @@ const Home: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="d-flex gap-3  mt-4">
+                        <div className="d-flex gap-3  mt-4 justify-content-between">
                           <div className="d-flex  gap-3 align-items-center">
                             <Image
                               className=""
@@ -1022,7 +1022,7 @@ const Home: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="d-flex gap-3  mt-4">
+                        <div className="d-flex gap-3  mt-4 justify-content-between">
                           <div className="d-flex  gap-3 align-items-center">
                             <Image
                               className=""

@@ -35,8 +35,8 @@ const Profile = () => {
     <>
       <Layout>
         <div className="px-3">
-          <div className="rounded-3 ">
-            <Row className="justify-content-center  text-nowrap bg-white mt-4 rounded-3 ">
+          <div className="rounded-3 bg-white" style={{ minHeight: "86vh" }}>
+            <Row className="justify-content-center  text-nowrap  mt-4 rounded-3 ">
               <div className="px-4">
                 <h5 className="red_ff pt-4 mb-3 fs_24">Profile</h5>
                 <div className="border"></div>
@@ -50,7 +50,7 @@ const Profile = () => {
                       md={6}
                       className="d-flex   ps-0 border-end border-end-3 border-2 justify-content-start flex-wrap"
                     >
-                      <div className="">
+                      <div className="w-100">
                         <div className="d-flex gap-3 mt-4 pt-3">
                           <div className="position-relative">
                             <Image
@@ -78,116 +78,121 @@ const Profile = () => {
                           </div>
                         </div>
 
-                        <Form
-                          className="mt-5 text-dark"
-                          onSubmit={handleSubmit}
-                        >
-                          <div className="d-flex  flex-column responsive-display flex-md-row gap-3  my-3">
-                            <Form.Group
-                              className="mb-3 w-100 fs_16 red_ff fw-light"
-                              controlId="firstName"
-                            >
-                              <Form.Label className="red_ff fw-medium">
-                                First Name
-                              </Form.Label>
-                              <Form.Control
-                                type="text"
-                                placeholder="First Name"
-                              />
-                            </Form.Group>
-                            <Form.Group
-                              className="mb-3 w-100 fs_16 red_ff fw-light"
-                              controlId="lastName"
-                            >
-                              <Form.Label className="red_ff fw-medium">
-                                Last Name
-                              </Form.Label>
-                              <Form.Control
-                                type="text"
-                                placeholder="Last Name"
-                              />
-                            </Form.Group>
-                          </div>
-                          <div className="d-flex flex-column responsive-display flex-md-row gap-3 w-100 my-3 ">
-                            <Form.Group
-                              className="mb-3 w-100 fs_16 red_ff fw-light"
-                              controlId="email"
-                            >
-                              <Form.Label className="red_ff fw-medium">
-                                Email Address
-                              </Form.Label>
-                              <Form.Control
-                                type="email"
-                                placeholder="example@gmail.com"
-                              />
-                            </Form.Group>
-                            <Form.Group
-                              className="mb-3 w-100 fs_16 red_ff fw-light"
-                              controlId="mobile"
-                            >
-                              <Form.Label className="red_ff fw-medium">
-                                Mobile Number
-                              </Form.Label>
-                              <Form.Control
-                                type="tel"
-                                placeholder="+01 123 456 789"
-                              />
-                            </Form.Group>
-                          </div>
-                          <div className="d-flex flex-column responsive-display flex-md-row gap-3 w-100 my-3">
-                            <Form.Group
-                              className="mb-3 w-100 fs_16 red_ff fw-light"
-                              controlId="dob"
-                            >
-                              <Form.Label className="red_ff fw-medium">
-                                Date of Birth
-                              </Form.Label>
-                              <Form.Control type="date" />
-                            </Form.Group>
-                            <Form.Group
-                              className="mb-3 w-100 fs_16 red_ff fw-light"
-                              controlId="corporateCard"
-                            >
-                              <Form.Label className="red_ff fw-medium">
-                                Corporate Card
-                              </Form.Label>
-                              <Form.Control
-                                type="text"
-                                placeholder="04683116661"
-                              />
-                            </Form.Group>
-                          </div>
-                          <div className="d-flex flex-column responsive-display flex-md-row gap-3 w-100 my-3">
-                            <Form.Group
-                              className="mb-3 responsive-display  w-50 fs_16 red_ff fw-light"
-                              controlId="accountType"
-                            >
-                              <Form.Label className="red_ff fw-medium">
-                                Account Type
-                              </Form.Label>
-                              <Form.Control type="text" placeholder="Prepaid" />
-                            </Form.Group>
-                            <Form.Group
-                              className="mb-3 responsive-display  w-50 fs_16 red_ff fw-light"
-                              controlId="LevelofAccess"
-                            >
-                              <Form.Label className="red_ff fw-medium">
-                                Level of Access
-                              </Form.Label>
-                              <Form.Control type="text" placeholder="" />
-                            </Form.Group>
-                          </div>
-                          <div className="mb-3  w-100 text-dark">
-                            <Button type="submit" className="w-100 py-3 mt-3">
-                              Save Changes
-                            </Button>
-                          </div>
-                          <div className="pb-4">
-                            <span className=" text-decoration-underline my-2 color_blue red_ff fw-semibold">
-                              Close Account
-                            </span>
-                          </div>
-                        </Form>
+                        <div className="col-md-10">
+                          <Form
+                            className="mt-5 text-dark"
+                            onSubmit={handleSubmit}
+                          >
+                            <div className="d-flex  flex-column responsive-display  -md-row gap-3  my-3">
+                              <Form.Group
+                                className="mb-3 w-100 fs_16 red_ff fw-light"
+                                controlId="firstName"
+                              >
+                                <Form.Label className="red_ff fw-medium">
+                                  First Name
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="First Name"
+                                />
+                              </Form.Group>
+                              <Form.Group
+                                className="mb-3 w-100 fs_16 red_ff fw-light"
+                                controlId="lastName"
+                              >
+                                <Form.Label className="red_ff fw-medium">
+                                  Last Name
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="Last Name"
+                                />
+                              </Form.Group>
+                            </div>
+                            <div className="d-flex flex-column responsive-display flex-md-row gap-3 w-100 my-3 ">
+                              <Form.Group
+                                className="mb-3 w-100 fs_16 red_ff fw-light"
+                                controlId="email"
+                              >
+                                <Form.Label className="red_ff fw-medium">
+                                  Email Address
+                                </Form.Label>
+                                <Form.Control
+                                  type="email"
+                                  placeholder="example@gmail.com"
+                                />
+                              </Form.Group>
+                              <Form.Group
+                                className="mb-3 w-100 fs_16 red_ff fw-light"
+                                controlId="mobile"
+                              >
+                                <Form.Label className="red_ff fw-medium">
+                                  Mobile Number
+                                </Form.Label>
+                                <Form.Control
+                                  type="tel"
+                                  placeholder="+01 123 456 789"
+                                />
+                              </Form.Group>
+                            </div>
+                            <div className="d-flex flex-column responsive-display flex-md-row gap-3 w-100 my-3">
+                              <Form.Group
+                                className="mb-3 w-100 fs_16 red_ff fw-light"
+                                controlId="dob"
+                              >
+                                <Form.Label className="red_ff fw-medium">
+                                  Date of Birth
+                                </Form.Label>
+                                <Form.Control type="date" />
+                              </Form.Group>
+                              <Form.Group
+                                className="mb-3 w-100 fs_16 red_ff fw-light"
+                                controlId="corporateCard"
+                              >
+                                <Form.Label className="red_ff fw-medium">
+                                  Corporate Card
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="04683116661"
+                                />
+                              </Form.Group>
+                            </div>
+                            <div className="d-flex flex-column responsive-display flex-md-row gap-3 w-100 my-3">
+                              <Form.Group
+                                className="mb-3 responsive-display  w-50 fs_16 red_ff fw-light"
+                                controlId="accountType"
+                              >
+                                <Form.Label className="red_ff fw-medium">
+                                  Account Type
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="Prepaid"
+                                />
+                              </Form.Group>
+                              <Form.Group
+                                className="mb-3 responsive-display  w-50 fs_16 red_ff fw-light"
+                                controlId="LevelofAccess"
+                              >
+                                <Form.Label className="red_ff fw-medium">
+                                  Level of Access
+                                </Form.Label>
+                                <Form.Control type="text" placeholder="" />
+                              </Form.Group>
+                            </div>
+                            <div className="mb-3  w-100 text-dark">
+                              <Button type="submit" className="w-100 py-3 mt-3">
+                                Save Changes
+                              </Button>
+                            </div>
+                            <div className="pb-4">
+                              <span className=" text-decoration-underline my-2 color_blue red_ff fw-semibold">
+                                Close Account
+                              </span>
+                            </div>
+                          </Form>
+                        </div>
                       </div>
                     </Col>
                     <Col

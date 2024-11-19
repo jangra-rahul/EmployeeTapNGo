@@ -139,7 +139,7 @@ const Support = () => {
           <div className="border-rounded">
             <Row
               className=" py-3 mt-4 p-sm-0 rounded-3 bg-white "
-              style={{ minHeight: "84vh" }}
+              style={{ minHeight: "86vh" }}
             >
               <Col className="px-4 pt-2 ">
                 <div className="d-flex align-items-center justify-content-between mt-3 pb-2 ">
@@ -155,7 +155,7 @@ const Support = () => {
                     </button>
                   </span>
                 </div>
-                <div className="d-flex mt-3 cusor gap-4 rounded-3">
+                <div className="d-flex mt-3 cusor gap-4  rounded-3">
                   <div className="fs_18  fw-semibold  red_ff ">
                     <div
                       className={`fs_18 fw-semibold red_ff  ${
@@ -181,7 +181,7 @@ const Support = () => {
                   </div>
                 </div>
 
-                <hr className="p-0 m-0 mb-2 border-2" />
+                <hr className="p-0 m-0 mb-2 border-1" />
 
                 <Table striped className="p-0 m-0 mt-4 rounded-3">
                   <thead>

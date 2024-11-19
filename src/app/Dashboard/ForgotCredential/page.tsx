@@ -21,7 +21,7 @@ const ForgotCredential = () => {
   return (
     <Container
       fluid
-      className="min-vh-100 d-flex flex-column align-items-center justify-content-center bg_theme"
+      className="min-vh-100 position-relative d-flex flex-column align-items-center justify-content-center bg_theme"
     >
       <Card className=" p-md-5 p-2 w-100" style={{ maxWidth: "494px" }}>
         <Card.Body className="">
@@ -56,6 +56,11 @@ const ForgotCredential = () => {
         isModalOpen={isVehicleModalOpen}
         closeModal={closeVehicleModal}
       />
+      <div className="position-absolute start-0 bottom-0 ps-sm-5 mx-sm-1 mx-3 pb-3">
+        <p style={{ color: "#C0C5CD" }}>
+          Copyright © 2024. Tap N Go Pvt Ltd All rights reserved.
+        </p>
+      </div>
     </Container>
   );
 };

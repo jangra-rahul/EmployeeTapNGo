@@ -18,7 +18,7 @@ const LoginAndSignupHeader: React.FC = () => {
   };
 
   return (
-    <div className="vh-100 py-3 d-flex flex-column align-items-center justify-content-center bg_theme">
+    <div className="vh-100 position-relative py-3 d-flex flex-column align-items-center justify-content-center bg_theme">
       <Container>
         <Link className="d-flex justify-content-center" href="#">
           <Image src={logo} alt="logo" />
@@ -86,6 +86,11 @@ const LoginAndSignupHeader: React.FC = () => {
           </div>
         </div>
       </Container>
+      <div className="position-absolute start-0 bottom-0 ps-sm-5 mx-sm-1 mx-3 pb-3">
+        <p style={{ color: "#C0C5CD" }}>
+          Copyright © 2024. Tap N Go Pvt Ltd All rights reserved.
+        </p>
+      </div>
     </div>
   );
 };

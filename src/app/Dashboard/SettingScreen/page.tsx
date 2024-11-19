@@ -25,8 +25,8 @@ const Profile = () => {
     <>
       <Layout>
         <div className="px-3">
-          <div className="rounded-3 ">
-            <Row className="justify-content-center text-nowrap bg-white mt-4 rounded-3 ">
+          <div className="rounded-3 bg-white " style={{ minHeight: "86vh" }}>
+            <Row className="justify-content-center text-nowrap mt-4 rounded-3 ">
               <h5 className=" fs_24 red_ff mb-4 pt-4 px-5">Settings</h5>
               <div className="d-flex flex-wrap gap-md-5 gap-sm-4 gap-3 p-0 m-0 ps-md-5 ps-4 text-nowrap">
                 <p
@@ -204,58 +204,57 @@ const Profile = () => {
                                 </div>
                               </Form.Group>
                             </div>
-                            <div className="d-flex flex-column responsive-display flex-md-row gap-3 w-100 my-3">
+                            <div className="d-flex flex-column flex-md-row gap-3 w-100 my-3">
+                              {/* Billing Address */}
                               <Form.Group
-                                className="mb-3 w-100 fs_16 red_ff fw-light"
-                                controlId="Primary Contact Name"
+                                className="mb-3 w-100 fs-16 fw-light"
+                                controlId="BillingAddress"
                               >
-                                <Form.Label className=" red_ff fw-medium">
+                                <Form.Label className="fw-medium">
                                   Billing Address
                                 </Form.Label>
-                                <div className="bg-white d-flex border pe-3  align-items-center rounded-2">
+                                <div className="bg-white position-relative d-flex border pe-3 align-items-center rounded-2">
                                   <textarea
                                     className="border-0 px-3 py-1 w-100"
-                                    name=""
-                                    rows={2}
-                                    cols={10}
-                                    id=""
-                                    placeholder="Main Stereet
+                                    rows={6} // Adjusted to show all lines
+                                    placeholder={`Main Street
 Adelaide
 SA
 AU
-5000"
+5000`}
                                   ></textarea>
                                   <Image
+                                    className="position-absolute top-0 end-0 mt-2 me-3"
                                     width={15}
                                     src={right_icon}
-                                    alt="right_icon"
+                                    alt="Check icon"
                                   />
                                 </div>
                               </Form.Group>
+
+                              {/* Mailing Address */}
                               <Form.Group
-                                className="mb-3 w-100 fs_16 red_ff fw-light"
-                                controlId="Primary Contact Name"
+                                className="mb-3 w-100 fs-16 fw-light"
+                                controlId="MailingAddress"
                               >
-                                <Form.Label className=" red_ff fw-medium">
+                                <Form.Label className="fw-medium">
                                   Mailing Address
                                 </Form.Label>
-                                <div className="bg-white d-flex border pe-3  align-items-center rounded-2">
+                                <div className="bg-white position-relative d-flex border pe-3 align-items-center rounded-2">
                                   <textarea
                                     className="border-0 px-3 py-1 w-100"
-                                    name=""
-                                    rows={2}
-                                    cols={10}
-                                    id=""
-                                    placeholder="Main Stereet
+                                    rows={6} // Adjusted to show all lines
+                                    placeholder={`Main Street
 Adelaide
 SA
 AU
-5000"
+5000`}
                                   ></textarea>
                                   <Image
+                                    className="position-absolute top-0 end-0 mt-2 me-3"
                                     width={15}
                                     src={right_icon}
-                                    alt="right_icon"
+                                    alt="Check icon"
                                   />
                                 </div>
                               </Form.Group>

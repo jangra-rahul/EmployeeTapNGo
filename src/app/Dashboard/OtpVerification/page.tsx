@@ -62,7 +62,7 @@ const VerificationCard = () => {
   // Render next screen if showNextScreen is true
   if (showNextScreen) {
     return (
-      <div className="min-vh-100 px-3 d-flex flex-column align-items-center justify-content-center bg_theme">
+      <div className="min-vh-100 position-relative px-3 d-flex flex-column align-items-center justify-content-center bg_theme">
         <Link className="d-flex justify-content-center" href="#">
           <Image src={logo} alt="logo" />
         </Link>
@@ -106,13 +106,18 @@ const VerificationCard = () => {
             </Button>
           </Form>
         </div>
+        <div className="position-absolute start-0 bottom-0 ps-sm-5 mx-sm-1 mx-3 pb-3">
+          <p style={{ color: "#C0C5CD" }}>
+            Copyright © 2024. Tap N Go Pvt Ltd All rights reserved.
+          </p>
+        </div>
         {/* You can replace this content with your actual next screen component */}
       </div>
     );
   }
 
   return (
-    <div className="min-vh-100 px-3 d-flex flex-column align-items-center justify-content-center bg_theme">
+    <div className="min-vh-100 px-3 d-flex flex-column position-relative align-items-center justify-content-center bg_theme">
       <Link className="d-flex justify-content-center" href="#">
         <Image src={logo} alt="logo" />
       </Link>
@@ -246,6 +251,11 @@ const VerificationCard = () => {
           </Modal.Header>
         </div>
       </Modal>
+      <div className="position-absolute start-0 bottom-0 ps-sm-5 mx-sm-1 mx-3 pb-3">
+        <p style={{ color: "#C0C5CD" }}>
+          Copyright © 2024. Tap N Go Pvt Ltd All rights reserved.
+        </p>
+      </div>
     </div>
   );
 };

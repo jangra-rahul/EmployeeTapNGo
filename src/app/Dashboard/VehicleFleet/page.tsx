@@ -27,7 +27,10 @@ const VehicleFleet = () => {
         <div className="px-2 mt-4">
           <div className="row">
             <div className="col-xl-8">
-              <div className="card h-100 border-0 p-4">
+              <div
+                className="card h-100 border-0 p-4"
+                style={{ minHeight: "86vh" }}
+              >
                 <div className="d-flex align-items-center justify-content-between">
                   <h5 className="fs_24 red_ff mb-0">
                     Vehicle Details - HR31B02

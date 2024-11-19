@@ -26,10 +26,22 @@ const Auto: React.FC = () => {
 
   const handleAmountClick = (value: string) => {
     setSelectedAmount(value);
+    if (value === "custom") {
+      setSelected(true);
+    }
+    if (value != "custom") {
+      setSelected(false);
+    }
   };
 
   const handleTriggerClick = (value: string) => {
     setSelectedTrigger(value);
+    if (value === "custom") {
+      setSelected(true);
+    }
+    if (value != "custom") {
+      setSelected(false);
+    }
   };
 
   const handleModalClose = () => setShowModal(false);
@@ -114,25 +126,25 @@ const Auto: React.FC = () => {
         </div>
         {!selected ? (
           <div className="d-flex flex-column justify-content-end mt-4">
-            {/* <Link href="/Dashboard/Payment"> */}
-            <Button
-              onClick={() => setSelected(true)}
-              className="w-100 py-2 fs-16 fw-semibold rounded-2 bg-primary text-white"
-            >
-              Set Auto Top-up Now
-            </Button>
-            {/* </Link> */}
-          </div>
-        ) : (
-          <div className="d-flex flex-column justify-content-end mt-4">
             <Link href="/Dashboard/Payment">
               <Button
                 onClick={() => setSelected(true)}
-                className="w-100 py-2 fs-16 fw-semibold rounded-2 bg-primary text-white"
+                className="w-100 py-2 fs-16 mb-4 fw-semibold rounded-2 bg-primary text-white"
               >
-                Update Auto Payment
+                Set Auto Top-up Now
               </Button>
             </Link>
+          </div>
+        ) : (
+          <div className="d-flex flex-column justify-content-end mt-4">
+            {/* <Link href="/Dashboard/Payment"> */}
+            <Button
+              // onClick={() => setSelected(true)}
+              className="w-100 py-2 fs-16 fw-semibold rounded-2 bg-primary text-white"
+            >
+              Update Auto Payment
+            </Button>
+            {/* </Link> */}
           </div>
         )}
       </div>
