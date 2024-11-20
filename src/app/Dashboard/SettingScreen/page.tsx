@@ -70,7 +70,7 @@ const Profile = () => {
                     <Row className=" bg-white mt-2 px-4">
                       <Col xs={12} md={7} className=" ps-md-2 ps-0  ">
                         <div
-                          style={{ minHeight: "66vh" }}
+                          style={{ minHeight: "75vh" }}
                           className="  d-flex flex-column justify-content-between responsive-display  gap-3  my-3"
                         >
                           <Form
@@ -274,11 +274,11 @@ AU
                     <>
                       <div
                         className="px-4 my-4 d-flex flex-column justify-content-start  "
-                        style={{ minHeight: "64vh" }}
+                        style={{ minHeight: "6vh" }}
                       >
                         <div
                           className="px-4 my-4 d-flex flex-column justify-content-center  align-items-center "
-                          style={{ minHeight: "57vh" }}
+                          style={{ minHeight: "65vh" }}
                         >
                           <p className="text-center">
                             No payment methods are available.
@@ -305,7 +305,7 @@ AU
                     <>
                       {" "}
                       <div
-                        style={{ minHeight: "66vh" }}
+                        style={{ minHeight: "73vh" }}
                         className=" mt-4 px-4  d-flex flex-column justify-content-between responsive-display  gap-3  my-3"
                       >
                         <div>

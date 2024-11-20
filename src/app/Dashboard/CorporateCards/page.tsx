@@ -6,7 +6,7 @@ import filter_icon from "../../../../public/assets/images/svg/search.svg";
 import Image from "next/image";
 import "../../Dashboard/CorporateCards/corporate.css";
 import cross_icon from "../../../../public/assets/images/svg/cross_icon.svg";
-import { Form, Modal } from "react-bootstrap";
+import { Dropdown, Form, Modal } from "react-bootstrap";
 import "../Employees/employees.css";
 
 const CorporateCards = () => {
@@ -20,6 +20,12 @@ const CorporateCards = () => {
 
   const hendalclickbutton = () => {
     setIsVerifyModalOpen(!isVerifyModalOpen);
+  };
+  const [sortOrder, setSortOrder] = useState("");
+
+  const handleSort = (order) => {
+    setSortOrder(order);
+    console.log("Sorting by:", order);
   };
   return (
     <>
@@ -42,11 +48,24 @@ const CorporateCards = () => {
                     src={filter_icon}
                     alt="filter_icon"
                   />
-                  <Image
-                    className=" cursor-pointer"
-                    src={bar_icon}
-                    alt="bar_icon"
-                  />
+                  <Dropdown>
+                    <Dropdown.Toggle
+                      variant="light"
+                      id="dropdown-basic"
+                      className="p-0 border-0 bg-transparent"
+                    >
+                      <Image width={38} src={bar_icon} alt="bar_icon" />
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                      <Dropdown.Item onClick={() => handleSort("A to Z")}>
+                        A to Z (Ascending)
+                      </Dropdown.Item>
+                      <Dropdown.Item onClick={() => handleSort("Z to A")}>
+                        Z to A (Descending)
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </div>
               </div>
               <div className="overflow-auto" style={{ height: "1003px" }}>

@@ -17,9 +17,12 @@ const EmployeeDetails = () => {
     <>
       <Layout>
         <div>
-          <div className="row mt-4 ps-2">
-            <div className="col-xl-4 pe-4 pe-lg-0 col-md-6">
-              <div className="bg-white p-4  rounded-3 border-0">
+          <div style={{ minHeight: "86vh" }} className="row pe-3 mt-4 ps-2">
+            <div className="col-xl-4 h-100 pe-4 pe-lg-0 col-md-6">
+              <div
+                style={{ minHeight: "63.6vh" }}
+                className="bg-white h-100 p-4  rounded-3 border-0"
+              >
                 <div className="d-flex align-items-center justify-content-between">
                   <div className="d-flex align-items-center gap-3">
                     <Image width={80} src={profile_icon} alt="profile_icon" />
@@ -127,7 +130,7 @@ const EmployeeDetails = () => {
                   </Form.Group>
                 </Form>
               </div>
-              <div className="bg-white mt-4 rounded-3 border-0 p-3">
+              <div className="bg-white mt-3 rounded-3 border-0 p-3">
                 <div className="d-sm-flex align-items-center justify-content-between">
                   <h5 className="fs_16 font_s red_ff mb-0">
                     Linked Corporate Card

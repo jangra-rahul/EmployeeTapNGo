@@ -86,7 +86,7 @@ const Home: React.FC = () => {
       {/* {showModal && (
         <div className={`${showModal === true && "custom_all_dark"}`}></div>
       )} */}
-      <div style={{ height: "94%" }} className="px-2">
+      <div style={{ height: "92%" }} className="px-2">
         <div className="pb-4 pt-3 h-100 ps-2">
           <Row className="h-100">
             <Col xxl={7} className="pe-3">
@@ -189,7 +189,7 @@ const Home: React.FC = () => {
                       >
                         <div className="d-flex mt-3 justify-content-between align-items-center">
                           <div>
-                            <p className="mb-0 fs_16 red_ff dashboard-text-color fw-normal">
+                            <p className="mb-0 fs_16 red_ff dashboard-text-color fw-semibold">
                               Manual Recharge
                             </p>
                             <p className="mb-0 red_ff fs_14 text-color">
@@ -203,7 +203,7 @@ const Home: React.FC = () => {
                         <div className="border mt-3"></div>
                         <div className="d-flex mt-3 justify-content-between align-items-center">
                           <div>
-                            <p className="mb-0 fs_16 dashboard-text-color red_ff fw-normal">
+                            <p className="mb-0 fs_16 dashboard-text-color red_ff fw-semibold">
                               Auto Top-Up
                             </p>
                             <p className="mb-0 red_ff fs_14 text-color">
@@ -217,7 +217,7 @@ const Home: React.FC = () => {
                         <div className="border mt-3"></div>
                         <div className="d-flex mt-3 justify-content-between align-items-center">
                           <div>
-                            <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
+                            <p className="mb-0 dashboard-text-color fs_16 red_ff fw-semibold">
                               Manual Recharge
                             </p>
                             <p className="mb-0 red_ff fs_14 text-color">
@@ -231,7 +231,7 @@ const Home: React.FC = () => {
                         <div className="border mt-3"></div>
                         <div className="d-flex mt-3 justify-content-between align-items-center">
                           <div>
-                            <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
+                            <p className="mb-0 dashboard-text-color fs_16 red_ff fw-semibold">
                               Manual Recharge
                             </p>
                             <p className="mb-0 red_ff fs_14 text-color">
@@ -245,7 +245,7 @@ const Home: React.FC = () => {
                         <div className="border mt-3"></div>
                         <div className="d-flex mt-3 justify-content-between align-items-center">
                           <div>
-                            <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
+                            <p className="mb-0 dashboard-text-color fs_16 red_ff fw-semibold">
                               Auto Top-Up
                             </p>
                             <p className="mb-0 red_ff fs_14 text-color">
@@ -259,7 +259,7 @@ const Home: React.FC = () => {
                         <div className="border mt-3"></div>
                         <div className="d-flex mt-3 justify-content-between align-items-center">
                           <div>
-                            <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
+                            <p className="mb-0 dashboard-text-color fs_16 red_ff fw-semibold">
                               Auto Top-Up
                             </p>
                             <p className="mb-0 red_ff fs_14 text-color">
@@ -273,7 +273,7 @@ const Home: React.FC = () => {
                         <div className="border mt-3"></div>
                         <div className="d-flex mt-3 justify-content-between align-items-center">
                           <div>
-                            <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
+                            <p className="mb-0 dashboard-text-color fs_16 red_ff fw-semibold">
                               Auto Top-Up
                             </p>
                             <p className="mb-0 red_ff fs_14 text-color">
@@ -313,7 +313,7 @@ const Home: React.FC = () => {
                     >
                       <div className="d-flex mt-3 justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 fs_16 red_ff dashboard-text-color fw-normal">
+                          <p className="mb-0 fs_16 red_ff dashboard-text-color fw-semibold">
                             Manual Recharge
                           </p>
                           <p className="mb-0 red_ff fs_14 text-color">
@@ -327,7 +327,7 @@ const Home: React.FC = () => {
                       <div className="border mt-3"></div>
                       <div className="d-flex mt-3 justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 fs_16 dashboard-text-color red_ff fw-normal">
+                          <p className="mb-0 fs_16 dashboard-text-color red_ff fw-semibold">
                             Auto Top-Up
                           </p>
                           <p className="mb-0 red_ff fs_14 text-color">
@@ -341,7 +341,7 @@ const Home: React.FC = () => {
                       <div className="border mt-3"></div>
                       <div className="d-flex mt-3 justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
+                          <p className="mb-0 dashboard-text-color fs_16 red_ff fw-semibold">
                             Manual Recharge
                           </p>
                           <p className="mb-0 red_ff fs_14 text-color">
@@ -355,7 +355,7 @@ const Home: React.FC = () => {
                       <div className="border mt-3"></div>
                       <div className="d-flex mt-3 justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
+                          <p className="mb-0 dashboard-text-color fs_16 red_ff fw-semibold">
                             Manual Recharge
                           </p>
                           <p className="mb-0 red_ff fs_14 text-color">
@@ -369,7 +369,7 @@ const Home: React.FC = () => {
                       <div className="border mt-3"></div>
                       <div className="d-flex mt-3 justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
+                          <p className="mb-0 dashboard-text-color fs_16 red_ff fw-semibold">
                             Auto Top-Up
                           </p>
                           <p className="mb-0 red_ff fs_14 text-color">
@@ -383,7 +383,7 @@ const Home: React.FC = () => {
                       <div className="border mt-3"></div>
                       <div className="d-flex mt-3 justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
+                          <p className="mb-0 dashboard-text-color fs_16 red_ff fw-semibold">
                             Auto Top-Up
                           </p>
                           <p className="mb-0 red_ff fs_14 text-color">
@@ -397,7 +397,7 @@ const Home: React.FC = () => {
                       <div className="border mt-3"></div>
                       <div className="d-flex mt-3 justify-content-between align-items-center">
                         <div>
-                          <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
+                          <p className="mb-0 dashboard-text-color fs_16 red_ff fw-semibold">
                             Auto Top-Up
                           </p>
                           <p className="mb-0 red_ff fs_14 text-color">
@@ -440,7 +440,7 @@ const Home: React.FC = () => {
                             alt="assign_credit_icon"
                           />
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               David Brook
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -450,7 +450,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Card Id
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -460,7 +460,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Usage
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -478,7 +478,7 @@ const Home: React.FC = () => {
                             alt="assign_credit_icon"
                           />
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               David Brook
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -488,7 +488,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Card Id
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -498,7 +498,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Usage
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -516,7 +516,7 @@ const Home: React.FC = () => {
                             alt="assign_credit_icon"
                           />
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               David Brook
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -526,7 +526,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Card Id
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -536,7 +536,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Usage
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -554,7 +554,7 @@ const Home: React.FC = () => {
                             alt="assign_credit_icon"
                           />
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               David Brook
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -564,7 +564,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Card Id
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -574,7 +574,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Usage
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -592,7 +592,7 @@ const Home: React.FC = () => {
                             alt="assign_credit_icon"
                           />
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               David Brook
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -602,7 +602,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Card Id
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -612,7 +612,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Usage
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -630,7 +630,7 @@ const Home: React.FC = () => {
                             alt="assign_credit_icon"
                           />
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               David Brook
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -640,7 +640,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Card Id
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -650,7 +650,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Usage
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -668,7 +668,7 @@ const Home: React.FC = () => {
                             alt="assign_credit_icon"
                           />
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               David Brook
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -678,7 +678,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Card Id
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -688,7 +688,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Usage
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -706,7 +706,7 @@ const Home: React.FC = () => {
                             alt="assign_credit_icon"
                           />
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               David Brook
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -716,7 +716,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Card Id
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -726,7 +726,7 @@ const Home: React.FC = () => {
                         </div>
                         <div className="">
                           <div>
-                            <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                            <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                               Usage
                             </h6>
                             <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -765,7 +765,7 @@ const Home: React.FC = () => {
                               alt="assign_credit_icon"
                             />
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 David Brook
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -775,7 +775,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Card Id
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -785,7 +785,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Usage
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -803,7 +803,7 @@ const Home: React.FC = () => {
                               alt="assign_credit_icon"
                             />
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 David Brook
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -813,7 +813,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Card Id
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -823,7 +823,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Usage
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -841,7 +841,7 @@ const Home: React.FC = () => {
                               alt="assign_credit_icon"
                             />
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 David Brook
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -851,7 +851,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Card Id
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -861,7 +861,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Usage
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -879,7 +879,7 @@ const Home: React.FC = () => {
                               alt="assign_credit_icon"
                             />
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 David Brook
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -889,7 +889,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Card Id
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -899,7 +899,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Usage
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -917,7 +917,7 @@ const Home: React.FC = () => {
                               alt="assign_credit_icon"
                             />
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 David Brook
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -927,7 +927,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Card Id
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -937,7 +937,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Usage
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -955,7 +955,7 @@ const Home: React.FC = () => {
                               alt="assign_credit_icon"
                             />
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 David Brook
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -965,7 +965,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Card Id
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -975,7 +975,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Usage
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -993,7 +993,7 @@ const Home: React.FC = () => {
                               alt="assign_credit_icon"
                             />
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 David Brook
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -1003,7 +1003,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Card Id
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -1013,7 +1013,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Usage
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -1031,7 +1031,7 @@ const Home: React.FC = () => {
                               alt="assign_credit_icon"
                             />
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 David Brook
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -1041,7 +1041,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Card Id
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">
@@ -1051,7 +1051,7 @@ const Home: React.FC = () => {
                           </div>
                           <div className="">
                             <div>
-                              <h6 className="mb-0 red_ff fs_14 text-nowrap">
+                              <h6 className="mb-0 red_ff fs_14 text-nowrap fw-semibold">
                                 Usage
                               </h6>
                               <p className="mb-0 mt-1 red_ff fs_14 text-nowrap">

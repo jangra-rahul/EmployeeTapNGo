@@ -83,9 +83,9 @@ const Profile = () => {
                             className="mt-5 text-dark"
                             onSubmit={handleSubmit}
                           >
-                            <div className="d-flex  flex-column responsive-display  -md-row gap-3  my-3">
+                            <div className="row responsive-display    my-3">
                               <Form.Group
-                                className="mb-3 w-100 fs_16 red_ff fw-light"
+                                className="mb-3 col-md-6 col-12 fs_16 red_ff fw-light"
                                 controlId="firstName"
                               >
                                 <Form.Label className="red_ff fw-medium">
@@ -97,7 +97,7 @@ const Profile = () => {
                                 />
                               </Form.Group>
                               <Form.Group
-                                className="mb-3 w-100 fs_16 red_ff fw-light"
+                                className="mb-3 col-md-6 col-12 fs_16 red_ff fw-light"
                                 controlId="lastName"
                               >
                                 <Form.Label className="red_ff fw-medium">

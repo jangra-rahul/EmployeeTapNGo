@@ -22,25 +22,27 @@ const Auto: React.FC = () => {
   const [selectedAmount, setSelectedAmount] = useState<string | null>(null);
   const [selectedTrigger, setSelectedTrigger] = useState<string | null>(null);
   const [selected, setSelected] = useState<boolean>(false);
+  const [selectedinput, setSelectedInput] = useState<boolean>(false);
+  const [selectedinput1, setSelectedInput1] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
 
   const handleAmountClick = (value: string) => {
     setSelectedAmount(value);
     if (value === "custom") {
-      setSelected(true);
+      setSelectedInput(true);
     }
     if (value != "custom") {
-      setSelected(false);
+      setSelectedInput(false);
     }
   };
 
   const handleTriggerClick = (value: string) => {
     setSelectedTrigger(value);
     if (value === "custom") {
-      setSelected(true);
+      setSelectedInput1(true);
     }
     if (value != "custom") {
-      setSelected(false);
+      setSelectedInput1(false);
     }
   };
 
@@ -74,6 +76,17 @@ const Auto: React.FC = () => {
               </Col>
             ))}
           </Row>
+          {selectedinput ? (
+            <>
+              <input
+                className="w-100 p-2 my-2 rounded-2"
+                type="text"
+                placeholder="Enter Value"
+              />
+            </>
+          ) : (
+            ""
+          )}
           <h4 className="mt-3 fs_18 fw-semibold red_ff dashboard-text-color">
             Recharge trigger point
           </h4>
@@ -93,6 +106,17 @@ const Auto: React.FC = () => {
               </Col>
             ))}
           </Row>
+          {selectedinput1 ? (
+            <>
+              <input
+                className="w-100 p-2 my-2 rounded-2"
+                type="text"
+                placeholder="Enter Value"
+              />
+            </>
+          ) : (
+            ""
+          )}
           {selected && (
             <>
               <h5 className=" fs_18 red_ff fw-semibold">Payment From</h5>
@@ -126,25 +150,23 @@ const Auto: React.FC = () => {
         </div>
         {!selected ? (
           <div className="d-flex flex-column justify-content-end mt-4">
-            <Link href="/Dashboard/Payment">
-              <Button
-                onClick={() => setSelected(true)}
-                className="w-100 py-2 fs-16 mb-4 fw-semibold rounded-2 bg-primary text-white"
-              >
-                Set Auto Top-up Now
-              </Button>
-            </Link>
+            <Button
+              onClick={() => setSelected(true)}
+              className="w-100 py-2 fs-16 mb-4 fw-semibold rounded-2 bg-primary text-white"
+            >
+              Set Auto Top-up Now
+            </Button>
           </div>
         ) : (
           <div className="d-flex flex-column justify-content-end mt-4">
-            {/* <Link href="/Dashboard/Payment"> */}
-            <Button
-              // onClick={() => setSelected(true)}
-              className="w-100 py-2 fs-16 fw-semibold rounded-2 bg-primary text-white"
-            >
-              Update Auto Payment
-            </Button>
-            {/* </Link> */}
+            <Link href="/Dashboard/Payment">
+              <Button
+                // onClick={() => setSelected(true)}
+                className="button-bg-color w-100 border-0 py-2 fs_16 red_ff text-white fw-semibold rounded-2"
+              >
+                Update Auto Payment
+              </Button>
+            </Link>
           </div>
         )}
       </div>

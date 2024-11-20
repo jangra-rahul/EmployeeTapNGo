@@ -7,7 +7,7 @@ import edit_icon from "../../../../public/assets/images/svg/edit_icon.svg";
 import detail_icon from "../../../../public/assets/images/svg/detail_icon.svg";
 import Image from "next/image";
 import "../../Dashboard/CorporateCards/corporate.css";
-import { Form, Modal } from "react-bootstrap";
+import { Dropdown, Form, Modal } from "react-bootstrap";
 import cross_icon from "../../../../public/assets/images/svg/cross_icon.svg";
 import "../Employees/employees.css";
 import Link from "next/link";
@@ -21,6 +21,12 @@ const Employees = () => {
   const [showSearchBar, setShowSearchBar] = useState(false);
   const handleSearchClick = () => {
     setShowSearchBar(!showSearchBar);
+  };
+  const [sortOrder, setSortOrder] = useState("");
+
+  const handleSort = (order) => {
+    setSortOrder(order);
+    console.log("Sorting by:", order); // Perform sorting logic here
   };
   return (
     <>
@@ -44,7 +50,24 @@ const Employees = () => {
                       src={filter_icon}
                       alt="filter_icon"
                     />
-                    <Image width={38} src={bar_icon} alt="bar_icon" />
+                    <Dropdown>
+                      <Dropdown.Toggle
+                        variant="light"
+                        id="dropdown-basic"
+                        className="p-0 border-0 bg-transparent"
+                      >
+                        <Image width={38} src={bar_icon} alt="bar_icon" />
+                      </Dropdown.Toggle>
+
+                      <Dropdown.Menu>
+                        <Dropdown.Item onClick={() => handleSort("A to Z")}>
+                          A to Z (Ascending)
+                        </Dropdown.Item>
+                        <Dropdown.Item onClick={() => handleSort("Z to A")}>
+                          Z to A (Descending)
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
                   </div>
                 </div>
               </div>
@@ -84,12 +107,14 @@ const Employees = () => {
                     <tbody className="mt-3 ">
                       <tr>
                         <td className=" pt-4 ">
-                          <p
-                            className="px-3 fw-semibold fs_14 pb-2 text-nowrap"
-                            style={{ color: "#202020" }}
-                          >
-                            Greg Boston
-                          </p>{" "}
+                          <Link href="/Dashboard/EmployeeDetails">
+                            <p
+                              className="px-3 fw-semibold fs_14 pb-2 text-nowrap"
+                              style={{ color: "#202020" }}
+                            >
+                              Greg Boston
+                            </p>{" "}
+                          </Link>
                           <div className="border mt-4"></div>
                         </td>
                         <td className=" pt-4  ">
@@ -135,12 +160,14 @@ const Employees = () => {
                       </tr>
                       <tr>
                         <td className=" pt-4 ">
-                          <p
-                            className="px-3 fw-semibold fs_14 pb-2 text-nowrap"
-                            style={{ color: "#202020" }}
-                          >
-                            Julie Smith
-                          </p>{" "}
+                          <Link href="/Dashboard/EmployeeDetails">
+                            <p
+                              className="px-3 fw-semibold fs_14 pb-2 text-nowrap"
+                              style={{ color: "#202020" }}
+                            >
+                              Julie Smith
+                            </p>{" "}
+                          </Link>
                           <div className="border mt-4"></div>
                         </td>
                         <td className=" pt-4  ">
@@ -189,12 +216,14 @@ const Employees = () => {
                       </tr>
                       <tr>
                         <td className=" pt-4 ">
-                          <p
-                            className="px-3 fw-semibold fs_14 pb-2 text-nowrap"
-                            style={{ color: "#202020" }}
-                          >
-                            Sagar Malik
-                          </p>{" "}
+                          <Link href="/Dashboard/EmployeeDetails">
+                            <p
+                              className="px-3 fw-semibold fs_14 pb-2 text-nowrap"
+                              style={{ color: "#202020" }}
+                            >
+                              Sagar Malik
+                            </p>{" "}
+                          </Link>
                           <div className="border mt-4"></div>
                         </td>
                         <td className=" pt-4  ">
@@ -244,12 +273,14 @@ const Employees = () => {
                       </tr>
                       <tr>
                         <td className=" pt-4 ">
-                          <p
-                            className="px-3 fw-semibold fs_14 pb-2 text-nowrap"
-                            style={{ color: "#202020" }}
-                          >
-                            Sagar Malik
-                          </p>{" "}
+                          <Link href="/Dashboard/EmployeeDetails">
+                            <p
+                              className="px-3 fw-semibold fs_14 pb-2 text-nowrap"
+                              style={{ color: "#202020" }}
+                            >
+                              Sagar Malik
+                            </p>{" "}
+                          </Link>
                           <div className="border mt-4"></div>
                         </td>
                         <td className=" pt-4  ">
@@ -299,12 +330,14 @@ const Employees = () => {
                       </tr>
                       <tr>
                         <td className=" pt-4 ">
-                          <p
-                            className="px-3 fw-semibold fs_14 pb-2 text-nowrap"
-                            style={{ color: "#202020" }}
-                          >
-                            Greg Boston
-                          </p>{" "}
+                          <Link href="/Dashboard/EmployeeDetails">
+                            <p
+                              className="px-3 fw-semibold fs_14 pb-2 text-nowrap"
+                              style={{ color: "#202020" }}
+                            >
+                              Greg Boston
+                            </p>{" "}
+                          </Link>
                           <div className="border mt-4"></div>
                         </td>
                         <td className=" pt-4  ">
@@ -350,12 +383,14 @@ const Employees = () => {
                       </tr>
                       <tr>
                         <td className=" pt-4 ">
-                          <p
-                            className="px-3 fw-semibold fs_14 pb-2 text-nowrap"
-                            style={{ color: "#202020" }}
-                          >
-                            Julie Smith
-                          </p>{" "}
+                          <Link href="/Dashboard/EmployeeDetails">
+                            <p
+                              className="px-3 fw-semibold fs_14 pb-2 text-nowrap"
+                              style={{ color: "#202020" }}
+                            >
+                              Julie Smith
+                            </p>{" "}
+                          </Link>
                           <div className="border mt-4"></div>
                         </td>
                         <td className=" pt-4  ">
