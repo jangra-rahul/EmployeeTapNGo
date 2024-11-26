@@ -84,6 +84,38 @@ const UsagesList = () => {
       status: "Paid",
       amount: "$1.33",
     },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
+    {
+      code: "001491",
+      date: "04 Jan 2024",
+      name: "Sagar Malik",
+      company: "Charlie’s Car & Dog Wash PTY LTD",
+      status: "Paid",
+      amount: "$1.33",
+    },
   ];
 
   const data1 = [
@@ -238,7 +270,7 @@ const UsagesList = () => {
   const renderTableData = () => {
     if (selectedTab === "Usage") {
       return (
-        <table className="table table-responsive">
+        <table className="table responsive">
           <thead>
             <tr>
               <th
@@ -319,7 +351,7 @@ const UsagesList = () => {
       );
     } else if (selectedTab === "TaxInvoice") {
       return (
-        <table className="table table-responsive">
+        <table className="table responsive">
           <thead>
             <tr>
               <th
@@ -394,7 +426,7 @@ const UsagesList = () => {
       );
     } else if (selectedTab === "Statements") {
       return (
-        <table className="table table-responsive">
+        <table className="table responsive">
           <thead>
             <tr>
               <th
@@ -588,7 +620,7 @@ const UsagesList = () => {
         </div>
       </div>
 
-      <div className="table-responsive">{renderTableData()}</div>
+      <div className="responsive">{renderTableData()}</div>
     </>
   );
 };

@@ -101,9 +101,8 @@ const CorporateCards = () => {
                           className="px-3 fs_14 pb-2 text-nowrap"
                           style={{ color: "#202020" }}
                         >
-                          {" "}
                           5668003
-                        </p>{" "}
+                        </p>
                         <div className="border mt-4"></div>
                       </td>
                       <td className=" pt-4  ">
@@ -329,7 +328,7 @@ const CorporateCards = () => {
                         <div className="border mt-4"></div>
                       </td>
                       <td className=" pt-4  ">
-                        <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>{" "}
+                        <p className="px-3 fs_14 mb-3 fw-medium">Greg Boston</p>
                         <div className="border mt-4"></div>
                       </td>
                       <td className=" pt-4 ">

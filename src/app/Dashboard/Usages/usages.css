@@ -11,6 +11,11 @@
   border: none;
 }
 
+.responsive {
+  max-height: 650px !important;
+  overflow-y: auto;
+}
+
 .Usage-Category-box {
   height: 170px !important ;
   width: 194 !important ;
