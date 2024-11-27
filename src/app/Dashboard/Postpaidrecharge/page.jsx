@@ -71,10 +71,10 @@ const Page = () => {
       {showModal && (
         <div className={`${showModal === true && "custom_all_dark"}`}></div>
       )}
-      <div className="px-2">
-        <div className="pb-4 pt-3 ">
-          <Row>
-            <Col xxl={7} className="pe-3">
+      <div style={{ height: "92%" }} className="px-2">
+        <div className="pb-4 pt-3 h-100">
+          <Row className="h-100">
+            <Col xxl={7} className="pe-3 h-100">
               <Row className="h-100">
                 <Col md={7} className=" pe-lg-2 ps-lg-0 mt-md-0  rounded-2 ">
                   <div className="card pt-4 d-flex flex-column justify-content-between h-100 p-md-4 p-3 border-0">
