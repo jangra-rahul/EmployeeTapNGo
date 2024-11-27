@@ -416,7 +416,7 @@ const Page = () => {
                       </a>
                     </div>
                     <div className=" overflow-x-auto">
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex justify-content-between w-100 gap-3  mt-4">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -454,7 +454,7 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex justify-content-between gap-3  mt-4">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -492,7 +492,7 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex justify-content-between gap-3  mt-4">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -530,7 +530,7 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex justify-content-between gap-3  mt-4">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -568,7 +568,7 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex justify-content-between gap-3  mt-4">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -606,7 +606,7 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex justify-content-between gap-3  mt-4">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -644,7 +644,7 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex justify-content-between gap-3  mt-4">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
@@ -682,7 +682,7 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex gap-3  mt-4">
+                      <div className="d-flex justify-content-between gap-3  mt-4">
                         <div className="d-flex  gap-3 align-items-center">
                           <Image
                             className=""
